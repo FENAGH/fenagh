@@ -1,17 +1,16 @@
-import { Link } from "gatsby"
 import React, { useState } from "react"
+import { StaticQuery, graphql, Link } from "gatsby"
 import { Box, PseudoBox, Flex } from "@chakra-ui/core";
 import { MdLocationOn, MdKeyboardArrowDown } from 'react-icons/md'
 // Components
 import { Container, FlexContainer } from './globals'
 import Logo from './logo'
 
-const MenuItems = ({link}) => {
-  const { path, value } = link
+const MenuItems = ({link, value}) => {
   return (
     <PseudoBox
       as={Link}
-      to={path}
+      to={link}
       display="inline-block"
       color="#3A8537"
       fontSize="14px"
@@ -33,24 +32,34 @@ const MenuItems = ({link}) => {
 }
 
 const Menu = ({show}) => {
-  const links = [
-    {id: 0, path: "/", value: "Home"},
-    {id: 1, path: "/", value: "Acerca de"},
-    {id: 2, path: "/", value: "Secciones"},
-    {id: 3, path: "/", value: "Registro"},
-  ]
-  return (
-    <Container display={{ base: show ? "block" : "none", md: "block" }}>
-      <Box
-        as="nav"
-        listStyleType="none"
-        py="1rem"
-      >
-        {links.map((link) => (
-          <MenuItems key={link.id} link={link} />
-        ))}
-      </Box>
-    </Container>
+  return(
+    <StaticQuery
+      query={graphql`
+        query NavigationLinks { 
+          site {
+            siteMetadata {
+              menuLinks {
+                name
+                link
+              }
+            }
+          }
+        }
+      `}
+      render={ data => (
+        <Container display={{ base: show ? "block" : "none", md: "block" }}>
+          <Box
+            as="nav"
+            listStyleType="none"
+            py="1rem"
+          >
+          {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
+            <MenuItems key={index} link={menuLink.link} value={menuLink.name}/>
+          ))}
+          </Box>
+        </Container>
+      )}
+    />
   )
 }
 
@@ -73,27 +82,27 @@ const Header = () => {
               >
                 <Logo />
               </Box>
-            </Box>
-            <Box display={{base: "none", md: "flex"}}>
-              <Box 
-                as={MdLocationOn} 
-                color="#3A8537"
-                mr="2"
-              />
-              <Flex
-                align="center"
-              >
-                <Box
-                  as="span"
-                  fontSize="12px"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  mr="1"
+              <Box display={{base: "none", md: "flex"}}>
+                <Box 
+                  as={MdLocationOn} 
+                  color="#3A8537"
+                  mr="2"
+                />
+                <Flex
+                  align="center"
                 >
-                  Tegucigalpa, Honduras
-                </Box>
-                <Box as={MdKeyboardArrowDown} />
-              </Flex>
+                  <Box
+                    as="span"
+                    fontSize="12px"
+                    fontWeight="bold"
+                    textTransform="uppercase"
+                    mr="1"
+                  >
+                    Tegucigalpa, Honduras
+                  </Box>
+                  <Box as={MdKeyboardArrowDown} />
+                </Flex>
+              </Box>
             </Box>
             <Box 
               display={{ sm: "block", md: "none" }} 
