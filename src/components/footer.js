@@ -1,23 +1,54 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { Box, Flex, Text, PseudoBox } from '@chakra-ui/core'
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { StaticQuery, graphql, Link } from "gatsby"
+import { Box, Flex, PseudoBox } from '@chakra-ui/core'
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
 // Components
 import { Container, FlexContainer } from './globals'
 import Logo from './logo'
 
-function Footer() {
-  const links = [
-    {id: 0, path: "/", value: "Sobre la FENAGH"},
-    {id: 1, path: "/", value: "Secciones"},
-    {id: 2, path: "/", value: "Registro Genealógico"},
-  ]
+const FooterLinks = () => {
+  return(
+    <StaticQuery
+      query={graphql`
+        query FooterNavigationLinks {
+          site {
+            siteMetadata {
+              menuLinks {
+                name
+                link
+              }
+            }
+          }
+        }
+      `}
+      render={ data => (
+        <React.Fragment>
+          {data.site.siteMetadata.menuLinks.map(({name, link}) => (
+            <Box 
+              as={Link}
+              key={name}
+              to={link}
+              flex={{base:"0 0 50%", sm:"0 0 20%", md:"0 0 11.1111%"}}
+              maxWidth={{base:"50%", sm:"20%", md:"11.1111%"}}
+              pt={{base: "2rem", md: "0"}}
+            >  
+              {name}
+            </Box>
+          ))}
+        </React.Fragment>
+      )}
+    />
+  )
+}
 
+
+
+function Footer() {
   const icons = [
     {id: 0, icon: FaFacebookF},
-    {id: 1, icon: FaLinkedinIn},
+    {id: 1, icon: FaInstagram},
     {id: 2, icon: FaTwitter},
-    {id: 3, icon: FaYoutube},
+    {id: 3, icon: FaLinkedinIn},
   ]
   return (
     <Box 
@@ -27,41 +58,16 @@ function Footer() {
       w="100%"
     >
       <Container>
-        <FlexContainer spaceBetween py="4rem">
-          <Flex align="center">
-            <Box as="span" mr="4rem">
-              <Logo white/>
-            </Box>
-            <Box fontSize="14px">
-              {links.map( link => (
-                <PseudoBox 
-                  as={Link}
-                  key={link.id}
-                  to={link.path}
-                  _notLast={{mr:"1.5rem"}}
-                >
-                  {link.value}
-                </PseudoBox>
-              ))}
-            </Box>
-          </Flex>
-          <Box>
-            <Text mb=".5rem" fontSize="12px">Encuentranos en:</Text>
-            <Flex>
-              {icons.map( ({id, icon}) => (
-                <PseudoBox 
-                  as={Link} 
-                  to="/"
-                  _notLast={{mr:"1.5rem"}}
-                >
-                  <PseudoBox 
-                    key={id}
-                    as={icon}
-                  />
-                </PseudoBox>
-              ))}
-            </Flex>
+        <FlexContainer py="4rem" flexWrap="wrap" justifyContent="flex-start">
+          <Box 
+            as="span" 
+            flex={{md:"0 0 33.33333%"}}
+            width="100%"
+            maxWidth={{md:"33.33333%"}}
+          >
+            <Logo white/>
           </Box>
+          <FooterLinks />
         </FlexContainer>
       </Container>
       <Box
@@ -69,11 +75,36 @@ function Footer() {
         py="1.5rem"
         w="100%"
       >
-        <Container 
-          textAlign="center"
-          fontSize="14px"
-        >
-          © FENAGH {new Date().getFullYear()}, Todos los derechos reservados
+        <Container>
+          <FlexContainer 
+            spaceBetween
+            fontSize="14px"
+          >
+            <Box as="span">
+              © {new Date().getFullYear()} FENAGH
+            </Box>
+            <Flex>
+            {icons.map( ({id, icon}) => (
+              <PseudoBox 
+                as={Link} 
+                to="/"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                border="1px solid rgba(60, 62, 66, 0.5)"
+                borderRadius="50%"
+                w="2rem"
+                h="2rem"
+                _notLast={{mr:"1.5rem"}}
+              >
+                <PseudoBox 
+                  key={id}
+                  as={icon}
+                />
+              </PseudoBox>
+            ))}
+            </Flex>
+          </FlexContainer>
         </Container>
       </Box>
     </Box>
