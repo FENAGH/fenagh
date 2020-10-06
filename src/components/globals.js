@@ -5,7 +5,7 @@ export const Container = ({children, fluid, ...otherProps}) => (
   <Box
     flexGrow="1"
     margin="0 auto"
-    p={fluid ? "0" : {base: "0 1rem", md: "0 2rem"}}
+    px={fluid ? "0" : {base: "1rem", md: "2rem"}}
     h="100%"
     w="auto"
     maxWidth={fluid ? "100%" : ["100%", "960px", "1216px", "1244px"]}
@@ -16,11 +16,12 @@ export const Container = ({children, fluid, ...otherProps}) => (
   </Box>
 )
 
-export const FlexContainer = ({children, spaceBetween, ...otherProps}) => (
+export const FlexContainer = ({children, spaceBetween, isResponsive, ...otherProps}) => (
   <Flex
     align="center"
     pos="relative"
     justifyContent={spaceBetween ? "space-between" : "center"}
+    flexDir={isResponsive ? {base: "column", md: "row"} : "row"}
     {...otherProps}
   >
     {children}
