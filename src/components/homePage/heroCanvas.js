@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/core'
 import React from 'react'
+import { Box } from '@chakra-ui/core'
 
-export const HeroCanvas = () => {
+const HeroCanvas = () => {
   return (
     <Box
       w="100%"
@@ -12,3 +12,5 @@ export const HeroCanvas = () => {
     </Box>
   )
 }
+
+export default HeroCanvas

@@ -1,15 +1,14 @@
 import React from 'react'
 // Components
-import { Container } from '../globals'
-import { Hero } from './hero'
-import { HeroCanvas } from './heroCanvas'
+import Hero from './hero'
+import About from './about'
 
 const HomePage = () => {
   return (
-    <Container fluid>
+    <React.Fragment>
       <Hero />
-      <HeroCanvas />
-    </Container>
+      <About />
+    </React.Fragment>
   )
 }
 

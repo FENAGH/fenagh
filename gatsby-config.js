@@ -9,19 +9,23 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'Acerca de',
+        name: 'Quienes Somos',
         link: '/acerca-de'
+      },
+      {
+        name: 'Asociaciones',
+        link: '/'
       },
       {
         name: 'Sectores',
         link: '/'
       },
       {
-        name: 'Registro',
+        name: 'FONACSAH',
         link: '/'
       },
       {
-        name: 'CAHLE',
+        name: 'Registro',
         link: '/'
       },
     ],

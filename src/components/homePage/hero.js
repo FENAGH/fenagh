@@ -1,9 +1,13 @@
 import React from 'react'
 import { Box, Heading, Image, Text } from '@chakra-ui/core'
+// Components
+import { Container } from '../globals'
+import HeroCanvas from './heroCanvas'
 
-export const Hero = () => (
-  <Box
-    as="section"
+
+const Hero = () => (
+  <Container
+    fluid
     pos="relative"
     backgroundColor="#63b746"
   >
@@ -49,5 +53,8 @@ export const Hero = () => (
         />
       </picture>
     </Box>
-  </Box>
+    <HeroCanvas />
+  </Container>
 )
+
+export default Hero
