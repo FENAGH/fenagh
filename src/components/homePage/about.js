@@ -23,7 +23,7 @@ const About = () => {
 			fluid 
 			as="section" 
 			backgroundColor="#fafafa"
-			py={{base: "2.5rem"}}
+			py="2.5rem"
 		>
 			<Container>
 				<FlexContainer spaceBetween isResponsive>
