@@ -23,7 +23,6 @@ const CustomSliderStyles = styled(Slider)`
     width: 50px;
     height: 50px;
     cursor: pointer;
-    float: left;
     outline: 0;
     transition: background-color .3s ease, border-color .3s ease;
     /* Disabled old arrow icons */
@@ -51,6 +50,10 @@ const CustomSliderStyles = styled(Slider)`
     transform: rotate(180deg);
     transform-origin: center 12px;
     z-index: 1;
+    left: 25px;
+  }
+  .slick-next{
+    right: 25px;
   }
 `
 
@@ -87,22 +90,33 @@ const CustomSlider = ({slides}) => {
         <Box 
           key={base}
           pos="relative"
+          px="1rem"
         >
           <Img 
             fluid={childImageSharp.fluid} 
-            alt={base.split(".")[0]} 
+            alt={`sector ${base.split(".")[0]}`}
             style={{width: "100%"}}
           />
-          <Heading 
-            as="h3" 
-            color="#fff"
-            size="lg" 
-            textTransform="capitalize"
+          <Box
+            backgroundColor="rgb(0,0,0)"
+            background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)"
+            w="calc(100% - 32px)"
+            h="80%"
             pos="absolute"
             bottom="0"
           >
-            {`sector ${base.split(".")[0]}`}
-          </Heading>
+            <Heading 
+              as="h3" 
+              color="#fff"
+              size="lg" 
+              textTransform="capitalize"
+              pos="absolute"
+              left="1.5rem"
+              bottom="1.5rem"
+            >
+              {base.split(".")[0]}
+            </Heading>
+          </Box>
         </Box>
       ))}
     </CustomSliderStyles>
