@@ -10,7 +10,7 @@ module.exports = {
       },
       {
         name: 'Quienes Somos',
-        link: '/acerca-de'
+        link: '/acerca-de',
       },
       {
         name: 'Asociaciones',
