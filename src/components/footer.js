@@ -86,6 +86,7 @@ function Footer() {
             <Flex>
             {icons.map( ({id, icon}) => (
               <PseudoBox 
+                key={id}
                 as={Link} 
                 to="/"
                 display="flex"
@@ -97,10 +98,7 @@ function Footer() {
                 h="2rem"
                 _notLast={{mr:"1.5rem"}}
               >
-                <PseudoBox 
-                  key={id}
-                  as={icon}
-                />
+                <PseudoBox as={icon}/>
               </PseudoBox>
             ))}
             </Flex>

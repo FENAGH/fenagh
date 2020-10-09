@@ -6,27 +6,63 @@ module.exports = {
     menuLinks: [
       {
         name: 'Inicio',
-        link: '/'
+        link: '/',
+        subMenu: null
       },
       {
         name: 'Quienes Somos',
         link: '/acerca-de',
+        subMenu: [
+          {
+            name: 'Historia',
+            link: '/'
+          },
+          {
+            name: 'Misión & Visión',
+            link: '/'
+          },
+          {
+            name: 'Estatutos',
+            link: '/'
+          },
+          {
+            name: 'Junta Directiva',
+            link: '/'
+          },
+        ]
       },
       {
         name: 'Asociaciones',
-        link: '/'
+        link: '/',
+        subMenu: [
+          {
+            name: 'Asociaciones Afiliadas',
+            link: '/'
+          },
+          {
+            name: 'U.R.S.A.C.',
+            link: '/'
+          },
+          {
+            name: 'C.R.E.L.',
+            link: '/'
+          },
+        ]
       },
       {
         name: 'Sectores',
-        link: '/'
+        link: '/',
+        subMenu: null
       },
       {
         name: 'FONACSAH',
-        link: '/'
+        link: '/',
+        subMenu: null
       },
       {
         name: 'Registro',
-        link: '/'
+        link: '/',
+        subMenu: null
       },
     ],
   },

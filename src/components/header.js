@@ -10,15 +10,14 @@ import Logo from './logo'
 
 const StyledItem = styled(motion.div)`
   background-color: #fff;
-  border-top: 1px solid #3A8537;
+  border-top: 2px solid #3A8537;
   box-shadow: 0 0 6px 0 rgba(23,43,64,.1);
   cursor: default;
   padding: 30px;
   position: absolute;
-
+  color:#1A202C;
   left: 0;
   top: 70px;
-
   ul{
     margin: 0;
     padding: 0;
@@ -28,27 +27,32 @@ const StyledItem = styled(motion.div)`
       display: flex;
       cursor: pointer;
       margin-left: 0;
-      margin-top: 24px;
-
-      background: red;
+      margin-top: 20px;
       &:first-of-type{
         margin-top: 0;
+      }
+      &:hover a{
+        color: #3A8537;
+      }
+      a{
+        font-weight: 500;
       }
     }
   }
 `
 
-const MenuItems = ({link, value}) => {
+const MenuItem = ({link, value, subMenu}) => {
 
   const [ isHovered, setIsHovered ] = useState(false)
 
   return (
     <PseudoBox
+      role="group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      as={Link}
+      as={subMenu ? "div" : Link}
       to={link}
-      color="#3A8537"
+      color="#1A202C"
       fontSize="14px"
       fontWeight="bold"
       textTransform="uppercase"
@@ -57,28 +61,36 @@ const MenuItems = ({link, value}) => {
       display="flex"
       alignItems="center"
       pos="relative"
+      cursor="pointer"
       _hover={{
-        color: "#1A202C"
+        color: "#3A8537"
       }}
     >
       <Box as="span" mr="5px">{value}</Box>
-      <Box as={MdKeyboardArrowDown} />
-      <AnimatePresence exitBeforeEnter>
-        {isHovered && (
-        <StyledItem
-          initial={{ opacity: 0 }}
-          exit={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: .2, 
-            ease: "easeInOut"
+      { subMenu && (
+        <PseudoBox 
+          as={MdKeyboardArrowDown} 
+          transition="transform .3s ease"
+          _groupHover={{
+            transform: "rotate(180deg)",
+            transformOrigin: "center"
           }}
+        />
+      )}
+      <AnimatePresence exitBeforeEnter>
+        {isHovered && subMenu && (
+        <StyledItem
+          initial={{ y: 10, opacity: 0 }}
+          exit={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1}}
+          transition={{ duration: .2, ease: "easeInOut"}}
         >
           <ul>
-            <li><Link to="/">Link 1</Link></li>
-            <li><Link to="/">Link 2</Link></li>
-            <li><Link to="/">Link 3</Link></li>
-            <li><Link to="/">Link 4</Link></li>
+            {subMenu.map(menu => (
+              <li key={menu.name}>
+                <Link to={menu.link}>{menu.name}</Link>
+              </li>
+            ))}
           </ul>
         </StyledItem>
       )}
@@ -89,7 +101,7 @@ const MenuItems = ({link, value}) => {
 
 
 
-const Menu = ({show}) => {
+const MenuItems = ({show}) => {
   return(
     <StaticQuery
       query={graphql`
@@ -99,6 +111,10 @@ const Menu = ({show}) => {
               menuLinks {
                 name
                 link
+                subMenu{
+                  name,
+                  link
+                }
               }
             }
           }
@@ -111,7 +127,12 @@ const Menu = ({show}) => {
           listStyleType="none"
         >
         {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
-          <MenuItems key={index} link={menuLink.link} value={menuLink.name}/>
+          <MenuItem
+            key={index} 
+            link={menuLink.link} 
+            value={menuLink.name}
+            subMenu={menuLink.subMenu}
+          />
         ))}
         </Box>
       )}
@@ -145,7 +166,7 @@ const Header = () => {
             >
               <Logo />
             </Box>
-            <Menu show={show}/>
+            <MenuItems show={show}/>
           </Box>
           <Box 
             display={{ sm: "block", md: "none" }} 
