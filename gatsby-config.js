@@ -5,11 +5,6 @@ module.exports = {
     author: '@adinjesuha',
     menuLinks: [
       {
-        name: 'Inicio',
-        link: '/',
-        subMenu: null
-      },
-      {
         name: 'Quienes Somos',
         link: '/acerca-de',
         subMenu: [
@@ -60,7 +55,7 @@ module.exports = {
         subMenu: null
       },
       {
-        name: 'Registro',
+        name: 'Convención 2020',
         link: '/',
         subMenu: null
       },
