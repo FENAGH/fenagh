@@ -9,12 +9,12 @@ import useWindowSize from '../../hooks/useWindowSize';
 
 const SubmenuItem = styled(motion.div)`
   background-color: #fff;
-  border-top: 2px solid #3A8537;
+  color:#1A202C;
   box-shadow: 0 0 6px 0 rgba(23,43,64,.1);
+  border-top: 2px solid #3A8537;
   cursor: default;
   padding: 30px;
   position: absolute;
-  color:#1A202C;
   left: 0;
   top: 58px;
   ul{

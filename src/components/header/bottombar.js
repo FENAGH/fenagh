@@ -43,7 +43,7 @@ const BottomBar = ({ showOnScroll }) => {
             pr={{base: "0", md:"5"}}
             mr={{base: "0", md:"5"}}
             borderRight={{sm: "0px", md: "1px"}}
-            borderRightColor={{sm:"transparent", md:"#d5dade"}}
+            borderRightColor={{sm:"transparent", lg:"#d5dade"}}
           >
             <Logo />
           </Box>
