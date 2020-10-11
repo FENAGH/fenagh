@@ -42,13 +42,12 @@ const BottomBar = ({ showOnScroll }) => {
             to="/"
             pr={{base: "0", md:"5"}}
             mr={{base: "0", md:"5"}}
-            borderRight={{sm: "0px", md: "1px"}}
-            borderRightColor={{sm:"transparent", lg:"#d5dade"}}
+            borderRight={{sm: "0px transparent", lg: "1px solid #d5dade"}}
           >
             <Logo />
           </Box>
           <MenuItems show={show}/>
-          <MobileNav show={show}/>
+          <MobileNav showNav={show}/>
           <Box 
             display={{ base: "block", lg: "none" }} 
             backgroundColor="#3A8537"

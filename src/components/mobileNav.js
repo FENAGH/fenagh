@@ -4,43 +4,44 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Box, Flex, PseudoBox } from '@chakra-ui/core'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-const MobileNavLink = ({link, value, subMenu}) => {
-  const [ showSubLink, setShowSubLink ] = useState(false)
-  const handleOnClick = () => setShowSubLink(!showSubLink)
-  return subMenu ? (
-    <PseudoBox
-      onClick={handleOnClick}
-      backgroundColor="#fff"
-      cursor="pointer"
-      color={showSubLink ? "#3A8537" : "#1A202C"}
-      fontSize="14px"
-      fontWeight="bold"
-      textTransform="uppercase"
-      pt="20px"
-      pos="relative"
-      _first={{
-        paddingTop: 0
-      }}
-    >
-      <Flex 
-        w="100%" 
-        align="center" 
-        justify="space-between"
+const MobileAccordion = ({i, link, value, subMenu, expanded, setExpanded}) => {
+  const isOpen = i === expanded
+  const handleOnClick = () => setExpanded(isOpen ? false : i)
+  return (
+    <>
+      <PseudoBox
+        onClick={handleOnClick}
+        backgroundColor="#fff"
+        color={isOpen ? "#3A8537" : "#1A202C"}
+        fontSize="14px"
+        fontWeight="bold"
+        textTransform="uppercase"
         borderBottom="1px solid #d5dade"
-        pb="20px"
+        pt="20px"
+        cursor="pointer"
+        _first={{
+          paddingTop: 0
+        }}
       >
-        <Box as="span">{value}</Box>
-        <Box 
-          as={MdKeyboardArrowDown} 
-          fontSize="1.2rem" 
-          mr="5px"
-          transform={showSubLink && "rotate(180deg)"}
-          transition="transform .3s ease"
-        />
-      </Flex>
-      <AnimatePresence exitBeforeEnter>
-        {showSubLink && subMenu && (
-        <motion.div
+        <Flex 
+          w="100%" 
+          align="center" 
+          justify="space-between"
+          pb="20px"
+        >
+          <Box as="span">{value}</Box>
+          <Box 
+            as={MdKeyboardArrowDown} 
+            fontSize="1.2rem" 
+            mr="5px"
+            transform={isOpen && "rotate(180deg)"}
+            transition="transform .3s ease"
+          />
+        </Flex>
+      </PseudoBox>
+      <AnimatePresence initial={false}>
+      {isOpen && (
+        <motion.section
           key="content"
           initial="collapsed"
           animate="open"
@@ -50,46 +51,34 @@ const MobileNavLink = ({link, value, subMenu}) => {
             collapsed: { opacity: 0, height: 0 }
           }}
           transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+          style={{
+            overflow: "hidden",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "#fafafa",
+          }}
         >
-          <Flex flexDir="column" backgroundColor="#f6f8f9">
-          {subMenu.map(menu => (
+          {subMenu.map(({name, link}) => (
             <Box
               as={Link}
-              key={menu.name}
-              to={menu.link}
-              p="1rem"
-              pl="1.4rem"
-              color="#1A202C"
+              key={name}
+              to={link}
+              py=".8rem"
+              pl="1.5rem"
             >
-              {menu.name}
+              {name}
             </Box>
           ))}
-          </Flex>
-        </motion.div>
+        </motion.section>
       )}
       </AnimatePresence>
-    </PseudoBox>
-  ) : (
-    <PseudoBox
-      as={Link}
-      to={link}
-      backgroundColor="#fff"
-      color="#1A202C"
-      fontSize="14px"
-      fontWeight="bold"
-      textTransform="uppercase"
-      borderBottom="1px solid #d5dade"
-      py="20px"
-      _last={{
-        borderBottom: "0px transparent"
-      }}
-    >
-      {value}
-    </PseudoBox>
+    </>
   )
 }
 
-const MobileNav = ({show}) => {
+
+const MobileNav = ({showNav}) => {
+  const [ expanded, setExpanded ] = useState(false)
   return (
     <StaticQuery
       query={graphql`
@@ -113,7 +102,7 @@ const MobileNav = ({show}) => {
           as="nav"
           backgroundColor="#fff"
           borderTop="2px solid #3a8537"
-          display={{base: show ? "flex" : "none", md:"none"}}
+          display={{base: showNav ? "flex" : "none", md:"none"}}
           flexDir="column"
           px="1rem"
           pt="2rem"
@@ -125,16 +114,57 @@ const MobileNav = ({show}) => {
           left="0"
           bottom="0"
         >
-        {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
-          <MobileNavLink 
-            key={index} 
-            link={menuLink.link} 
-            value={menuLink.name}
-            subMenu={menuLink.subMenu}
-          />
-        ))}
+        {data.site.siteMetadata.menuLinks.map((menuLink, index) => {
+          if(!menuLink.subMenu) return (
+            <PseudoBox
+              key={menuLink.name}
+              as={Link}
+              to={menuLink.link}
+              backgroundColor="#fff"
+              color="#1A202C"
+              fontSize="14px"
+              fontWeight="bold"
+              textTransform="uppercase"
+              borderBottom="1px solid #d5dade"
+              py="20px"
+              _last={{
+                borderBottom: "0px transparent"
+              }}
+            >
+              {menuLink.name}
+            </PseudoBox>
+          )
+          return (
+            <MobileAccordion 
+              key={index}
+              i={index}
+              link={menuLink.link} 
+              value={menuLink.name}
+              subMenu={menuLink.subMenu}
+              expanded={expanded} 
+              setExpanded={setExpanded}
+            />
+          )
+        })}
+        <Box 
+          as="a"
+          href="/"
+          backgroundColor="#3A8537"
+          color="#fff"
+          fontSize="14px"
+          fontWeight="bold"
+          textTransform="uppercase"
+          w="100%"
+          p="1rem"
+          textAlign="center"
+          pos="absolute"
+          left="0"
+          bottom="0"
+        >
+          iniciar sesión
         </Box>
-      )}
+        </Box>
+      )}  
     />
   )
 }
