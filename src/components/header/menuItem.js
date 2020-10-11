@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Box, PseudoBox } from '@chakra-ui/core';
 import styled from "@emotion/styled";
 import { MdKeyboardArrowDown } from 'react-icons/md'
+// Hook
+import useWindowSize from '../../hooks/useWindowSize';
 
 const SubmenuItem = styled(motion.div)`
   background-color: #fff;
@@ -14,7 +16,7 @@ const SubmenuItem = styled(motion.div)`
   position: absolute;
   color:#1A202C;
   left: 0;
-  top: 60px;
+  top: 58px;
   ul{
     margin: 0;
     padding: 0;
@@ -31,20 +33,34 @@ const SubmenuItem = styled(motion.div)`
       &:hover a{
         color: #3A8537;
       }
-      a{
-        font-weight: 500;
-      }
     }
   }
 `
 
 const MenuItem = ({link, value, subMenu}) => {
   const [ isHovered, setIsHovered ] = useState(false)
+  const { width } = useWindowSize()
+
+  const handleMouseEnter = () => {
+    if(width < 768){
+      return null
+    }else{
+      setIsHovered(true)
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if(width < 768){
+      return null
+    }else{
+      setIsHovered(false)
+    }
+  }
   return (
     <PseudoBox
       role="group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       as={subMenu ? "div" : Link}
       to={link}
       color="#1A202C"
@@ -55,6 +71,7 @@ const MenuItem = ({link, value, subMenu}) => {
       h="60px"
       display="flex"
       alignItems="center"
+      justifyContent={{base: "space-between"}}
       pos="relative"
       cursor="pointer"
       _hover={{
@@ -64,7 +81,8 @@ const MenuItem = ({link, value, subMenu}) => {
       <Box as="span" mr="5px">{value}</Box>
       { subMenu && (
         <PseudoBox 
-          as={MdKeyboardArrowDown} 
+          as={MdKeyboardArrowDown}
+          fontSize="1rem"
           transition="transform .3s ease"
           _groupHover={{
             transform: "rotate(180deg)",
@@ -95,3 +113,4 @@ const MenuItem = ({link, value, subMenu}) => {
 }
 
 export default MenuItem;
+

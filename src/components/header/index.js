@@ -5,13 +5,9 @@ import TopBar from './topbar';
 import BottomBar from './bottombar';
 
 
-const Header = () => {
+export default function(){
 	const [showOnScroll, setShowOnScroll] = useState(false)
-	const [show, setShow] = useState(false);
-	
-	const handleToggle = () => setShow(!show);
 	const headerRef = useRef(null)
-    
 	useEffect(() => {
 		const elementHeight = headerRef.current.offsetHeight
 		const hanldeScroll = () => {
@@ -32,15 +28,12 @@ const Header = () => {
         ref={headerRef}
         as="header"
         w="100%"
-        h="107px"
+        h={{base: "52px", lg:"107px"}}
         zIndex="1000"
       >
-        {/* Top Bar */}
-				<TopBar handleToggle={handleToggle} />
-        {/* Bottom Bar */}
-        <BottomBar showOnScroll={showOnScroll} show={show} />
+				<TopBar />
+        <BottomBar showOnScroll={showOnScroll} />
       </Box>
     )
   }
   
-  export default Header

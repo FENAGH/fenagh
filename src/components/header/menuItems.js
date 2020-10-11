@@ -26,9 +26,16 @@ const MenuItems = ({show}) => {
       render={ data => (
         <Box
           as="nav"
-          display={{ base: show ? "block" : "none", md: "flex" }}
-          listStyleType="none"
-          zIndex="1001"
+          backgroundColor={{base: "#fff", lg: "transparent"}}
+          display={{base:"none", md: show ? "flex" : "none", lg: "flex"}}
+          w="100%"
+          h={{md:"60px", lg: "auto"}}
+          px={{md: "2em", lg: "0"}}
+          borderTop={{base: "2px solid #3a8537", lg: "0px transparent"}}
+          pos={{md: "absolute", lg: "initial"}}
+          top="52px"
+          left="0"
+          bottom="0"
         >
         {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
           <MenuItem
