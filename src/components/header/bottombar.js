@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby'
 import { Box } from '@chakra-ui/core';
-import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core"
 // Components
 import { Container } from '../globals';
@@ -14,30 +13,26 @@ const barSlideDown = keyframes`
   100% { transform: translateY(0) }
 `
 
-const AnimatedBar = styled.div(({showOnScroll}) => ({
-  backgroundColor:"#fff",
-  position: showOnScroll ? "fixed" : "relative",
-  top: showOnScroll && 0,
-  left: showOnScroll && 0,
-  zIndex:"1001",
-  width:"100%",
-  animation: showOnScroll && `${barSlideDown} .3s;`,
-}))
-
-
 const BottomBar = ({ showOnScroll }) => {
   const [show, setShow] = useState(false);
-	
 	const handleToggle = () => setShow(!show);
   return (
-    <AnimatedBar showOnScroll={showOnScroll}>
+    <Box 
+      backgroundColor="#fff"
+      position={{base: "fixed", md: showOnScroll ? "fixed" : "relative"}}
+      top={{base: 0, md: showOnScroll ? 0 : "unset"}}
+      left={{base: 0, md: showOnScroll ? 0 : "unset"}}
+      zIndex="1"
+      w="100%"
+      animation={{base: "none", md: showOnScroll && `${barSlideDown} .3s`}}
+    >
       <Container>
         <Box 
           display="flex" 
           alignItems="center"
           justifyContent={{base: "space-between", lg: "flex-start"}}
         >
-          <Box 
+          <Box
             as={Link}
             to="/"
             pr={{base: "0", md:"5"}}
@@ -68,7 +63,7 @@ const BottomBar = ({ showOnScroll }) => {
           </Box>
         </Box>
       </Container>
-    </AnimatedBar>
+    </Box>
   );
 }
 

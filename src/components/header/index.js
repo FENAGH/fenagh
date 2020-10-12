@@ -29,7 +29,8 @@ export default function(){
         as="header"
         w="100%"
         h={{base: "52px", lg:"107px"}}
-        zIndex="1000"
+				zIndex="1000"
+				pos={{base: "fixed", lg: "unset"}}
       >
 				<TopBar />
         <BottomBar showOnScroll={showOnScroll} />
