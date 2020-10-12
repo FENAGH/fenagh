@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StaticQuery, graphql, Link } from "gatsby"
 import { AnimatePresence, motion } from 'framer-motion';
 import { Box, Flex, PseudoBox } from '@chakra-ui/core'
-import { MdKeyboardArrowDown } from 'react-icons/md'
+import { MdKeyboardArrowDown, MdExitToApp } from 'react-icons/md'
 
 const MobileAccordion = ({i, link, value, subMenu, expanded, setExpanded}) => {
   const isOpen = i === expanded
@@ -102,9 +102,9 @@ const MobileNav = ({showNav}) => {
           as="nav"
           backgroundColor="#fff"
           borderTop="2px solid #3a8537"
-          display={{base: showNav ? "flex" : "none", md:"none"}}
+          display={{base: showNav ? "flex" : "none", lg:"none"}}
           flexDir="column"
-          px="1rem"
+          px={{base: "1rem", md: "2rem"}}
           pt="2rem"
           w="100%"
           h="calc(100vh - 52px)"
@@ -128,7 +128,7 @@ const MobileNav = ({showNav}) => {
               borderBottom="1px solid #d5dade"
               py="20px"
               _last={{
-                borderBottom: "0px transparent"
+                borderBottom:"0px solid transparent !important"
               }}
             >
               {menuLink.name}
@@ -148,20 +148,20 @@ const MobileNav = ({showNav}) => {
         })}
         <Box 
           as="a"
-          href="/"
-          backgroundColor="#3A8537"
-          color="#fff"
+          href="#"
+          backgroundColor="#fff"
+          color="#1A202C"
           fontSize="14px"
           fontWeight="bold"
           textTransform="uppercase"
+          py="20px"
           w="100%"
-          p="1rem"
-          textAlign="center"
-          pos="absolute"
-          left="0"
-          bottom="0"
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
         >
-          iniciar sesión
+          <Box as="span">Registro Genealógico</Box>
+          <Box as={MdExitToApp} fontSize="1.2rem" mr="5px" />
         </Box>
         </Box>
       )}  

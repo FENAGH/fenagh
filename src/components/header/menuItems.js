@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/core';
 // Components
 import MenuItem from './menuItem'
 
-const MenuItems = ({show}) => {
+const MenuItems = () => {
   return(
     <StaticQuery
       query={graphql`
@@ -27,15 +27,8 @@ const MenuItems = ({show}) => {
         <Box
           as="nav"
           backgroundColor={{base: "#fff", lg: "transparent"}}
-          display={{base:"none", md: show ? "flex" : "none", lg: "flex"}}
+          display={{base: "none", lg: "flex"}}
           w="100%"
-          h={{md:"60px", lg: "auto"}}
-          px={{md: "2em", lg: "0"}}
-          borderTop={{base: "2px solid #3a8537", lg: "0px transparent"}}
-          pos={{md: "absolute", lg: "initial"}}
-          top="52px"
-          left="0"
-          bottom="0"
         >
         {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
           <MenuItem
