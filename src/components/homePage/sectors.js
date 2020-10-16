@@ -154,7 +154,7 @@ const Sectors = () => {
           fontSize="12px" 
           color="#ef6123"
         >
-          sobre nuestros agremiados
+          que hacemos
         </Heading>
         <Heading 
           as="h2" 
