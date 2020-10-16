@@ -1,11 +1,11 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import styled from '@emotion/styled'
-import { Box, Heading } from '@chakra-ui/core'
+import { Box, Heading, PseudoBox } from '@chakra-ui/core'
 // Components
-import { Container } from '../globals'
+import { Container, FlexContainer } from '../globals'
 // Styles
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
@@ -91,6 +91,8 @@ const CustomSlider = ({slides}) => {
           key={base}
           pos="relative"
           px="1rem"
+          borderRadius="sm"
+          overflow="hidden"
         >
           <Img 
             fluid={childImageSharp.fluid} 
@@ -126,7 +128,10 @@ const CustomSlider = ({slides}) => {
 const Sectors = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}}) {
+      allFile(
+        filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}},
+        limit: 3
+      ) {
         edges {
           node {
             base
@@ -139,35 +144,104 @@ const Sectors = () => {
         }
       }
     }
-  `)  
+  `) 
   return (
     <Container py="5rem">
       <Box
         maxWidth="520px"
         textAlign="center"
         m="0 auto"
-        mb="2rem"
+        mb="3rem"
       >
         <Heading 
           as="h3" 
-          textTransform="uppercase" 
-          fontSize="12px" 
           color="#ef6123"
+          fontSize="12px"
+          textTransform="uppercase" 
+          letterSpacing="0.2em"
         >
-          que hacemos
+          sobre nosotros
         </Heading>
         <Heading 
-          as="h2" 
+          as="h2"
           fontFamily="Bebas Neue" 
-          fontSize="4rem"
+          fontSize={{base: "3rem", lg: "4rem"}}
           textTransform="uppercase"
-          lineHeight="1"
           mt="1rem"
         >
           sectores representados
         </Heading>
       </Box>
-      <CustomSlider slides={data.allFile.edges} />
+      <FlexContainer 
+        flexWrap="wrap"
+        mx={{md: "-15px"}}
+      >
+        {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
+          <Box
+            key={base}
+            w="100%"
+            flex={{md: "0 0 33.333333%"}}
+            maxW={{md: "33.333333%"}}
+            borderRadius="md"
+            px={{md: "15px"}}
+            mb="2.5rem"
+            maxW="520px"
+            
+          >
+            <PseudoBox
+              as={Link}
+              to={`/sectores/${base.split(".")[0]}`}
+              display="block"
+              borderRadius="md"
+              pos="relative"
+              overflow="hidden"
+            >
+              <Img 
+                fluid={childImageSharp.fluid} 
+                alt={`sector ${base.split(".")[0]}`}
+                style={{width: "100%"}}
+              />
+              <Box 
+                w="100%"
+                h="80%"
+                backgroundColor="rgb(0,0,0)"
+                background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)"
+                pos="absolute"
+                bottom="0"
+              />
+              <Box
+                pos="absolute"
+                bottom="40px"
+                left="40px"
+              >
+                <Heading 
+                  as="h3"
+                  color="#fff"
+                  fontFamily="Bebas Neue" 
+                  size="2xl"
+                  fontWeight="500"
+                  zIndex="1"
+                >Sector <br/> {base.split(".")[0]}</Heading>
+              </Box>
+            </PseudoBox>
+          </Box>
+        ))}
+        <Box mt="2rem">
+          <PseudoBox 
+            as={Link}
+            to="/" 
+            bg="#3A8537"
+            color="#fff" 
+            textTransform="uppercase"
+            fontWeight="500"
+            borderRadius="md"
+            display="inline-block"
+            p="1.5rem 1.2rem"
+          >
+            Ver Todos los Sectores
+          </PseudoBox>
+        </Box>
+      </FlexContainer>
     </Container>
   )
 }
