@@ -26,7 +26,8 @@ export default function(){
     return (
       <Box 
         ref={headerRef}
-        as="header"
+				as="header"
+				display="block"
         w="100%"
         h={{base: "52px", lg:"107px"}}
 				zIndex="1000"

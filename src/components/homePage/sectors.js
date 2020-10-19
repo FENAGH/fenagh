@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import styled from '@emotion/styled'
-import { Box, Heading, PseudoBox } from '@chakra-ui/core'
+import { Box, Heading, PseudoBox, Text } from '@chakra-ui/core'
 // Components
 import { Container, FlexContainer } from '../globals'
 // Styles
@@ -146,22 +146,22 @@ const Sectors = () => {
     }
   `) 
   return (
-    <Container py="5rem">
+    <Container py="5rem" zIndex="10">
       <Box
         maxWidth="520px"
         textAlign="center"
         m="0 auto"
         mb="3rem"
       >
-        <Heading 
-          as="h3" 
+        <Text
           color="#ef6123"
           fontSize="12px"
+          fontWeight="bold"
           textTransform="uppercase" 
           letterSpacing="0.2em"
         >
           sobre nosotros
-        </Heading>
+        </Text>
         <Heading 
           as="h2"
           fontFamily="Bebas Neue" 

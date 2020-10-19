@@ -43,7 +43,7 @@ const BottomBar = ({ showOnScroll }) => {
       position={{base: "fixed", lg: showOnScroll ? "fixed" : "relative"}}
       top={{base: 0, lg: showOnScroll ? 0 : "unset"}}
       left={{base: 0, lg: showOnScroll ? 0 : "unset"}}
-      zIndex="1"
+      zIndex="1000"
       w="100%"
       animation={{base: "none", lg: showOnScroll && `${barSlideDown} .3s`}}
     >
