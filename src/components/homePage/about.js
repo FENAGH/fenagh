@@ -8,9 +8,9 @@ import { Container, FlexContainer } from '../globals'
 const About = () => {
 	const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "about.jpg" }) {
+      file(relativePath: { eq: "about.png" }) {
         childImageSharp {
-          fluid(maxWidth: 450) {
+          fluid(maxWidth: 520) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,16 +22,21 @@ const About = () => {
 			fluid 
 			as="section" 
 			backgroundColor="#e6e1dd"
-			pt="4rem"
+			pt="5rem"
 		>
 			<Container>
-				<FlexContainer spaceBetween isResponsive>
+				<FlexContainer 
+					spaceBetween 
+					isResponsive
+					alignItems="flex-start"
+				>
 					<Box
 						w="100%"
 						display="block"
 						flex={{md: "0 0 41.66666667%"}}
 						maxWidth={{base: "100%", md:"41.66666667%"}}
 						mb={{base: "40px", md: "0"}}
+						ml={{md: "12%", lg:"8.33333333%"}}
 					>
 						
 						<Text
@@ -77,13 +82,16 @@ const About = () => {
 						</PseudoBox>
 					</Box>
 					<Box
-						ml={{md: "12%", lg:"8.33333333%"}}
 						w="100%"
-						maxWidth="520px"
+						maxWidth="460px"
 						pos="relative"
+						boxShadow="0px 15px 30px 0px rgba(0,0,0,.4)"
 						zIndex="2"
 					>
-						<Img fluid={data.file.childImageSharp.fluid} style={{width: "100%", borderRadius:"5px"}}/>
+						<Img 
+							fluid={data.file.childImageSharp.fluid} 
+							style={{width:"100%"}}
+						/>
 					</Box>
 				</FlexContainer>
 			</Container>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/core';
+import { Box, Heading, Image } from '@chakra-ui/core';
+import { ImQuotesLeft } from 'react-icons/im'
 // Components
 import { Container } from '../globals'
 
@@ -8,8 +9,9 @@ const Reviews = () => {
     <Container 
       fluid
       mt="-50px"
+      pos="relative"
     >
-      <Box w="100%" mb="-1px">
+      <Box w="100%">
         <Image
           alt="FENAGH campo de vacas" 
           src={require('../../images/edges-bg.png')} 

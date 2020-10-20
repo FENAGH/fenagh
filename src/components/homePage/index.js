@@ -4,7 +4,7 @@ import Hero from './hero'
 import About from './about'
 import Sectors from './sectors'
 import Benefits from './benefits'
-import Reviews from './Reviews'
+import Reviews from './reviews'
 
 const HomePage = () => {
   return (
