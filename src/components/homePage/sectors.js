@@ -10,7 +10,7 @@ import { Container, FlexContainer } from '../globals'
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 
-const CustomSliderStyles = styled(Slider)`
+const SliderWrapper = styled(Slider)`
   .slick-arrow{
     /* New custom styles */
     display: block;
@@ -25,6 +25,7 @@ const CustomSliderStyles = styled(Slider)`
     cursor: pointer;
     outline: 0;
     transition: background-color .3s ease, border-color .3s ease;
+
     /* Disabled old arrow icons */
     &:before, &:after{
       content: none;
@@ -50,14 +51,14 @@ const CustomSliderStyles = styled(Slider)`
     transform: rotate(180deg);
     transform-origin: center 12px;
     z-index: 1;
-    left: 25px;
+    left: -10px;
   }
   .slick-next{
-    right: 25px;
+    right: -10px;
   }
 `
 
-const CustomSlider = ({slides}) => {
+const CustomSlider = ({children}) => {
   const settings = {
     dots: false,
     infinite: false,
@@ -85,52 +86,63 @@ const CustomSlider = ({slides}) => {
     ]
   }
   return(
-    <CustomSliderStyles {...settings}>
-      {slides.map(({node: {base, childImageSharp}}) => (
-        <Box 
-          key={base}
-          pos="relative"
-          px="1rem"
-          borderRadius="sm"
-          overflow="hidden"
-        >
-          <Img 
-            fluid={childImageSharp.fluid} 
-            alt={`sector ${base.split(".")[0]}`}
-            style={{width: "100%"}}
-          />
-          <Box
-            backgroundColor="rgb(0,0,0)"
-            background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)"
-            w="calc(100% - 32px)"
-            h="80%"
-            pos="absolute"
-            bottom="0"
-          >
-            <Heading 
-              as="h3" 
-              color="#fff"
-              size="lg" 
-              textTransform="capitalize"
-              pos="absolute"
-              left="1.5rem"
-              bottom="1.5rem"
-            >
-              {base.split(".")[0]}
-            </Heading>
-          </Box>
-        </Box>
-      ))}
-    </CustomSliderStyles>
+  <SliderWrapper {...settings}>{children}</SliderWrapper>
   )
 }
+
+const SliderCard = ({base, childImageSharp}) => (
+  <Box
+    w="100%"
+    flex={{md: "0 0 33.333333%"}}
+    maxW={{md: "33.333333%"}}
+    px={{md: "15px"}}
+    mb="2.5rem"
+    maxW="520px"
+  >
+    <PseudoBox
+      as={Link}
+      // to={`/sectores/${base.split(".")[0]}`}
+      to="/"
+      display="block"
+      pos="relative"
+      overflow="hidden"
+    >
+      <Img 
+        fluid={childImageSharp.fluid} 
+        alt={`sector ${base.split(".")[0]}`}
+        style={{width: "100%"}}
+      />
+      <Box 
+        w="100%"
+        h="80%"
+        backgroundColor="rgb(0,0,0)"
+        background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)"
+        pos="absolute"
+        bottom="0"
+      />
+      <Box
+        pos="absolute"
+        bottom="40px"
+        left="40px"
+      >
+        <Heading 
+          as="h3"
+          color="#fff"
+          fontFamily="Bebas Neue" 
+          size="2xl"
+          fontWeight="500"
+          zIndex="1"
+        >Sector <br/> {base.split(".")[0]}</Heading>
+      </Box>
+    </PseudoBox>
+  </Box>
+)
 
 const Sectors = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}},
-        limit: 3
+        filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}}
       ) {
         edges {
           node {
@@ -146,102 +158,104 @@ const Sectors = () => {
     }
   `) 
   return (
-    <Container py="5rem" zIndex="10">
-      <Box
-        maxWidth="520px"
-        textAlign="center"
-        m="0 auto"
-        mb="3rem"
-      >
-        <Text
-          color="#ef6123"
-          fontSize="12px"
-          fontWeight="bold"
-          textTransform="uppercase" 
-          letterSpacing="0.2em"
+    <Container 
+      fluid
+      bg="#e6e1dd"
+      pt="5rem" 
+      zIndex="10"
+    >
+      <Container>
+        <FlexContainer 
+          spaceBetween 
+          isResponsive
+          alignItems="flex-start"
+          pt="2rem"
+          mb="120px"
         >
-          sobre nosotros
-        </Text>
-        <Heading 
-          as="h2"
-          fontFamily="Bebas Neue" 
-          fontSize={{base: "3rem", lg: "4rem"}}
-          textTransform="uppercase"
-          mt="1rem"
-        >
-          sectores representados
-        </Heading>
-      </Box>
-      <FlexContainer 
-        flexWrap="wrap"
-        mx={{md: "-15px"}}
-      >
-        {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
           <Box
-            key={base}
-            w="100%"
-            flex={{md: "0 0 33.333333%"}}
-            maxW={{md: "33.333333%"}}
-            borderRadius="md"
-            px={{md: "15px"}}
-            mb="2.5rem"
-            maxW="520px"
-            
-          >
-            <PseudoBox
-              as={Link}
-              to={`/sectores/${base.split(".")[0]}`}
-              display="block"
-              borderRadius="md"
-              pos="relative"
-              overflow="hidden"
-            >
-              <Img 
-                fluid={childImageSharp.fluid} 
-                alt={`sector ${base.split(".")[0]}`}
-                style={{width: "100%"}}
-              />
-              <Box 
-                w="100%"
-                h="80%"
-                backgroundColor="rgb(0,0,0)"
-                background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)"
-                pos="absolute"
-                bottom="0"
-              />
-              <Box
-                pos="absolute"
-                bottom="40px"
-                left="40px"
-              >
-                <Heading 
-                  as="h3"
-                  color="#fff"
-                  fontFamily="Bebas Neue" 
-                  size="2xl"
-                  fontWeight="500"
-                  zIndex="1"
-                >Sector <br/> {base.split(".")[0]}</Heading>
-              </Box>
-            </PseudoBox>
+						w="100%"
+						display="block"
+						flex={{md: "0 0 41.66666667%"}}
+            maxWidth={{base: "100%", md:"41.66666667%"}}
+            ml={{md: "12%", lg:"8.33333333%"}}
+						mb={{base: "40px", md: "0"}}
+					>
+            <Text
+							color="#5a5957"
+							fontSize="12px"
+							fontWeight="bold"
+							textTransform="uppercase" 
+							letterSpacing="0.2em"
+						>
+							our innovation
+						</Text>
+						<Heading 
+							as="h2"
+							fontFamily="Bebas Neue" 
+							fontSize={{base: "3rem", lg: "4rem"}}
+							textTransform="uppercase"
+							mt="1rem"
+						>
+							Sectores Representados
+						</Heading>
           </Box>
-        ))}
-        <Box mt="2rem">
-          <PseudoBox 
-            as={Link}
-            to="/" 
-            bg="#3A8537"
-            color="#fff" 
-            textTransform="uppercase"
-            fontWeight="500"
-            borderRadius="md"
-            display="inline-block"
-            p="1.5rem 1.2rem"
+          <Box>
+            <Text 
+							color="#676767" 
+							mb="2.5rem"
+						>
+							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable, there are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+						</Text>
+            <PseudoBox
+							as={Link}
+							to="/"
+							bg="#e2b51e"
+							color="#000"
+							fontSize="sm"
+							fontWeight="bold"
+							textTransform="uppercase"
+							p="1rem 1.5rem"
+							transition="background-color .3s ease"
+							_hover={{
+								backgroundColor: "#d2a818",
+							}}
+						>
+							Learn more
+						</PseudoBox>
+          </Box>
+        </FlexContainer>
+        <Box
+          textAlign="center"
+          m="0 auto"
+          mb="3rem"
+        >
+          <Heading 
+            as="h3"
+            fontSize={{base: "1.1rem", lg: "1.5rem"}}
+            mb=".5rem"
           >
-            Ver Todos los Sectores
-          </PseudoBox>
+            Where we started, and where we're heading
+          </Heading>
+          <Text color="#676767">
+            We're continuing our strong legacy and mission lorem ipsum.
+          </Text>
         </Box>
-      </FlexContainer>
+        <CustomSlider>
+          {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
+            <SliderCard 
+              key={base}
+              base={base}
+              childImageSharp={childImageSharp}
+            />
+          ))}
+        </CustomSlider>
+      </Container>
+      <Box 
+        bg="#000"
+        w="100%"
+        h="400px"
+        mt="-300px"
+      />
     </Container>
   )
 }

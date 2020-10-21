@@ -53,7 +53,7 @@ function Footer() {
   return (
     <Box 
       as="footer"
-      backgroundColor="#262626"
+      backgroundColor="#000"
       color="white"
       w="100%"
     >

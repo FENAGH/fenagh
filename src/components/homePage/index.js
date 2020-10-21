@@ -5,6 +5,7 @@ import About from './about'
 import Sectors from './sectors'
 import Benefits from './benefits'
 import Reviews from './reviews'
+import News from './news'
 
 const HomePage = () => {
   return (
@@ -12,9 +13,9 @@ const HomePage = () => {
       <Hero />
       <About />
       <Reviews />
+      <News />
       <Sectors />
-      <Benefits />
-    </React.Fragment>
+    </React.Fragment> 
   )
 }
 

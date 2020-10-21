@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Box, Flex, Heading, PseudoBox, Text } from '@chakra-ui/core'
-import Img from "gatsby-image"
+import { Box, Heading, PseudoBox, Text } from '@chakra-ui/core'
 // Components
+import Img from "gatsby-image"
 import { Container, FlexContainer } from '../globals'
 
 const About = () => {

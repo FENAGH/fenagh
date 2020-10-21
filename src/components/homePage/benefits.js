@@ -16,8 +16,6 @@ const Benefits = () => {
     <Container 
       fluid
       bg="#262626"
-      p="320px 0 220px"
-      mt="-320px"
       pos="relative"
     >
       <Box 
@@ -33,12 +31,6 @@ const Benefits = () => {
         bottom="0"
       />
       <Container mb="2.5rem">
-        <Box 
-          borderTop="1px solid"
-          borderTopColor="#353535"
-          mb="4.5rem"
-          w="100%"
-        />
         <FlexContainer 
           isResponsive 
           mx="-15px"
