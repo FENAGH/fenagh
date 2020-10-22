@@ -15,8 +15,11 @@ const MenuItems = () => {
                 name
                 link
                 subMenu{
-                  name,
-                  link
+                  flayOutName,
+                  flayOutMenu{
+                    flayOutMenu_name,
+                    flayOutMenu_link
+                  }
                 }
               }
             }

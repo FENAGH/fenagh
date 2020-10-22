@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { theme, ThemeProvider } from "@chakra-ui/core";
 // Components
 import Header from "./header"
 import Footer from "./footer";
+
+
 
 const breakpoints = ["360px", "768px", "1024px", "1440px"];
 breakpoints.sm = breakpoints[0];
@@ -18,6 +20,7 @@ const newTheme = {
 };
 
 const Layout = ({ children }) => {
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,9 +31,15 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [togglePopperMask, setTogglePopperMask ] = useState(false)
+
   return (
     <ThemeProvider theme={newTheme}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header 
+        siteTitle={data.site.siteMetadata?.title || `Title`} 
+        togglePopperMask={togglePopperMask}
+        setTogglePopperMask={setTogglePopperMask}
+      />
       <main>{children}</main>
       <Footer />
     </ThemeProvider>

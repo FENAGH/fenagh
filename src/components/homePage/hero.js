@@ -63,7 +63,7 @@ const Hero = () => {
         <Img fluid={data.file.childImageSharp.fluid} style={{width: "100%"}}/>
         <Box 
           w="100%"
-          h="520px"
+          h="100%"
           backgroundColor="rgb(0,0,0)"
           background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)"
           pos="absolute"

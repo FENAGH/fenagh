@@ -5,52 +5,101 @@ module.exports = {
     author: '@adinjesuha',
     menuLinks: [
       {
-        name: 'Quienes Somos',
-        link: '/acerca-de',
+        name: 'Institución',
+        link: null,
         subMenu: [
           {
-            name: 'Historia',
-            link: '/'
+            flayOutName: 'Acerca de FENAGH',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Historia',
+                flayOutMenu_link: '/page-2'
+              },
+              {
+                flayOutMenu_name: 'Misión & Visión',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Objetivos',
+                flayOutMenu_link: '/'
+              }
+            ]
           },
           {
-            name: 'Misión & Visión',
-            link: '/'
-          },
-          {
-            name: 'Estatutos',
-            link: '/'
-          },
-          {
-            name: 'Junta Directiva',
-            link: '/'
+            flayOutName: 'Nuestra Gente',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Mensaje del Presidente',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Junta Directiva',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Personal',
+                flayOutMenu_link: '/'
+              },
+            ]
           },
         ]
       },
       {
-        name: 'Asociaciones',
-        link: '/',
+        name: 'Socios',
+        link: null,
         subMenu: [
           {
-            name: 'Asociaciones Afiliadas',
-            link: '/'
+            flayOutName: 'Afiliados',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Asociaciones',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Empresas',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Proyectos',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Convenios Firmados',
+                flayOutMenu_link: '/'
+              },
+            ]
           },
           {
-            name: 'U.R.S.A.C.',
-            link: '/'
+            flayOutName: 'Leyes Agrícolas',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Tribuario',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Agrario',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Sanitario',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Comercial',
+                flayOutMenu_link: '/'
+              },
+            ]
           },
-          {
-            name: 'C.R.E.L.',
-            link: '/'
-          },
+
         ]
       },
       {
-        name: 'Sectores',
+        name: 'Cuota Pecuaria',
         link: '/',
         subMenu: null
       },
       {
-        name: 'FONACSAH',
+        name: 'Noticias',
         link: '/',
         subMenu: null
       },
