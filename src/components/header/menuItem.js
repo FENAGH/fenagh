@@ -79,6 +79,7 @@ const FlayOutPanel = styled.div`
       .flayout-li{
         a{
           color: rgb(74, 78, 87);
+          font-weight: 600;
           display: block;
           padding: 8px 10px;
           margin-bottom: 4px;
@@ -144,7 +145,7 @@ const MenuItem = ({link, value, subMenu}) => {
         to={link}
         color="#1A202C"
         fontSize="14px"
-        fontWeight="medium"
+        fontWeight="bold"
         textTransform="uppercase"
         mr="1.2rem"
         h="60px"
