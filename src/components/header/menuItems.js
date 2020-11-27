@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 // Components
 import MenuItem from './menuItem'
 

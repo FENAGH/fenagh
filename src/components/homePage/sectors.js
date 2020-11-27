@@ -3,9 +3,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import styled from '@emotion/styled'
-import { Box, Heading, PseudoBox, Text } from '@chakra-ui/core'
+import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
-import { Container, FlexContainer } from '../globals'
+import { ButtonLink, Container, FlexContainer } from '../globals'
 // Styles
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
@@ -18,7 +18,7 @@ const SliderWrapper = styled(Slider)`
     background-repeat: no-repeat;
     background-size: 2rem;
     background-color: transparent;
-    border: .2rem solid #3A8537;
+    border: .2rem solid #15640f;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -44,7 +44,7 @@ const SliderWrapper = styled(Slider)`
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%233A8537' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
     &:hover{
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
-      background-color: #3A8537;
+      background-color: #15640f;
     }
   }
   .slick-prev{
@@ -99,7 +99,7 @@ const SliderCard = ({base, childImageSharp}) => (
     mb="2.5rem"
     maxW="520px"
   >
-    <PseudoBox
+    <Box
       as={Link}
       // to={`/sectores/${base.split(".")[0]}`}
       to="/"
@@ -134,7 +134,7 @@ const SliderCard = ({base, childImageSharp}) => (
           zIndex="1"
         >Sector <br/> {base.split(".")[0]}</Heading>
       </Box>
-    </PseudoBox>
+    </Box>
   </Box>
 )
 
@@ -160,7 +160,7 @@ const Sectors = () => {
   return (
     <Container 
       fluid
-      bg="#e6e1dd"
+      bg="brandGreen.70"
       pt="5rem" 
       zIndex="10"
     >
@@ -169,8 +169,7 @@ const Sectors = () => {
           spaceBetween 
           isResponsive
           alignItems="flex-start"
-          pt="2rem"
-          mb="120px"
+          py="4rem"
         >
           <Box
 						w="100%"
@@ -178,68 +177,39 @@ const Sectors = () => {
 						flex={{md: "0 0 41.66666667%"}}
             maxWidth={{base: "100%", md:"41.66666667%"}}
             ml={{md: "12%", lg:"8.33333333%"}}
-						mb={{base: "40px", md: "0"}}
 					>
             <Text
-							color="#5a5957"
+							color="brandGreen.30"
 							fontSize="12px"
 							fontWeight="bold"
 							textTransform="uppercase" 
-							letterSpacing="0.2em"
+							letterSpacing="1px"
 						>
 							our innovation
 						</Text>
 						<Heading 
-							as="h2"
+              as="h2"
+              color="white"
 							fontFamily="Bebas Neue" 
 							fontSize={{base: "3rem", lg: "4rem"}}
 							textTransform="uppercase"
-							mt="1rem"
+              mt="1rem"
+              letterSpacing="1px"
+              lineHeight="1.1"
 						>
 							Sectores Representados
 						</Heading>
           </Box>
           <Box>
             <Text 
-							color="#676767" 
+							color="rgba(255,255,255,.8)" 
 							mb="2.5rem"
 						>
 							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable, there are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
 						</Text>
-            <PseudoBox
-							as={Link}
-							to="/"
-							bg="#e2b51e"
-							color="#000"
-							fontSize="sm"
-							fontWeight="bold"
-							textTransform="uppercase"
-							p="1rem 1.5rem"
-							transition="background-color .3s ease"
-							_hover={{
-								backgroundColor: "#d2a818",
-							}}
-						>
-							Learn more
-						</PseudoBox>
+            <ButtonLink invert path="/">ver más</ButtonLink>
           </Box>
         </FlexContainer>
-        <Box
-          textAlign="center"
-          m="0 auto"
-          mb="3rem"
-        >
-          <Heading 
-            as="h3"
-            fontSize={{base: "1.1rem", lg: "1.5rem"}}
-            mb=".5rem"
-          >
-            Where we started, and where we're heading
-          </Heading>
-          <Text color="#676767">
-            We're continuing our strong legacy and mission lorem ipsum.
-          </Text>
-        </Box>
         <CustomSlider>
           {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
             <SliderCard 
@@ -251,7 +221,7 @@ const Sectors = () => {
         </CustomSlider>
       </Container>
       <Box 
-        bg="#000"
+        bg="brandBG"
         w="100%"
         h="400px"
         mt="-300px"

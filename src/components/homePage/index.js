@@ -3,7 +3,6 @@ import React from 'react'
 import Hero from './hero'
 import About from './about'
 import Sectors from './sectors'
-import Benefits from './benefits'
 import Reviews from './reviews'
 import News from './news'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from "gatsby"
-import { Box, Flex, PseudoBox } from '@chakra-ui/core'
+import { Box, Flex } from '@chakra-ui/react'
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa'
 // Components
 import { Container, FlexContainer } from './globals'
@@ -85,7 +85,7 @@ function Footer() {
             </Box>
             <Flex>
             {icons.map( ({id, icon}) => (
-              <PseudoBox 
+              <Box 
                 key={id}
                 as={Link} 
                 to="/"
@@ -98,8 +98,8 @@ function Footer() {
                 h="2rem"
                 _notLast={{mr:"1.5rem"}}
               >
-                <PseudoBox as={icon}/>
-              </PseudoBox>
+                <Box as={icon}/>
+              </Box>
             ))}
             </Flex>
           </FlexContainer>

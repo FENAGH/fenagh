@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Box, Heading, PseudoBox } from '@chakra-ui/core'
+import { Box, Heading } from '@chakra-ui/react'
 // Components
-import { Container } from '../globals'
+import { Container, ButtonLink } from '../globals'
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -42,22 +42,7 @@ const Hero = () => {
         >
           CULTIVATE YOUR FUTURE
         </Heading>
-        <PseudoBox
-          as={Link}
-          to="/"
-          bg="#e2b51e"
-          color="#000"
-          fontSize="sm"
-          fontWeight="bold"
-          textTransform="uppercase"
-          p="1rem 1.5rem"
-          transition="background-color .3s ease"
-          _hover={{
-            backgroundColor: "#d2a818",
-          }}
-        >
-          Learn more
-        </PseudoBox>
+        <ButtonLink brand>ver más</ButtonLink>
       </Box>
       <Box w="100%" pos="relative">
         <Img fluid={data.file.childImageSharp.fluid} style={{width: "100%"}}/>

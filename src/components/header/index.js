@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby';
-import { Box, Button, Flex, PseudoBox } from "@chakra-ui/core";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import { MdChevronRight } from 'react-icons/md'
 // Components
 import { Container, FlexContainer } from '../globals';
@@ -226,9 +226,9 @@ export default function(){
 	const handleToggle = () => setShow(!show);
 	
 	return (
-		<PseudoBox
+		<Box
 			as="header"
-			backgroundColor="#fff"
+			backgroundColor="brandBG"
 			position="fixed"
 			zIndex="20"
 			w="100%"
@@ -257,22 +257,22 @@ export default function(){
 						<MenuItems />
 					</Box>
 
-					<PseudoBox
-						as="a"
-						href="#"
+					<Box
+						as={Link}
+						to="/"
 						display={{base: "none", md: "inline-block"}}
 						h={{md: "50px", lg: "60px"}}
 						lineHeight={{md: "50px", lg: "60px"}}
-						bg="#3A8537"
-						color="#fff"
+						bg="brandGreen.50"
+						color="brandGreen.30"
 						px="1.2rem"
 						fontSize="14px"
-						fontWeight="600"
+						fontWeight="700"
 						textTransform="uppercase"
 						mr={{md: "2rem", lg: "0"}}
 					>
 						Iniciar Sesión
-					</PseudoBox>
+					</Box>
 
 					<ToggleMobileMenu handleToggle={handleToggle}/>
 					
@@ -294,7 +294,7 @@ export default function(){
 						
 				</FlexContainer>
 			</Container>
-		</PseudoBox>
+		</Box>
 	)
 }
   

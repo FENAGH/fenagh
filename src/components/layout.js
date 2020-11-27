@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { theme, ThemeProvider } from "@chakra-ui/core";
+import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 // Components
 import Header from "./header"
 import Footer from "./footer";
@@ -14,10 +14,28 @@ breakpoints.md = breakpoints[1];
 breakpoints.lg = breakpoints[2];
 breakpoints.xl = breakpoints[3];
 
-const newTheme = {
-  ...theme,
+const theme = extendTheme({
+  colors: {
+    brandGreen: {
+      70: "#09210e",
+      50: "#15640f",
+      30: "#b9df3c",
+      10: "#dcf7b7",
+    },
+    brandYellow: "#ffd653",
+    brandBG: "#f5f2e3",
+  },
+  fonts: {
+    body: "Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    heading: "Bebas Neue, sans-serif",
+  },
+  fontWeights: {
+    normal: 400,
+    medium: 500,
+    bold: 700,
+  },
   breakpoints
-};
+})
 
 const Layout = ({ children }) => {
 
@@ -34,7 +52,7 @@ const Layout = ({ children }) => {
   const [togglePopperMask, setTogglePopperMask ] = useState(false)
 
   return (
-    <ThemeProvider theme={newTheme}>
+    <ChakraProvider theme={theme}>
       <Header 
         siteTitle={data.site.siteMetadata?.title || `Title`} 
         togglePopperMask={togglePopperMask}
@@ -42,7 +60,7 @@ const Layout = ({ children }) => {
       />
       <main>{children}</main>
       <Footer />
-    </ThemeProvider>
+    </ChakraProvider>
   )
 }
 

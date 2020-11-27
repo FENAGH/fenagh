@@ -103,23 +103,17 @@ module.exports = {
         link: '/',
         subMenu: null
       },
-      {
-        name: 'Convención 2020',
-        link: '/',
-        subMenu: null
-      },
     ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-chakra-ui`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Bebas Neue\:400`,
-        ],
-        display: 'swap'
+          `Roboto\:400,500,700`
+        ]
       }
     },
     {

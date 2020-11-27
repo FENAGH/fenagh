@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Box, PseudoBox } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import styled from "@emotion/styled";
 import { MdKeyboardArrowDown } from 'react-icons/md'
 // Hook
@@ -137,7 +137,7 @@ const MenuItem = ({link, value, subMenu}) => {
   }
   return (
     <>
-      <PseudoBox
+      <Box
         role="group"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -147,7 +147,7 @@ const MenuItem = ({link, value, subMenu}) => {
         fontSize="14px"
         fontWeight="bold"
         textTransform="uppercase"
-        mr="1.2rem"
+        px=".8rem"
         h="60px"
         display="flex"
         alignItems="center"
@@ -159,7 +159,7 @@ const MenuItem = ({link, value, subMenu}) => {
       >
         <Box as="span" mr="5px">{value}</Box>
         { subMenu && (
-          <PseudoBox 
+          <Box 
             as={MdKeyboardArrowDown}
             fontSize="1rem"
             mt="1px"
@@ -190,7 +190,7 @@ const MenuItem = ({link, value, subMenu}) => {
           </motion.div>
         )}
         </AnimatePresence>
-      </PseudoBox>
+      </Box>
       <AnimatePresence exitBeforeEnter>
         {isHovered && subMenu && (
           <Mask 

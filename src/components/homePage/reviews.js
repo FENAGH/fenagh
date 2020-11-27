@@ -1,14 +1,27 @@
 import React from 'react';
-import { Avatar, Box, Heading, Image, Stack, Text } from '@chakra-ui/core';
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { Avatar, Box, Heading, Stack, Text } from '@chakra-ui/react';
 import { ImQuotesLeft } from 'react-icons/im'
 // Components
 import { Container } from '../globals'
 
 const Reviews = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      reviewsImage: file(relativePath: { eq: "cows.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <Container 
       fluid
-      mt="-50px"
+      mt="-1.5rem"
       pos="relative"
     >
       <Box
@@ -29,9 +42,9 @@ const Reviews = () => {
         </Stack>
       </Box>
       <Box w="100%">
-        <Image
+        <Img
           alt="FENAGH campo de vacas" 
-          src={require('../../images/cows.png')} 
+          fluid={data.reviewsImage.childImageSharp.fluid}
           w="100%"
         />
       </Box>

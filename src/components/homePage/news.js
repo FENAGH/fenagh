@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Box, Heading, PseudoBox, Text } from '@chakra-ui/core'
+import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { Container, FlexContainer } from '../globals'
+import { ButtonLink, Container, FlexContainer } from '../globals'
 
 const fakePosts = [
   {
@@ -36,61 +36,45 @@ const FeaturedArticle = () => {
     }
   `)
   return(
-    <Box
-      w="100%"
-    >
+    <Box w="100%"> 
       <Box maxW="100%" mb="2rem">
         <Img fluid={data.file.childImageSharp.fluid} style={{width: "100%"}}/>
       </Box>
       <Box>
-        <Box as={Link} to="/">
-          <Heading as="h2" size="lg" mb="1rem">Ethical kinfolk meditation kale chips, celiac blog hammock selvage williamsburg echo park godard tousled. </Heading>
+        <Box as={Link} to="/blog">
+          <Heading as="h3" size="lg" fontWeight="normal" mb="1rem">Ethical kinfolk meditation kale chips, celiac blog hammock selvage williamsburg echo park godard tousled. </Heading>
         </Box>
-        <Text color="#676767" mb="1rem">Palo santo kitsch salvia tbh. Pok pok banh mi pickled copper mug adaptogen tousled echo park next level vape affogato ennui flannel vegan venmo. Messenger bag craft beer brunch vice, af lomo blog hexagon farm-to-table cliche.</Text>
+        <Text color="rgba(0,0,0,0.8)" mb="1rem">Palo santo kitsch salvia tbh. Pok pok banh mi pickled copper mug adaptogen tousled echo park next level vape affogato ennui flannel vegan venmo. Messenger bag craft beer brunch vice, af lomo blog hexagon farm-to-table cliche.</Text>
         <Text fontSize="0.8rem" color="#3a8537" fontWeight="medium" mb="2.5rem">
-          <Box as="span" mr="5px" color="#483e35" fontWeight="bold">Topics:</Box>
+          <Box as="span" mr="5px" color="rgba(0,0,0,0.6)" fontWeight="bold">Topics:</Box>
           Lorem ipsum, Dolor Quantum
         </Text>
-        <PseudoBox
-          as={Link}
-          to="/"
-          bg="#e2b51e"
-          color="#000"
-          fontSize="sm"
-          fontWeight="bold"
-          textTransform="uppercase"
-          p="1rem 1.5rem"
-          transition="background-color .3s ease"
-          _hover={{
-            backgroundColor: "#d2a818",
-          }}
-        >
-          Learn more
-        </PseudoBox>
       </Box>
     </Box>
   )
 }
 
 const News = () => (
-  <Box bg="#faf6f1" py="6rem">
+  <Box bg="brandBG" py="6rem">
     <Container>
       <FlexContainer alignItems="flex-start">
         <Box
           flex="0 0 50%"
           maxWidth="50%"
+          pr="2rem"
+          borderRight="1px solid #ddd9d1"
         >
           <FeaturedArticle />
         </Box>
         <Box
           flex="0 0 33.3333%"
           maxWidth="33.3333%"
-          pl="100px"
+          pl="2rem"
         >
           {fakePosts.map(post => (
             <Box
               key={post.id}
-              borderBottom="2px solid #ddd9d1"
+              borderBottom="1px solid #ddd9d1"
               pb="2rem"
               mb="2rem"
             >
@@ -98,23 +82,21 @@ const News = () => (
                 as={Link}
                 to="/"
               >
-                <Heading as="h2" size="md" mb="1rem" lineHeight="1.4">{post.title}</Heading>
-                <Text fontSize="0.8rem" color="#3a8537" fontWeight="medium">
-                  <Box as="span" mr="5px" color="#483e35" fontWeight="bold">Topics:</Box>
-                  {post.topics}
-                </Text>
+                <Heading 
+                  as="h3" 
+                  size="md" 
+                  mb="1rem" 
+                  fontWeight="normal" 
+                  lineHeight="1.2"
+                >{post.title}</Heading>
               </Box>
+              <Text fontSize="0.8rem" color="brandGreen.50" fontWeight="medium">
+                <Box as="span" mr="5px" color="rgba(0,0,0,0.6)" fontWeight="bold">Topics:</Box>
+                {post.topics}
+              </Text>
             </Box>
           ))}
-          <Box
-            as={Link}
-            to="/"
-            color="#3a8537"
-            fontSize="md"
-            fontWeight="bold"
-          >
-            View All Stories
-          </Box>
+          <ButtonLink brand>Ver Todo</ButtonLink>
         </Box>
       </FlexContainer>
     </Container>

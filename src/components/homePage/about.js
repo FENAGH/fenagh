@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { Box, Heading, PseudoBox, Text } from '@chakra-ui/core'
+import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { Container, FlexContainer } from '../globals'
+import { ButtonLink, Container, FlexContainer } from '../globals'
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -21,15 +21,11 @@ const About = () => {
 		<Container 
 			fluid 
 			as="section" 
-			backgroundColor="#e6e1dd"
-			pt="5rem"
+			backgroundColor="white"
+			py="6rem"
 		>
 			<Container>
-				<FlexContainer 
-					spaceBetween 
-					isResponsive
-					alignItems="flex-start"
-				>
+				<FlexContainer spaceBetween isResponsive>
 					<Box
 						w="100%"
 						display="block"
@@ -40,7 +36,7 @@ const About = () => {
 					>
 						
 						<Text
-							color="#5a5957"
+							color="brandGreen.50"
 							fontSize="12px"
 							fontWeight="bold"
 							textTransform="uppercase" 
@@ -50,43 +46,28 @@ const About = () => {
 						</Text>
 						<Heading 
 							as="h2"
-							fontFamily="Bebas Neue" 
+							color="#000"
 							fontSize={{base: "3rem", lg: "4rem"}}
 							textTransform="uppercase"
+							letterSpacing="1px"
+							lineHeight="1.1"
 							mt="1rem"
 						>
 							We’re leader in agriculture market
 						</Heading>
 						<Text 
-							color="#676767" 
+							color="rgba(0,0,0,0.5)"
 							mt="1.5rem"
 							mb="2rem"
 						>
 							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
 						</Text>
-						<PseudoBox
-							as={Link}
-							to="/"
-							bg="#e2b51e"
-							color="#000"
-							fontSize="sm"
-							fontWeight="bold"
-							textTransform="uppercase"
-							p="1rem 1.5rem"
-							transition="background-color .3s ease"
-							_hover={{
-								backgroundColor: "#d2a818",
-							}}
-						>
-							Learn more
-						</PseudoBox>
+						<ButtonLink brand>Ver más</ButtonLink>
 					</Box>
 					<Box
 						w="100%"
 						maxWidth="460px"
 						pos="relative"
-						boxShadow="0px 15px 30px 0px rgba(0,0,0,.4)"
-						zIndex="2"
 					>
 						<Img 
 							fluid={data.file.childImageSharp.fluid} 
