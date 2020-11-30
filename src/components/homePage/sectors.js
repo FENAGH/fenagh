@@ -11,6 +11,9 @@ import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 
 const SliderWrapper = styled(Slider)`
+  .slick-list{
+    overflow: unset;
+  }
   .slick-arrow{
     /* New custom styles */
     display: block;
@@ -51,10 +54,13 @@ const SliderWrapper = styled(Slider)`
     transform: rotate(180deg);
     transform-origin: center 12px;
     z-index: 1;
-    left: -10px;
+    /* left: -10px; */
+    top: calc(100% + 20px);
+    left: 10px;
   }
   .slick-next{
-    right: -10px;
+    left: 80px;
+    top: calc(100% + 20px);
   }
 `
 
@@ -94,7 +100,6 @@ const SliderCard = ({base, childImageSharp}) => (
   <Box
     w="100%"
     flex={{md: "0 0 33.333333%"}}
-    maxW={{md: "33.333333%"}}
     px={{md: "15px"}}
     mb="2.5rem"
     maxW="520px"
@@ -199,15 +204,15 @@ const Sectors = () => {
 						>
 							Sectores Representados
 						</Heading>
-          </Box>
-          <Box>
-            <Text 
-							color="rgba(255,255,255,.8)" 
-							mb="2.5rem"
-						>
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable, there are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-						</Text>
-            <ButtonLink invert path="/">ver más</ButtonLink>
+            <Box mt="1.5rem">
+              <Text 
+                color="rgba(255,255,255,.8)" 
+                mb="2.5rem"
+              >
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable, there are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+              </Text>
+              <ButtonLink invert path="/">ver más</ButtonLink>
+            </Box>
           </Box>
         </FlexContainer>
         <CustomSlider>
@@ -223,7 +228,7 @@ const Sectors = () => {
       <Box 
         bg="brandBG"
         w="100%"
-        h="400px"
+        h="500px"
         mt="-300px"
       />
     </Container>

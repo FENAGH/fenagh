@@ -1,10 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Avatar, Box, Heading, Stack, Text } from '@chakra-ui/react';
-import { ImQuotesLeft } from 'react-icons/im'
+import { Box, Heading, Flex } from '@chakra-ui/react'
 // Components
-import { Container } from '../globals'
+import { ButtonLink, Container } from '../globals'
 
 const Reviews = () => {
   const data = useStaticQuery(graphql`
@@ -24,23 +23,6 @@ const Reviews = () => {
       mt="-1.5rem"
       pos="relative"
     >
-      <Box
-        w="1024px"
-        textAlign="center"
-        pos="absolute" 
-        right="50%"
-        top="150px"
-        transform="translateX(50%)"
-      >
-        <Box as={ImQuotesLeft} m="0 auto" fontSize="2rem" fill="#3a8537" mb="1rem"/>
-        <Heading as="h2" size="xl" lineHeight="1.4" mb="1rem"> Fanny pack viral sustainable fixie beard mixtape pinterest franzen air plant shabby chic cronut vice vape art party four loko.</Heading>
-        <Text fontSize="1.1rem" color="#676767" mb="2rem"> — Luiz Eduardo Villeda de Rezende (Industrias ACME)</Text>
-        <Stack isInline justify="center" align="center" spacing="20px">
-          <Avatar size="lg" name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
-          <Avatar name="Ryan Florence" opacity="0.5" src="https://bit.ly/ryan-florence" />
-          <Avatar name="Kent Dodds" opacity="0.5" src="https://bit.ly/kent-c-dodds" />
-        </Stack>
-      </Box>
       <Box w="100%">
         <Img
           alt="FENAGH campo de vacas" 
@@ -48,6 +30,29 @@ const Reviews = () => {
           w="100%"
         />
       </Box>
+      <Flex
+        flexDir="column"
+        maxW="810px"
+        w="100%"
+        textAlign="center"
+        align="center"
+        pos="absolute" 
+        right="50%"
+        top="150px"
+        transform="translateX(50%)"
+      >
+        <Heading 
+          as="h3" 
+          size="xl"
+          fontSize={{base: "3rem", lg: "4rem"}}
+          lineHeight="1.2"
+          letterSpacing="1px"
+          mb="2rem"
+        > 
+          World-changing flavor starts on your plate. Get cooking.
+        </Heading>
+        <ButtonLink brand>our produce</ButtonLink>
+      </Flex>
     </Container>
   );
 };

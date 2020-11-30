@@ -32,7 +32,7 @@ const ToggleMobileMenu = ({handleToggle}) => (
 
 const MobileNav = ({show}) => (
 	<Box
-		bg="#fff"
+		bg="#f5f2e3"
 		boxShadow={show ? "rgba(51, 51, 51, 0.5) 0px 0px 30px -15px" : "rgba(51, 51, 51, 0) 0px 0px 30px -15px"}
 		transform={show ? "translateX(0%)" : "translateX(100%)"}
 		w={{base: "calc(2.5vw * 36)", md: "calc(2.5vw * 21)"}}
@@ -228,7 +228,7 @@ export default function(){
 	return (
 		<Box
 			as="header"
-			backgroundColor="brandBG"
+			backgroundColor="#fff"
 			position="fixed"
 			zIndex="20"
 			w="100%"

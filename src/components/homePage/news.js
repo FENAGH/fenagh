@@ -42,10 +42,10 @@ const FeaturedArticle = () => {
       </Box>
       <Box>
         <Box as={Link} to="/blog">
-          <Heading as="h3" size="lg" fontWeight="normal" mb="1rem">Ethical kinfolk meditation kale chips, celiac blog hammock selvage williamsburg echo park godard tousled. </Heading>
+          <Heading as="h3" fontSize="2rem" lineHeight="1.2" fontWeight="normal" mb="1rem">Ethical kinfolk meditation kale chips, celiac blog hammock selvage williamsburg echo park godard tousled. </Heading>
         </Box>
         <Text color="rgba(0,0,0,0.8)" mb="1rem">Palo santo kitsch salvia tbh. Pok pok banh mi pickled copper mug adaptogen tousled echo park next level vape affogato ennui flannel vegan venmo. Messenger bag craft beer brunch vice, af lomo blog hexagon farm-to-table cliche.</Text>
-        <Text fontSize="0.8rem" color="#3a8537" fontWeight="medium" mb="2.5rem">
+        <Text fontSize="0.8rem" color="#3a8537" fontWeight="medium">
           <Box as="span" mr="5px" color="rgba(0,0,0,0.6)" fontWeight="bold">Topics:</Box>
           Lorem ipsum, Dolor Quantum
         </Text>
@@ -84,10 +84,10 @@ const News = () => (
               >
                 <Heading 
                   as="h3" 
-                  size="md" 
-                  mb="1rem" 
+                  fontSize="1.6rem" 
                   fontWeight="normal" 
                   lineHeight="1.2"
+                  mb="1rem" 
                 >{post.title}</Heading>
               </Box>
               <Text fontSize="0.8rem" color="brandGreen.50" fontWeight="medium">
@@ -96,7 +96,7 @@ const News = () => (
               </Text>
             </Box>
           ))}
-          <ButtonLink brand>Ver Todo</ButtonLink>
+          <ButtonLink brand fullWidth>Ver Todo</ButtonLink>
         </Box>
       </FlexContainer>
     </Container>

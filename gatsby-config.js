@@ -112,7 +112,7 @@ module.exports = {
       options: {
         fonts: [
           `Bebas Neue\:400`,
-          `Roboto\:400,500,700`
+          `Roboto\:400,500,700`,
         ]
       }
     },

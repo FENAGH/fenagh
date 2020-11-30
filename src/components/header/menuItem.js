@@ -85,7 +85,7 @@ const FlayOutPanel = styled.div`
           margin-bottom: 4px;
           transform:translateX(-10px);
           &:hover{
-            color: #3A8537;
+            color: #15640f;
             text-decoration: underline;
           }
         }
@@ -154,7 +154,7 @@ const MenuItem = ({link, value, subMenu}) => {
         justifyContent={{base: "space-between"}}
         pos="relative"
         _hover={{
-          color: "#3A8537"
+          color: "brandGreen.50"
         }}
       >
         <Box as="span" mr="5px">{value}</Box>

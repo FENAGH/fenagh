@@ -42,7 +42,7 @@ export const ButtonLink = ({children, path, ...otherProps}) => (
     textTransform="uppercase"
     p="0 12px"
     h="54px"
-    w="180px"
+    w={otherProps.fullWidth ? "100%" : "180px"}
     display="flex"
     alignItems="center"
     justifyContent="center"

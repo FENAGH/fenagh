@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
         togglePopperMask={togglePopperMask}
         setTogglePopperMask={setTogglePopperMask}
       />
-      <main>{children}</main>
+      <main style={{overflowX: "hidden"}}>{children}</main>
       <Footer />
     </ChakraProvider>
   )

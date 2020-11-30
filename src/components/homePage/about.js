@@ -1,9 +1,9 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { ButtonLink, Container, FlexContainer } from '../globals'
+import { Container, FlexContainer } from '../globals'
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -62,7 +62,6 @@ const About = () => {
 						>
 							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
 						</Text>
-						<ButtonLink brand>Ver más</ButtonLink>
 					</Box>
 					<Box
 						w="100%"
