@@ -170,51 +170,36 @@ const Sectors = () => {
       zIndex="10"
     >
       <Container>
-        <FlexContainer 
-          spaceBetween 
-          isResponsive
-          alignItems="flex-start"
-          py="4rem"
+        <Box
+          w="100%"
+          display="block"
+          flex={{md: "0 0 41.66666667%"}}
+          maxWidth={{base: "100%", md:"41.66666667%"}}
+          ml={{md: "12%", lg:"8.33333333%"}}
+          mb="4rem"
         >
-          <Box
-						w="100%"
-						display="block"
-						flex={{md: "0 0 41.66666667%"}}
-            maxWidth={{base: "100%", md:"41.66666667%"}}
-            ml={{md: "12%", lg:"8.33333333%"}}
-					>
-            <Text
-							color="brandGreen.30"
-							fontSize="12px"
-							fontWeight="bold"
-							textTransform="uppercase" 
-							letterSpacing="1px"
-						>
-							our innovation
-						</Text>
-						<Heading 
-              as="h2"
-              color="white"
-							fontFamily="Bebas Neue" 
-							fontSize={{base: "3rem", lg: "4rem"}}
-							textTransform="uppercase"
-              mt="1rem"
-              letterSpacing="1px"
-              lineHeight="1.1"
-						>
-							Sectores Representados
-						</Heading>
-            <Box mt="1.5rem">
-              <Text 
-                color="rgba(255,255,255,.8)" 
-                mb="2.5rem"
-              >
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable, there are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-              </Text>
-              <ButtonLink invert path="/">ver más</ButtonLink>
-            </Box>
-          </Box>
-        </FlexContainer>
+          <Text
+            color="brandGreen.30"
+            fontSize="12px"
+            fontWeight="bold"
+            textTransform="uppercase" 
+            letterSpacing="1px"
+          >
+            our innovation
+          </Text>
+          <Heading 
+            as="h2"
+            color="white"
+            fontFamily="Bebas Neue" 
+            fontSize={{base: "3rem", lg: "4rem"}}
+            textTransform="uppercase"
+            mt="1rem"
+            letterSpacing="1px"
+            lineHeight="1.1"
+          >
+            Sectores Representados
+          </Heading>
+        </Box>
         <CustomSlider>
           {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
             <SliderCard 
