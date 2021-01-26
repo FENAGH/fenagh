@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useStaticQuery, graphql } from "gatsby"
 import { Link } from 'gatsby'
 import { Box } from "@chakra-ui/react"
 import styled from '@emotion/styled'
@@ -7,7 +8,7 @@ import { css } from '@emotion/react'
 import { Container, FlexContainer } from '../globals'
 import Logo from '../logo'
 import MenuItems from './menuItems'
-import MobileNav from '../mobile-nav'
+import MobileNav from '../mobileNav'
 
 const PanelBackgorund = styled.div`
 	background-color:#fff;
@@ -55,7 +56,27 @@ const ToggleMobileMenu = ({handleToggle, show}) => (
 
 export default function(){
 	const [show, setShow] = useState(false);
-  const [ scrolling, setScrolling ] = useState(false)
+	const [ scrolling, setScrolling ] = useState(false)
+	
+	const data = useStaticQuery(graphql`
+    query HeaderQuery {
+			site {
+				siteMetadata {
+					menuLinks {
+						name
+						link
+						subMenu{
+							flayOutName,
+							flayOutMenu{
+								flayOutMenu_name,
+								flayOutMenu_link
+							}
+						}
+					}
+				}
+			}
+    }
+	`)
 	
 	const handleToggle = () => setShow(!show);
 
@@ -98,9 +119,18 @@ export default function(){
 							<Logo />
 						</Box>
 					</Box>
-					<MenuItems scrolling={scrolling}/>
-					<ToggleMobileMenu handleToggle={handleToggle} show={show} />
-					<MobileNav show={show}/>
+					<MenuItems 
+						scrolling={scrolling} 
+						links={data.site.siteMetadata.menuLinks}
+					/>
+					<ToggleMobileMenu 
+						show={show} 
+						handleToggle={handleToggle} 
+					/>
+					<MobileNav 
+						show={show} 
+						links={data.site.siteMetadata.menuLinks}
+					/>
 					<PanelBackgorund show={show} />
 				</FlexContainer>
 			</Container>
