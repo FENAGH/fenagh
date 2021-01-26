@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 // Components
 import MenuItem from './menuItem'
 
-const MenuItems = () => {
+const MenuItems = ({scrolling}) => {
   return(
     <StaticQuery
       query={graphql`
@@ -31,7 +31,6 @@ const MenuItems = () => {
           as="nav"
           backgroundColor={{base: "#fff", lg: "transparent"}}
           display={{base: "none", lg: "flex"}}
-          w="100%"
         >
         {data.site.siteMetadata.menuLinks.map((menuLink, index) => (
           <MenuItem
@@ -39,6 +38,7 @@ const MenuItems = () => {
             link={menuLink.link} 
             value={menuLink.name}
             subMenu={menuLink.subMenu}
+            scrolling={scrolling}
           />
         ))}
         </Box>

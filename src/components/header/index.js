@@ -1,297 +1,107 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby';
-import { Box, Button, Flex } from "@chakra-ui/react";
-import { MdChevronRight } from 'react-icons/md'
+import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'gatsby'
+import { Box } from "@chakra-ui/react"
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 // Components
-import { Container, FlexContainer } from '../globals';
-import Logo from '../logo';
-import MenuItems from './menuItems';
+import { Container, FlexContainer } from '../globals'
+import Logo from '../logo'
+import MenuItems from './menuItems'
+import MobileNav from '../mobile-nav'
 
-const ToggleMobileMenu = ({handleToggle}) => (
+const PanelBackgorund = styled.div`
+	background-color:#fff;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height: 100vh;
+	transform: scaleY(0);
+	transition: transform .267s ease;
+	transform-origin: 0 0;
+	z-index: 1;
+	${props => props.show && css`
+		transform: scaleY(1);
+	`}
+`
+
+const ToggleMobileMenu = ({handleToggle, show}) => (
   <Box 
 		onClick={handleToggle}
-    display={{ base: "block", lg: "none" }} 
+    display={{ base: "flex", lg: "none" }} 
     cursor="pointer"
-    p=".7rem 1rem"
-		pos="fixed"
+    p=".5rem"
 		right="0"
 		top="0"
 		zIndex="21"
+		backgroundColor="#000"
+    borderRadius="50%"
+    w="40px"
+    h="40px"
+    alignItems="center"
+    justifyContent="center"
   >
     <svg
-      fill="#0d0e11"
-      width="30px"
-      viewBox="0 0 20 20"
+      fill="#fff"
+      w="30px"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>Menu</title>
-      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      <path d={show ? "M19 4q0.43 0 0.715 0.285t0.285 0.715q0 0.422-0.289 0.711l-6.297 6.289 6.297 6.289q0.289 0.289 0.289 0.711 0 0.43-0.285 0.715t-0.715 0.285q-0.422 0-0.711-0.289l-6.289-6.297-6.289 6.297q-0.289 0.289-0.711 0.289-0.43 0-0.715-0.285t-0.285-0.715q0-0.422 0.289-0.711l6.297-6.289-6.297-6.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285q0.422 0 0.711 0.289l6.289 6.297 6.289-6.297q0.289-0.289 0.711-0.289z" : "M3 6h18v2.016h-18v-2.016zM3 12.984v-1.969h18v1.969h-18zM3 18v-2.016h18v2.016h-18z"} />
     </svg>
   </Box>
 )
 
-const MobileNav = ({show}) => (
-	<Box
-		bg="#f5f2e3"
-		boxShadow={show ? "rgba(51, 51, 51, 0.5) 0px 0px 30px -15px" : "rgba(51, 51, 51, 0) 0px 0px 30px -15px"}
-		transform={show ? "translateX(0%)" : "translateX(100%)"}
-		w={{base: "calc(2.5vw * 36)", md: "calc(2.5vw * 21)"}}
-		h="auto"
-		pl="calc(2.5vw * 2.5)"
-		
-		zIndex="20"
-		transition="box-shadow 200ms ease-in-out 0s, opacity 200ms ease-in-out 0s, transform 200ms ease-in-out 0s"
-
-		pos="fixed"
-		top="0"
-		right="0"
-		
-		display={{ base: "flex", lg: "none" }} 
-		flexDir="column"
-
-		style={{
-			inset:"0px 0px 0px auto",
-		}}
-	>
-		<Flex
-			h="50px"
-			flexDir="row"
-			alignItems="center"
-		>
-			<Box
-				as={Link}
-				to="/"
-			>
-				<Logo />
-			</Box>
-		</Flex>
-		<Box
-			as="nav"
-			flexGrow="2"
-			overflow="hidden scroll"
-			scrollbarWidth="thin"
-			pos="absolute"
-			top="50px"
-			bottom="calc(30px + 20vw)"
-			w="100%"
-		>
-			<Box 
-				as="ul"
-				role="menubar"
-				margin="0"
-				listStyleType="none"
-				pt="calc(2.5vw * 1)"
-				pb={{base: "calc(2.5vw * 14)", md: "0"}}
-			>
-				<Box 
-					as="li"
-					py="calc(2.5vw * 1.25)"
-				>
-					<Button 
-						variant="link"
-						rightIcon={MdChevronRight}
-						color="rgb(13, 14, 17)"
-						fontSize="14px"
-						letterSpacing="0.25px"
-						py="10px"
-					>
-						Product
-					</Button>
-				</Box>
-				<Box 
-					as="li"
-					py="calc(2.5vw * 1.25)"
-				>
-					<Button 
-						variant="link"
-						rightIcon={MdChevronRight}
-						color="rgb(13, 14, 17)"
-						fontSize="14px"
-						letterSpacing="0.25px"
-						py="10px"
-					>
-						Education
-					</Button>
-				</Box>
-				<Box 
-					as="li"
-					py="calc(2.5vw * 1.25)"
-				>
-					<Button 
-						variant="link"
-						rightIcon={MdChevronRight}
-						color="rgb(13, 14, 17)"
-						fontSize="14px"
-						letterSpacing="0.25px"
-						py="10px"
-					>
-						Blog
-					</Button>
-				</Box>
-				<Box 
-					as="li"
-					py="calc(2.5vw * 1.25)"
-				>
-					<Button 
-						variant="link"
-						rightIcon={MdChevronRight}
-						color="rgb(13, 14, 17)"
-						fontSize="14px"
-						letterSpacing="0.25px"
-						py="10px"
-					>
-						Community & Events
-					</Button>
-				</Box>
-				<Box 
-					as="li"
-					py="calc(2.5vw * 1.25)"
-				>
-					<Button 
-						variant="link"
-						rightIcon={MdChevronRight}
-						color="rgb(13, 14, 17)"
-						fontSize="14px"
-						letterSpacing="0.25px"
-						py="10px"
-					>
-						Enterprise
-					</Button>
-				</Box>
-			</Box>
-		</Box>
-		<Box
-			display={{base: "flex", md: "none"}}
-			alignItems="center"
-			pl="calc(2.5vw * 2.5)"
-			w={{base: "calc(2.5vw * 36)", md: "calc(2.5vw * 21)"}}
-			h="calc(30px + 20vw)"
-			zIndex="30"
-			pos="fixed"
-			style={{
-				inset:"auto 0px 0px auto"
-			}}
-		>
-			<Box 
-				as="a" 
-				href="#"
-				h="45px"
-				lineHeight="45px"
-				bg="#3A8537"
-				color="#fff"
-				px="1.2rem"
-				fontSize="14px"
-				fontWeight="600"
-				textTransform="uppercase"
-			>Iniciar Sesión</Box>
-		</Box>
-		<Box
-			pointerEvents="none"
-			h="auto"
-			w="100%"
-			position="fixed"
-			zIndex="30"
-			style={{
-				inset:"50px 0px 0px auto",
-			}}
-		>
-			<Box 
-				background="rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat scroll 0% 0%"
-				h="calc(2.5vw * 2)"
-				pos="absolute"
-				left="0"
-				right="0"
-				top="0"
-				pointerEvents="none"
-				zIndex="22"
-				transform="rotate(180deg)"
-			/>
-			<Box 
-				background="rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat scroll 0% 0%"
-				h="calc(2.5vw * 6)"
-				pos="absolute"
-				left="0"
-				right="0"
-				bottom="calc(30px + 20vw)"
-				pointerEvents="none"
-				zIndex="22"
-			/>
-		</Box>
-	</Box>
-)
-
-
 export default function(){
 	const [show, setShow] = useState(false);
+  const [ scrolling, setScrolling ] = useState(false)
+	
 	const handleToggle = () => setShow(!show);
+
+	const headerRef = useRef(null)
+
+  useEffect(() => {
+    const elementHeight = headerRef.current.offsetHeight
+    const hanldeScroll = () => {
+      const currentScrollY = window.scrollY;
+      if(300 < currentScrollY && !scrolling){
+        setScrolling(true)
+      }
+      if(elementHeight > currentScrollY && scrolling){
+        setScrolling(false) 
+      }
+    }
+    window.addEventListener('scroll', hanldeScroll, { passive: true })
+    return ()=> window.removeEventListener('scroll', hanldeScroll)
+	}, [scrolling])	
 	
 	return (
 		<Box
 			as="header"
-			backgroundColor="#fff"
+			ref={headerRef}
 			position="fixed"
-			zIndex="20"
+			bgColor={scrolling ? "#fff" : "transparent"}
+			boxShadow={scrolling ? "rgb(0 0 0 / 5%) 0px 10px 20px" : ""}
+			transition="background-color .3s ease"
 			w="100%"
-		>
+			zIndex="20"
+			>
 			<Container>
-				<FlexContainer justifyContent="space-between">
+				<FlexContainer justifyContent="space-between" height="60px">
 					<Box 
 						display="flex" 
 						alignItems="center"
-						minH="50px"
+						zIndex="30"
 					>
-						<Box 
-							as="figure"
-							opacity={show ? "0.5" : "1"}
-							mr="2rem"
-							transition="filter 200ms ease-in-out 0s"
-							style={show  ? { filter:  "blur(0.125rem)" } : {}}
-						>
-							<Box
-								as={Link}
-								to="/"
-							>
-								<Logo />
-							</Box>
+						<Box as={Link} to="/">
+							<Logo />
 						</Box>
-						<MenuItems />
 					</Box>
-
-					<Box
-						as={Link}
-						to="/"
-						display={{base: "none", md: "inline-block"}}
-						h={{md: "50px", lg: "60px"}}
-						lineHeight={{md: "50px", lg: "60px"}}
-						bg="brandGreen.50"
-						color="brandGreen.30"
-						px="1.2rem"
-						fontSize="14px"
-						fontWeight="700"
-						textTransform="uppercase"
-						mr={{md: "2rem", lg: "0"}}
-					>
-						Iniciar Sesión
-					</Box>
-
-					<ToggleMobileMenu handleToggle={handleToggle}/>
-					
+					<MenuItems scrolling={scrolling}/>
+					<ToggleMobileMenu handleToggle={handleToggle} show={show} />
 					<MobileNav show={show}/>
-
-					<Box
-						display={{base: "block", lg: "none"}}
-						background="rgb(0, 0, 0) none repeat scroll 0% 0%"
-						pos="fixed"
-						top="0px"
-						left="0px"
-						bottom="0px"
-						w="100%"
-						zIndex="18"
-						opacity={show ? "0.22" : "0"}
-						pointerEvents="none"
-						transition="opacity 200ms ease-in-out 0s"
-					/>
-						
+					<PanelBackgorund show={show} />
 				</FlexContainer>
 			</Container>
 		</Box>

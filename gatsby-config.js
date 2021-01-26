@@ -13,11 +13,11 @@ module.exports = {
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Historia',
-                flayOutMenu_link: '/page-2'
+                flayOutMenu_link: '/historia'
               },
               {
                 flayOutMenu_name: 'Misión & Visión',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/mision-y-vision'
               },
               {
                 flayOutMenu_name: 'Objetivos',
@@ -30,15 +30,15 @@ module.exports = {
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Mensaje del Presidente',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/mensaje-del-presidente'
               },
               {
                 flayOutMenu_name: 'Junta Directiva',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/junta-directiva'
               },
               {
                 flayOutMenu_name: 'Personal',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/personal'
               },
             ]
           },
@@ -53,18 +53,18 @@ module.exports = {
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Asociaciones',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/asociaciones'
               },
               {
                 flayOutMenu_name: 'Empresas',
                 flayOutMenu_link: '/'
               },
               {
-                flayOutMenu_name: 'Proyectos',
-                flayOutMenu_link: '/'
+                flayOutMenu_name: 'Convención',
+                flayOutMenu_link: '/convención'
               },
               {
-                flayOutMenu_name: 'Convenios Firmados',
+                flayOutMenu_name: 'Convenios',
                 flayOutMenu_link: '/'
               },
             ]
@@ -94,7 +94,22 @@ module.exports = {
         ]
       },
       {
+        name: 'Proyectos',
+        link: '/proyectos',
+        subMenu: null
+      },
+      {
         name: 'Cuota Pecuaria',
+        link: '/',
+        subMenu: null
+      },
+      {
+        name: 'Comercialización',
+        link: '/',
+        subMenu: null
+      },
+      {
+        name: 'Registro Genealógico',
         link: '/',
         subMenu: null
       },
@@ -108,13 +123,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: "@chakra-ui/gatsby-plugin",
       options: {
-        fonts: [
-          `Bebas Neue\:400`,
-          `Roboto\:400,500,700`,
-        ]
-      }
+        isResettingCSS: true,
+        isUsingColorMode: true,
+        portalZIndex: 40,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

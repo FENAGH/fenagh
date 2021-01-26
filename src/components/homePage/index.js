@@ -5,16 +5,18 @@ import About from './about'
 import Sectors from './sectors'
 import Reviews from './reviews'
 import News from './news'
+import Border from '../border'
 
 const HomePage = () => {
   return (
-    <React.Fragment>
+    <>
       <Hero />
+      <Border />
       <About />
       <Reviews />
       <News />
       <Sectors />
-    </React.Fragment> 
+    </> 
   )
 }
 

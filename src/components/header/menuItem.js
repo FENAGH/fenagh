@@ -7,16 +7,6 @@ import { MdKeyboardArrowDown } from 'react-icons/md'
 // Hook
 import useWindowSize from '../../hooks/useWindowSize';
 
-const Mask = styled(motion.div)`
-  position: fixed;
-  top: 60px;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  z-index: 19;
-  background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0%, rgba(0, 0, 0, 0.66) 100%) repeat scroll 0% 0%;
-`
-
 const FlayOutNav = styled.nav`
   color:#1A202C;
   transform: translateX(-3rem);
@@ -65,7 +55,7 @@ const FlayOutPanel = styled.div`
     .flayout-panel-title{
       display: inline-block;
       color:rgb(13, 14, 17);
-      font-size:1rem;
+      font-size: 1rem;
       font-weight: 700;
       letter-spacing:0.25px;
       padding: .5rem 0.625rem;
@@ -78,7 +68,7 @@ const FlayOutPanel = styled.div`
       list-style-type:none;
       .flayout-li{
         a{
-          color: rgb(74, 78, 87);
+          color: #777777;
           font-weight: 600;
           display: block;
           padding: 8px 10px;
@@ -116,7 +106,7 @@ const FlayOut = ({subMenu}) => (
   </FlayOutNav>
 )
 
-const MenuItem = ({link, value, subMenu}) => {
+const MenuItem = ({link, value, subMenu, scrolling}) => {
   const [ isHovered, setIsHovered ] = useState(false)
   const { width } = useWindowSize()
 
@@ -143,18 +133,18 @@ const MenuItem = ({link, value, subMenu}) => {
         onMouseLeave={handleMouseLeave}
         as={subMenu ? "div" : Link}
         to={link}
-        color="#1A202C"
-        fontSize="14px"
-        fontWeight="bold"
-        textTransform="uppercase"
+        color={scrolling ? "#000" : "#fff"}
+        fontSize="16px"
+        fontWeight="700"
         px=".8rem"
         h="60px"
         display="flex"
         alignItems="center"
         justifyContent={{base: "space-between"}}
         pos="relative"
+        transition="color .3s ease"
         _hover={{
-          color: "brandGreen.50"
+          color: "#15640f"
         }}
       >
         <Box as="span" mr="5px">{value}</Box>
@@ -184,25 +174,11 @@ const MenuItem = ({link, value, subMenu}) => {
               zIndex: "20",
             }}
           >
-
             <FlayOut subMenu={subMenu}/>
-
           </motion.div>
         )}
         </AnimatePresence>
       </Box>
-      <AnimatePresence exitBeforeEnter>
-        {isHovered && subMenu && (
-          <Mask 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: .4, ease: [.6, .05, -.01, 0.9]
-            }}
-          />
-        )}
-      </AnimatePresence>
     </>
   )
 }

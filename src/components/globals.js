@@ -6,10 +6,10 @@ export const Container = ({children, fluid, ...otherProps}) => (
   <Box
     flexGrow="1"
     margin="0 auto"
-    px={fluid ? "0" : {base: "1rem", md: "2rem"}}
+    px={fluid ? "0" : {base: "15px", md: "30px"}}
     h="100%"
     w="auto"
-    maxWidth={fluid ? "100%" : ["100%", "960px", "1216px", "1244px"]}
+    maxWidth={fluid ? "100%" : ["100%", "960px", "1216px", "1340px"]}
     pos="relative"
     {...otherProps}
   >
