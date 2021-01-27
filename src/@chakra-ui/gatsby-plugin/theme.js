@@ -7,6 +7,28 @@ breakpoints.lg = breakpoints[2]
 breakpoints.xl = breakpoints[3]
 
 const theme = extendTheme({
+  components: {
+    Button: {
+      variants: {
+        "brand-fenagh": {
+          bg:"brandGreen.50",
+          h:"3.5rem",
+          lineHeight:"3.5rem",
+          size: "lg",
+          borderRadius: "0",
+          color: "brandGreen.30"
+        },
+        "brand-fenagh-inverted": {
+          bg:"brandGreen.30",
+          h:"3.5rem",
+          lineHeight:"3.5rem",
+          size: "lg",
+          borderRadius: "0",
+          color: "brandGreen.50",
+        },
+      }
+    }
+  },
   colors: {
     brandGreen: {
       70: "#09210e",
@@ -16,6 +38,7 @@ const theme = extendTheme({
     },
     brandYellow: "#ffd653",
     brandBG: "#f5f2e3",
+    bodyText: "#7a7a7a"
   },
   fonts: {
     body: "Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
@@ -25,6 +48,11 @@ const theme = extendTheme({
     normal: 400,
     medium: 500,
     bold: 700,
+  },
+  global: {
+    body: {
+      color: "#3f3f3f"
+    }
   },
   breakpoints
 })

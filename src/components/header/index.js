@@ -24,6 +24,9 @@ const PanelBackgorund = styled.div`
 	${props => props.show && css`
 		transform: scaleY(1);
 	`}
+	@media(min-width: 1024px){
+    display: none;
+  }
 `
 
 const ToggleMobileMenu = ({handleToggle, show}) => (

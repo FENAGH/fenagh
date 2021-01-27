@@ -18,11 +18,7 @@ const Reviews = () => {
     }
   `)
   return (
-    <Container 
-      fluid
-      mt="-1.5rem"
-      pos="relative"
-    >
+    <Container >
       <Box w="100%">
         <Img
           alt="FENAGH campo de vacas" 

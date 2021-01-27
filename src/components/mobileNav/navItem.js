@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import { Box } from '@chakra-ui/react'
 import AccordionItem from './accordionItem'
 
-const MobileNavItem = ({link, value, subMenu, indexValue}) => {
-  const [ expanded, setExpanded ] = useState(0)
+const MobileNavItem = ({link, value, subMenu}) => {
+  const [ expanded, setExpanded ] = useState(false)
 
   return (
 	<Box
@@ -31,7 +31,6 @@ const MobileNavItem = ({link, value, subMenu, indexValue}) => {
         setExpanded={setExpanded}
         value={value}
         subMenu={subMenu}
-        indexValue={indexValue}
       />
 		)}
 	</Box>

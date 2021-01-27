@@ -20,6 +20,9 @@ const MobileNavPanel = styled.section`
 		pointer-events: auto;
 		transition-delay: .267s;
 	`}
+  @media(min-width: 1024px){
+    display: none;
+  }
 `
 
 const MobileNav = ({show, links}) => (
@@ -45,8 +48,7 @@ const MobileNav = ({show, links}) => (
         >
         {links.map((menuLink, index) => (
           <MobileNavItem
-            key={index} 
-            indexValue={index}
+            key={index}
             link={menuLink.link}
             value={menuLink.name}
             subMenu={menuLink.subMenu}

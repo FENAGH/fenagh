@@ -4,13 +4,11 @@ import { Link } from 'gatsby'
 import { Box, Icon } from '@chakra-ui/react'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-const AccordionItem = ({expanded, setExpanded, subMenu, value, indexValue}) => {
-  const isOpen = indexValue === expanded
-  console.log(isOpen)
+const AccordionItem = ({expanded, setExpanded, subMenu, value}) => {
   return(
     <>
       <Box 
-        onClick={() => setExpanded(isOpen ? false : indexValue)}
+        onClick={() => setExpanded(!expanded)}
 				as="button"
 				outline="0"
 				userSelect="none"
@@ -41,7 +39,7 @@ const AccordionItem = ({expanded, setExpanded, subMenu, value, indexValue}) => {
 			</Box>
       <motion.div
         key='content' 
-        animate={{height: isOpen ? '100%' : '1px'}}
+        animate={{height: expanded ? '100%' : '1px'}}
         transition={{ ease: "easeOut", duration: .408 }}
       >
         <Box

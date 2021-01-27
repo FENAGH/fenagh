@@ -13,8 +13,9 @@ const HomePage = () => {
       <Hero />
       <Border />
       <About />
-      <Reviews />
+      <Border />
       <News />
+      <Reviews />
       <Sectors />
     </> 
   )

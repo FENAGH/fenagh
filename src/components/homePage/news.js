@@ -1,106 +1,164 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
+import styled from '@emotion/styled'
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { ButtonLink, Container, FlexContainer } from '../globals'
+import { Container } from '../globals'
 
 const fakePosts = [
   {
     id: 0, 
-    title: " Offal snackwave pork belly messenger bag tbh listicle poutine typewriter.", 
-    topics: "Lorem ipsum, Dolor Quantum"
+    title: "Photo essay: In the kitchen of Mère Brazier", 
+    body: "Photographer Etienne Maury offers a rare behind-the-scenes glimpse of a legendary Lyonnais kitchen."
   },
   {
     id: 1, 
-    title: "Fixie trust fund celiac 8-bit iPhone listicle occupy messenger bag.", 
-    topics: "Lorem ipsum, Dolor Quantum"
+    title: "The perfect day in Shanghai", 
+    body: "Scour the markets, get your fill of dumplings, and take in the sights of this hypermodern Chinese megalopolis."
   },
   {
     id: 2, 
-    title: "Pok pok banh mi pickled copper mug adaptogen tousled echo park.", 
-    topics: "Lorem ipsum, Dolor Quantum"
+    title: "Photo essay: the tattoo artists of Shanghai", 
+    body: "Shanghai is the center of China’s burgeoning ink scene."
+  },
+  {
+    id: 3, 
+    title: "The perfect day in Santa Fe", 
+    body: "Grab a burrito and stroll around the railroad yards, restaurants, and groovy art installations of Santa Fe."
   },
 ]
 
-const FeaturedArticle = () => {
+const ArticleList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  
+`
+
+const ArticleWrapper = styled.article`
+  width:100%;
+  position:relative;
+  margin-bottom:30px;
+  padding-bottom:10px;
+  font-size:12px;
+  line-height: 150%;
+  text-align: center;
+  @media (min-width:768px){
+    width: calc(33.333333333% - 15px);
+    margin-right: 20px;
+    &:nth-child(3n){
+      margin-right: 0px;
+    }
+  }
+  @media (min-width:768px){
+    width: calc(33.333333333% - 20px);
+    margin-right: 30px;
+    &:nth-child(3n){
+      margin-right: 0px;
+    }
+  }
+  &:hover{
+    .post-bg{
+      transform: scale(1.0408);
+      .bg-shadow{
+        opacity: 1;
+      }
+    }
+  }
+`
+
+const Article = ({title, body}) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "post.jpg" }) {
+      file(relativePath: { eq: "post-placeholder.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 720, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
-      } 
+      }
     }
   `)
-  return(
-    <Box w="100%"> 
-      <Box maxW="100%" mb="2rem">
-        <Img fluid={data.file.childImageSharp.fluid} style={{width: "100%"}}/>
+  return (
+    <ArticleWrapper>
+      <Box 
+        posinterEvents="none" 
+        zIndex="3" 
+        pos="absolute" 
+        top="0" 
+        lef="0" 
+        pt="66.5%" 
+        w="100%"
+      >
+        <Heading 
+          as="h4"
+          size="md" 
+          display="inline-block"
+          mb="20px"
+          letterSpacing="2px"
+          pointerEvents="auto" 
+          transform="translateY(-50%)"
+        >
+          <Box 
+            as="span" 
+            bg="brandGreen.50" 
+            color="#fff"
+            p="0 14px 0 14px"
+            display="inline-block"
+            userSelect="none"
+            transition="background-color .267s ease, color .267s ease"
+          >tag</Box>
+        </Heading>
       </Box>
-      <Box>
-        <Box as={Link} to="/blog">
-          <Heading as="h3" fontSize="2rem" lineHeight="1.2" fontWeight="normal" mb="1rem">Ethical kinfolk meditation kale chips, celiac blog hammock selvage williamsburg echo park godard tousled. </Heading>
+      <Box 
+        w="100%" 
+        className="post-bg" 
+        transition="transform .267s ease-out"
+        mb="30px"
+      >
+        <Img 
+          fluid={data.file.childImageSharp.fluid} 
+          style={{width:"100%"}}
+        />
+      </Box>
+      <Box 
+        as={Link} 
+        to="/" 
+        display="inline-block" 
+      >
+        <Box px="10px" transform="translateZ(0)">
+          <Heading as="h3" fontSize={{base:"20px", lg: "28px"}} lineHeight="125%" letterSpacing="1px" mb="6px">{title}</Heading>
+          <Box mt="4px" color="#a5a5a5">
+            <Text fontSize={{base: "14px", lg: "16px"}} lineHeight="150%">{body}</Text>
+          </Box>
         </Box>
-        <Text color="rgba(0,0,0,0.8)" mb="1rem">Palo santo kitsch salvia tbh. Pok pok banh mi pickled copper mug adaptogen tousled echo park next level vape affogato ennui flannel vegan venmo. Messenger bag craft beer brunch vice, af lomo blog hexagon farm-to-table cliche.</Text>
-        <Text fontSize="0.8rem" color="#3a8537" fontWeight="medium">
-          <Box as="span" mr="5px" color="rgba(0,0,0,0.6)" fontWeight="bold">Topics:</Box>
-          Lorem ipsum, Dolor Quantum
-        </Text>
       </Box>
-    </Box>
+    </ArticleWrapper>
   )
 }
 
 const News = () => (
-  <Box bg="brandBG" py="6rem">
-    <Container>
-      <FlexContainer alignItems="flex-start">
-        <Box
-          flex="0 0 50%"
-          maxWidth="50%"
-          pr="2rem"
-          borderRight="1px solid #ddd9d1"
-        >
-          <FeaturedArticle />
-        </Box>
-        <Box
-          flex="0 0 33.3333%"
-          maxWidth="33.3333%"
-          pl="2rem"
-        >
-          {fakePosts.map(post => (
-            <Box
-              key={post.id}
-              borderBottom="1px solid #ddd9d1"
-              pb="2rem"
-              mb="2rem"
-            >
-              <Box
-                as={Link}
-                to="/"
-              >
-                <Heading 
-                  as="h3" 
-                  fontSize="1.6rem" 
-                  fontWeight="normal" 
-                  lineHeight="1.2"
-                  mb="1rem" 
-                >{post.title}</Heading>
-              </Box>
-              <Text fontSize="0.8rem" color="brandGreen.50" fontWeight="medium">
-                <Box as="span" mr="5px" color="rgba(0,0,0,0.6)" fontWeight="bold">Topics:</Box>
-                {post.topics}
-              </Text>
-            </Box>
-          ))}
-          <ButtonLink brand fullWidth>Ver Todo</ButtonLink>
-        </Box>
-      </FlexContainer>
-    </Container>
-  </Box>
+  <Container>
+    <Heading 
+      as="h2"
+      color="#000"
+      fontSize={{base: "2rem", md: "2.4rem", lg: "2.8rem"}}
+      letterSpacing="2px"
+      lineHeight="1.1"
+      textAlign="center"
+      mb="30px"
+    >Noticias Destacadas</Heading>
+    <ArticleList>
+      {fakePosts.map(data => (
+        <Article 
+          key={data.id}
+          title={data.title}
+          body={data.body}
+        />
+      ))}
+    </ArticleList>
+  </Container>
 )
 
 export default News

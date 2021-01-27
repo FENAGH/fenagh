@@ -1,80 +1,98 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { Container, FlexContainer } from '../globals'
+import { Container, ButtonLink } from '../globals'
 
 const About = () => {
 	const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "about.png" }) {
+		query {
+      mobile: file(relativePath: { eq: "about-sm.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 520) {
+          fluid(maxWidth: 520, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      tablet: file(relativePath: { eq: "about-md.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1024, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      desktop: file(
+        relativePath: { eq: "about.webp" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+	
+	const sources = [
+    {
+      ...data.mobile.childImageSharp.fluid,
+      media: "(max-width: 520px)",
+    },
+    {
+      ...data.tablet.childImageSharp.fluid,
+      media: "(min-width: 521px) and (max-width: 1024px)",
+    },
+    {
+      ...data.desktop.childImageSharp.fluid,
+      media: `(min-width: 1025px)`,
+    },
+  ]
 	return (
-		<Container 
-			fluid 
-			as="section" 
-			backgroundColor="white"
-			py="6rem"
-		>
-			<Container>
-				<FlexContainer spaceBetween isResponsive>
-					<Box
-						w="100%"
-						display="block"
-						flex={{md: "0 0 41.66666667%"}}
-						maxWidth={{base: "100%", md:"41.66666667%"}}
-						mb={{base: "40px", md: "0"}}
-						ml={{md: "12%", lg:"8.33333333%"}}
-					>
-						
+		<Container fluid>
+			<Box 
+				w="100%" 
+				minH="100vh" 
+				pos="relative" 
+				display="flex" 
+				alignItems="center" 
+				justifyContent="center" 
+				mt={{base: "50px", md: "200px"}}
+			>
+				<Box w="100%" mt="250px">
+					<Img 
+						fluid={sources} 
+						style={{width:"100%"}}
+					/>
+				</Box>
+				<Box w={{base: "90vw", md: "70vw",lg: "50vw"}} pos="absolute" top="0px">
+					<Box textAlign="center">
 						<Text
 							color="brandGreen.50"
-							fontSize="12px"
+							fontSize={{base: "10px", md:"12px"}}
 							fontWeight="bold"
 							textTransform="uppercase" 
 							letterSpacing="0.2em"
+							mb="1rem"
 						>
 							sobre nosotros
 						</Text>
 						<Heading 
 							as="h2"
 							color="#000"
-							fontSize={{base: "3rem", lg: "4rem"}}
-							textTransform="uppercase"
-							letterSpacing="1px"
+							fontSize={{base: "2rem", md: "2.8rem", lg: "4rem"}}
+							fontSize={{base: "2rem", md: "2.6rem", lg: "3.2rem"}}
+							letterSpacing="2px"
 							lineHeight="1.1"
-							mt="1rem"
-						>
-							We’re leader in agriculture market
-						</Heading>
-						<Text 
-							color="rgba(0,0,0,0.5)"
-							mt="1.5rem"
-							mb="2rem"
-						>
-							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-						</Text>
+						>somos el organismo cúpula <br/>del sector agropecuario</Heading>
+						<Text mt="1.5rem" mb="2rem" fontSize={{base: "sm", md: "md", lg: "lg"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de Honduras y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
+						<Box>
+							<ButtonLink path="/historia" mb={{base: "1rem", md: "0"}} mr={{base: "0", md: "1rem"}}>Nuestra Historia</ButtonLink>
+							<ButtonLink path="/objetivos" inverted>Objetivos</ButtonLink>
+						</Box>
 					</Box>
-					<Box
-						w="100%"
-						maxWidth="460px"
-						pos="relative"
-					>
-						<Img 
-							fluid={data.file.childImageSharp.fluid} 
-							style={{width:"100%"}}
-						/>
-					</Box>
-				</FlexContainer>
-			</Container>
+				</Box>
+			</Box>
 		</Container>
 	)
 }

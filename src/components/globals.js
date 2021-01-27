@@ -33,30 +33,26 @@ export const ButtonLink = ({children, path, ...otherProps}) => (
   <Box
     as={Link}
     to={path}
-    bg={
-      otherProps.brand ? "brandGreen.50" : 
-      otherProps.invert ? "brandGreen.30" : "#fff"
-    }
-    color={otherProps.brand ? "brandGreen.30" : "brandGreen.50"}
+    display="inline-block"
+    bg={otherProps.inverted ? "brandGreen.30" : "brandGreen.50"}
+    color={otherProps.inverted ? "brandGreen.50" : "brandGreen.30"}
+    textAlign="center"
+    fontSize="1.125rem"
     fontWeight="bold"
-    textTransform="uppercase"
+    lineHeight="3.5rem"
     p="0 12px"
-    h="54px"
-    w={otherProps.fullWidth ? "100%" : "180px"}
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
+    px="1.5rem"
+    h="3.5rem"
+    minW={{base: "100%", md: otherProps.fullWidth ? "100%" : "3rem"}}
     transition="background-color .3s ease"
     cursor="pointer"
     _hover={
-      otherProps.brand ? ({
-        backgroundColor: "brandGreen.70",
-      }) : 
-      otherProps.invert ? ({
+      otherProps.inverted ? ({
         backgroundColor: "brandGreen.10",
       }) : ({
-        backgroundColor: "gray.50",
+        backgroundColor: "brandGreen.70",
       })
     }
+    {...otherProps}
   >{children}</Box>
 )
