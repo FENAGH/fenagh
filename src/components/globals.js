@@ -1,6 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 import { Box, Flex } from '@chakra-ui/react'
+
+export const PostContainer = styled.div`
+  color: #3f3f3f;
+  padding-bottom: 30px;
+  font-size: 13px;
+  line-height: 200%;
+  p{
+    margin-bottom: 1.9em;
+  }
+  p, .post-content ul, .post-content ol {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px){
+    font-size: 16px;
+  }
+`
 
 export const Container = ({children, fluid, ...otherProps}) => (
   <Box
@@ -43,7 +62,11 @@ export const ButtonLink = ({children, path, ...otherProps}) => (
     p="0 12px"
     px="1.5rem"
     h="3.5rem"
-    minW={{base: "100%", md: otherProps.fullWidth ? "100%" : "3rem"}}
+    minW={otherProps.fixedWidth  ? "3rem" : {
+      base: "100%", 
+      md: otherProps.fullWidth ? "100%" : "3rem"
+    }}
+    minW="3rem"
     transition="background-color .3s ease"
     cursor="pointer"
     _hover={

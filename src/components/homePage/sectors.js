@@ -5,7 +5,7 @@ import Slider from 'react-slick'
 import styled from '@emotion/styled'
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
-import { ButtonLink, Container, FlexContainer } from '../globals'
+import { Container } from '../globals'
 // Styles
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"

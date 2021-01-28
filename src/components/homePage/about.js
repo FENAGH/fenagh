@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Button, ButtonGroup, Heading, Text } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { Container, ButtonLink } from '../globals'
+import { Container } from '../globals'
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -50,7 +50,8 @@ const About = () => {
   ]
 	return (
 		<Container fluid>
-			<Box 
+			<Box
+				id="about-us"
 				w="100%" 
 				minH="100vh" 
 				pos="relative" 
@@ -80,16 +81,12 @@ const About = () => {
 						<Heading 
 							as="h2"
 							color="#000"
-							fontSize={{base: "2rem", md: "2.8rem", lg: "4rem"}}
 							fontSize={{base: "2rem", md: "2.6rem", lg: "3.2rem"}}
-							letterSpacing="2px"
+							fontWeight="light"
+							letterSpacing="1px"
 							lineHeight="1.1"
 						>somos el organismo cúpula <br/>del sector agropecuario</Heading>
 						<Text mt="1.5rem" mb="2rem" fontSize={{base: "sm", md: "md", lg: "lg"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de Honduras y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
-						<Box>
-							<ButtonLink path="/historia" mb={{base: "1rem", md: "0"}} mr={{base: "0", md: "1rem"}}>Nuestra Historia</ButtonLink>
-							<ButtonLink path="/objetivos" inverted>Objetivos</ButtonLink>
-						</Box>
 					</Box>
 				</Box>
 			</Box>

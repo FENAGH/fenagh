@@ -32,13 +32,13 @@ const PanelBackgorund = styled.div`
 const ToggleMobileMenu = ({handleToggle, show}) => (
   <Box 
 		onClick={handleToggle}
+		backgroundColor="brandGreen.50"
     display={{ base: "flex", lg: "none" }} 
     cursor="pointer"
     p=".5rem"
 		right="0"
 		top="0"
 		zIndex="21"
-		backgroundColor="#000"
     borderRadius="50%"
     w="40px"
     h="40px"
@@ -46,7 +46,7 @@ const ToggleMobileMenu = ({handleToggle, show}) => (
     justifyContent="center"
   >
     <svg
-      fill="#fff"
+      fill="#b9df3c"
       w="30px"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export default function(){
     const elementHeight = headerRef.current.offsetHeight
     const hanldeScroll = () => {
       const currentScrollY = window.scrollY;
-      if(300 < currentScrollY && !scrolling){
+      if(elementHeight < currentScrollY && !scrolling){
         setScrolling(true)
       }
       if(elementHeight > currentScrollY && scrolling){

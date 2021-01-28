@@ -144,6 +144,7 @@ const News = () => (
       as="h2"
       color="#000"
       fontSize={{base: "2rem", md: "2.4rem", lg: "2.8rem"}}
+      fontWeight="light"
       letterSpacing="2px"
       lineHeight="1.1"
       textAlign="center"

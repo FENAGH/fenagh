@@ -4,8 +4,8 @@ import { Box } from '@chakra-ui/react'
 const Border = () => (
   <Box 
     w="100%"
-    mb="85px"
     mt="-38px"
+    mb={{base: "45px", md: "85px"}}
     zIndex="3"
     pos="relative"
   >
