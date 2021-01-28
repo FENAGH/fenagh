@@ -1,21 +1,37 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
 
-const Border = () => (
+const Border = ({bottom, top}) => (
   <Box 
-    w="100%"
-    mt="-38px"
-    mb={{base: "45px", md: "85px"}}
-    zIndex="3"
+    display="block"
+    zIndex="10"
     pos="relative"
+    style={bottom ? {
+      position: 'absolute',
+      left: 0,
+      bottom: 0,
+      width: '100%',
+    } : top ? {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      transform:"scaleY(-1)"
+    } : {
+      marginBottom: "45px",
+      marginTop: "-38px"
+    }}
   >
     <Box 
+      display="block"
       w="100%"
       h="38px"
       bg={`url(${require('../images/cap@2x.png')}) repeat-x 50% 100%`}
       bgSize="1969px 38px"
-      bgPosition="1183px"
-      transform="scaleX(-1)"
+      style={{
+        backgroundPositionX:"1183px",
+        transform:"scaleX(-1)"
+      }}
     />
   </Box>
 )

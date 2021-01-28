@@ -139,7 +139,7 @@ const Article = ({title, body}) => {
 }
 
 const News = () => (
-  <Container>
+  <Container mt={{base: "50px", md: "100px"}}>
     <Heading 
       as="h2"
       color="#000"

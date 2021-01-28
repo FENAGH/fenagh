@@ -21,6 +21,19 @@ export const PostContainer = styled.div`
   }
 `
 
+export const Constrain = styled.div`
+  max-width: 1340px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: 768px){
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+`
+
 export const Container = ({children, fluid, ...otherProps}) => (
   <Box
     flexGrow="1"

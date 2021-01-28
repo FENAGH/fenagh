@@ -1,14 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { Box, Heading } from "@chakra-ui/react"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Container, PostContainer } from "../components/globals"
 import Border from "../components/border"
+import Hero from "../components/hero"
 
-const HistoryPage = () => {
+const HistoryPage = ({center}) => {
   const data = useStaticQuery(graphql`
     query {
       mobile: file(relativePath: { eq: "home-sm.webp" }) {
@@ -53,69 +52,14 @@ const HistoryPage = () => {
   return (
     <Layout>
       <SEO title="Historia" />
-      <Container 
-        fluid
-        pos="relative"
-        h={{base: "175vw", md: "60.25vw"}}
-        minH={{base: "150vw", md: "52.25vw"}}
-        maxH="calc(100vh - 10px);"
-        overflow="hidden"
-      >
-        <Box
-          w="100%"
-          h="100%"
-          pos="absolute"
-          display="flex"
-          flexDir="column"
-          alignItems="center"
-          justifyContent="flex-end"
-          px={{base: "15px", md:"30px"}}
-          pb={{base: "60px", lg:"100px"}}
-          zIndex="10"
-        >
-          <Heading 
-            as="h4"
-            display="inline-block"
-            mb="20px"
-            fontFamily="Roboto"
-            fontSize="12px"
-            lineHeight="22px"
-            letterSpacing="1px"
-            textTransform="uppercase"
-          >
-            <Box 
-              as="span" 
-              display="inline-block"
-              bg="#fff"
-              p="0 13px 0 14px"
-              color="#232323"
-            >Institución</Box>
-          </Heading>
-          <Heading
-            as="h1"
-            color="#fff"
-            fontSize={{base: "4rem", md:"5rem", lg: "7.2rem"}}
-            fontWeight="light"
-            lineHeight="1.1"
-            textAlign="center"
-            maxW={{base:"90%", md:"76%"}}
-          >
-            Nuestra Historia
-          </Heading>
-        </Box>
-        <Box w="100%" pos="relative">
-          <Img fluid={sources} style={{width: "100%"}}/>
-          <Box 
-            w="100%"
-            h="100%"
-            backgroundColor="rgb(0,0,0)"
-            background="linear-gradient(180deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,0) 100%)"
-            pos="absolute"
-            bottom="0"
-          />
-        </Box>
-      </Container>
 
+      <Hero 
+        sources={sources}
+        align="center"
+        taxonomyName="institución"
+        headline="Nuestra Historia"
+      />
+      
       <Border />
 
       <PostContainer>

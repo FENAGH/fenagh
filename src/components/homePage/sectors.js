@@ -5,29 +5,28 @@ import Slider from 'react-slick'
 import styled from '@emotion/styled'
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
-import { Container } from '../globals'
+import { Constrain, Container } from '../globals'
 // Styles
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+import Border from '../border'
 
 const SliderWrapper = styled(Slider)`
-  .slick-list{
-    overflow: unset;
-  }
+  padding: 50px 0;
+  margin-bottom: -50px;
   .slick-arrow{
     /* New custom styles */
     display: block;
-    background-position: 9px;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 2rem;
-    background-color: transparent;
-    border: .2rem solid #15640f;
+    background-size: 1.4rem;
+    background-color: #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
     outline: 0;
-    transition: background-color .3s ease, border-color .3s ease;
+    transition: transform .267s ease-out,opacity .267s ease-out;
 
     /* Disabled old arrow icons */
     &:before, &:after{
@@ -35,32 +34,23 @@ const SliderWrapper = styled(Slider)`
     }
   }
   .slick-prev.slick-disabled, .slick-arrow.slick-disabled{
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ddd' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
-    border-color: #ddd;
+    pointer-events: none;
+    opacity: 0;
     cursor: default;
-    &:hover{
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ddd' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
-      background-color: transparent;
-    }
-  }
-  .slick-prev, .slick-next{
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%233A8537' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
-    &:hover{
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M13.449 12.111l-7.86 7.59a1.916 1.916 0 0 0-.048 2.716 1.93 1.93 0 0 0 2.717.047l9.234-8.918c.386-.372.583-.862.59-1.354.01-.492-.17-.988-.542-1.374L8.622 1.584a1.93 1.93 0 0 0-2.716-.049 1.916 1.916 0 0 0-.047 2.717l7.59 7.86z'/%3E%3C/svg%3E");
-      background-color: #15640f;
-    }
   }
   .slick-prev{
-    transform: rotate(180deg);
-    transform-origin: center 12px;
-    z-index: 1;
-    /* left: -10px; */
-    top: calc(100% + 20px);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M10 4q0.414 0 0.707 0.293t0.293 0.707q0 0.422-0.297 0.711l-5.289 5.289h15.586q0.414 0 0.707 0.293t0.293 0.707-0.293 0.707-0.707 0.293h-15.586l5.289 5.289q0.297 0.289 0.297 0.711 0 0.414-0.293 0.707t-0.707 0.293q-0.422 0-0.711-0.289l-7-7q-0.289-0.305-0.289-0.711t0.289-0.711l7-7q0.297-0.289 0.711-0.289z'/%3E%3C/svg%3E");
+  }
+  .slick-next{
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M14 4q0.422 0 0.711 0.289l7 7q0.289 0.289 0.289 0.711t-0.289 0.711l-7 7q-0.289 0.289-0.711 0.289-0.43 0-0.715-0.285t-0.285-0.715q0-0.422 0.289-0.711l5.297-5.289h-15.586q-0.414 0-0.707-0.293t-0.293-0.707 0.293-0.707 0.707-0.293h15.586l-5.297-5.289q-0.289-0.289-0.289-0.711 0-0.43 0.285-0.715t0.715-0.285z'/%3E%3C/svg%3E");
+  }
+  .slick-prev{
+    top: calc(100% - 50px);
     left: 10px;
   }
   .slick-next{
-    left: 80px;
-    top: calc(100% + 20px);
+    right: 10px;
+    top: calc(100% - 50px);
   }
 `
 
@@ -69,16 +59,22 @@ const CustomSlider = ({children}) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 520,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
+          slidesToScroll: 1,
         }
       },
       {
@@ -86,7 +82,6 @@ const CustomSlider = ({children}) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
         }
       }
     ]
@@ -100,13 +95,13 @@ const SliderCard = ({base, childImageSharp}) => (
   <Box
     w="100%"
     flex={{md: "0 0 33.333333%"}}
-    px={{md: "15px"}}
+    px="10px"
     mb="2.5rem"
     maxW="520px"
   >
     <Box
       as={Link}
-      // to={`/sectores/${base.split(".")[0]}`}
+      to={`/sectores/${base.split(".")[0]}`}
       to="/"
       display="block"
       pos="relative"
@@ -117,28 +112,16 @@ const SliderCard = ({base, childImageSharp}) => (
         alt={`sector ${base.split(".")[0]}`}
         style={{width: "100%"}}
       />
-      <Box 
-        w="100%"
-        h="80%"
-        backgroundColor="rgb(0,0,0)"
-        background="linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)"
-        pos="absolute"
-        bottom="0"
-      />
-      <Box
-        pos="absolute"
-        bottom="40px"
-        left="40px"
-      >
-        <Heading 
-          as="h3"
-          color="#fff"
-          fontFamily="Bebas Neue" 
-          size="2xl"
-          fontWeight="500"
-          zIndex="1"
-        >Sector <br/> {base.split(".")[0]}</Heading>
-      </Box>
+      <Heading 
+        as="h3"
+        color="#fff"
+        fontFamily="Roboto" 
+        size={{base: "sm", md: "md", lg: "lg"}}
+        textTransform="capitalize"
+        fontWeight="medium"
+        zIndex="1"
+        mt=".8rem"
+      >Sector {base.split(".")[0]}</Heading>
     </Box>
   </Box>
 )
@@ -161,45 +144,27 @@ const Sectors = () => {
         }
       }
     }
-  `) 
+  `)
   return (
-    <Container 
-      fluid
-      bg="brandGreen.70"
-      pt="5rem" 
-      zIndex="10"
-    >
-      <Container>
-        <Box
-          w="100%"
-          display="block"
-          flex={{md: "0 0 41.66666667%"}}
-          maxWidth={{base: "100%", md:"41.66666667%"}}
-          ml={{md: "12%", lg:"8.33333333%"}}
-          mb="4rem"
-        >
-          <Text
-            color="brandGreen.30"
-            fontSize="12px"
-            fontWeight="bold"
-            textTransform="uppercase" 
-            letterSpacing="1px"
-          >
-            our innovation
-          </Text>
-          <Heading 
-            as="h2"
-            color="white"
-            fontFamily="Bebas Neue" 
-            fontSize={{base: "3rem", lg: "4rem"}}
-            textTransform="uppercase"
-            mt="1rem"
-            letterSpacing="1px"
-            lineHeight="1.1"
-          >
-            Sectores Representados
-          </Heading>
-        </Box>
+    <Constrain>
+      <Container
+        bg="brandGreen.70"
+        py="100px"
+        overflow="hidden"
+        bg={`#181818 url(${require('../../images/sectors-bg.webp')}) no-repeat 50% 50%`}
+        bgSize="cover"
+        pos="relative"
+      >
+        <Border top/>
+        <Heading 
+          as="h2"
+          color="#fff"
+          fontSize={{base: "2rem", md: "2.6rem", lg: "3.2rem"}}
+          fontWeight="light"
+          letterSpacing="1px"
+          lineHeight="1.1"
+          textAlign="center"
+        >Sectores Representados</Heading>
         <CustomSlider>
           {data.allFile.edges.map(({node: {base, childImageSharp}}) => (
             <SliderCard 
@@ -208,15 +173,10 @@ const Sectors = () => {
               childImageSharp={childImageSharp}
             />
           ))}
-        </CustomSlider>
+        </CustomSlider> 
+        <Border bottom/>
       </Container>
-      <Box 
-        bg="brandBG"
-        w="100%"
-        h="500px"
-        mt="-300px"
-      />
-    </Container>
+    </Constrain>
   )
 }
 

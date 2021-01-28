@@ -58,7 +58,7 @@ const About = () => {
 				display="flex" 
 				alignItems="center" 
 				justifyContent="center" 
-				mt={{base: "50px", md: "200px"}}
+				mt={{base: "50px", md: "100px"}}
 			>
 				<Box w="100%" mt="250px">
 					<Img 
@@ -86,7 +86,7 @@ const About = () => {
 							letterSpacing="1px"
 							lineHeight="1.1"
 						>somos el organismo cúpula <br/>del sector agropecuario</Heading>
-						<Text mt="1.5rem" mb="2rem" fontSize={{base: "sm", md: "md", lg: "lg"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de Honduras y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
+						<Text mt="1.5rem" mb="2rem" fontSize={{base: "sm", md: "md", lg: "lg"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de <strong>Honduras</strong> y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
 					</Box>
 				</Box>
 			</Box>
