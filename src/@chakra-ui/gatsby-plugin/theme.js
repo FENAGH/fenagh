@@ -41,7 +41,7 @@ const theme = extendTheme({
     bodyText: "#7a7a7a"
   },
   fonts: {
-    body: "Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    body: "Libre Baskerville, Times New Roman, serif",
     heading: "Bebas Neue, sans-serif",
   },
   fontWeights: {
@@ -50,9 +50,12 @@ const theme = extendTheme({
     bold: 700,
   },
   global: {
+    html: {
+      scrollBehavior: "smooth"
+    },
     body: {
-      color: "#3f3f3f"
-    }
+      color: "#3f3f3f",
+    },
   },
   breakpoints
 })

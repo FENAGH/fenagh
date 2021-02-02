@@ -107,11 +107,13 @@ const SliderCard = ({base, childImageSharp}) => (
       pos="relative"
       overflow="hidden"
     >
-      <Img 
-        fluid={childImageSharp.fluid} 
-        alt={`sector ${base.split(".")[0]}`}
-        style={{width: "100%"}}
-      />
+      <Box w="100%" maxH="160px" overflow="hidden">
+        <Img 
+          fluid={childImageSharp.fluid} 
+          alt={`sector ${base.split(".")[0]}`}
+          style={{width: "100%"}}
+        />
+      </Box>
       <Heading 
         as="h3"
         color="#fff"

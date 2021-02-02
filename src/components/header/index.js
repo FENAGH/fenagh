@@ -118,8 +118,8 @@ export default function(){
 						alignItems="center"
 						zIndex="30"
 					>
-						<Box as={Link} to="/">
-							<Logo />
+						<Box as={Link} to="/" color="#fff">
+							<Logo white={!scrolling ? true : false}/>
 						</Box>
 					</Box>
 					<MenuItems 

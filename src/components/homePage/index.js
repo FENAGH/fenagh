@@ -10,13 +10,6 @@ import Border from '../border'
 const HomePage = () => {
   const data = useStaticQuery(graphql`
     query {
-      mobile: file(relativePath: { eq: "home-sm.webp" }) {
-        childImageSharp {
-          fluid(maxWidth: 520, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       tablet: file(relativePath: { eq: "home-md.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1024, quality: 100) {
@@ -37,10 +30,6 @@ const HomePage = () => {
   `)
   const sources = [
     {
-      ...data.mobile.childImageSharp.fluid,
-      media: "(max-width: 520px)",
-    },
-    {
       ...data.tablet.childImageSharp.fluid,
       media: "(min-width: 521px) and (max-width: 1024px)",
     },
@@ -51,10 +40,10 @@ const HomePage = () => {
   ]
   return (
     <>
-      <Hero 
+      <Hero
         sources={sources}
-        align="flex-start"
-        headline={"Cultivando el futuro de Honduras"}
+        className="hero-default hero-alignBottom"
+        headline="Cultivando el futuro de Honduras"
       />
       <Border />
       <About />

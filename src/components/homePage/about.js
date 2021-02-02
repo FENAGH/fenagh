@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
 import Img from "gatsby-image"
-import { Container } from '../globals'
+import { Condensed, Container } from '../globals'
 
 const About = () => {
 	const data = useStaticQuery(graphql`
@@ -50,45 +50,31 @@ const About = () => {
   ]
 	return (
 		<Container fluid>
-			<Box
-				id="about-us"
-				w="100%" 
-				minH="100vh" 
-				pos="relative" 
-				display="flex" 
-				alignItems="center" 
-				justifyContent="center" 
-				mt={{base: "50px", md: "100px"}}
-			>
-				<Box w="100%" mt="250px">
-					<Img 
-						fluid={sources} 
-						style={{width:"100%"}}
-					/>
-				</Box>
-				<Box w={{base: "90vw", md: "70vw",lg: "50vw"}} pos="absolute" top="0px">
-					<Box textAlign="center">
-						<Text
-							color="brandGreen.50"
-							fontSize={{base: "10px", md:"12px"}}
-							fontWeight="bold"
-							textTransform="uppercase" 
-							letterSpacing="0.2em"
-							mb="1rem"
-						>
-							sobre nosotros
-						</Text>
-						<Heading 
-							as="h2"
-							color="#000"
-							fontSize={{base: "2rem", md: "2.6rem", lg: "3.2rem"}}
-							fontWeight="light"
-							letterSpacing="1px"
-							lineHeight="1.1"
-						>somos el organismo cúpula <br/>del sector agropecuario</Heading>
-						<Text mt="1.5rem" mb="2rem" fontSize={{base: "sm", md: "md", lg: "lg"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de <strong>Honduras</strong> y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
-					</Box>
-				</Box>
+				<Box textAlign="center" maxW="620px" m="0 auto" mt="100px" >
+					<Heading
+						as="h4"
+						color="brandGreen.50"
+						fontSize={{base: "14px", md:"16px"}}
+						fontWeight="light"
+						letterSpacing="0.2em"
+						mb="1rem"
+					>
+						sobre nosotros
+					</Heading>
+					<Heading 
+						as="h2"
+						color="#000"
+						fontSize={{base: "2rem", md: "2.6rem", lg: "3.2rem"}}
+						letterSpacing="1px"
+						lineHeight="1.1"
+					>somos el organismo cúpula <br/>del sector agropecuario</Heading>
+					<Text mt="1.5rem" fontSize={{base: "14px", md: "16px"}}>Hoy por hoy <strong>FENAGH</strong> es el organismo cúpula del Sector agropecuario de <strong>Honduras</strong> y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</Text>
+			</Box>
+			<Box w="100%">
+				<Img 
+					fluid={sources} 
+					style={{width:"100%"}}
+				/>
 			</Box>
 		</Container>
 	)

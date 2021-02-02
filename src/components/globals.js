@@ -3,21 +3,37 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { Box, Flex } from '@chakra-ui/react'
 
-export const PostContainer = styled.div`
+export const Condensed = styled.div`
   color: #3f3f3f;
   padding-bottom: 30px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 200%;
   p{
     margin-bottom: 1.9em;
   }
-  p, .post-content ul, .post-content ol {
+  p, 
+  .content-condensed ul, 
+  .content-condensed ol {
     max-width: 620px;
     margin-left: auto;
     margin-right: auto;
   }
+  table {
+    max-width: 620px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 415px){
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    } 
+  }
   @media (min-width: 768px){
     font-size: 16px;
+    padding-bottom: 80px;
   }
 `
 
@@ -26,8 +42,8 @@ export const Constrain = styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   @media (min-width: 768px){
     padding-left: 30px;
     padding-right: 30px;

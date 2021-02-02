@@ -3,15 +3,14 @@ import { Table, Thead, Tbody, Tr, Th, Td, TableCaption } from "@chakra-ui/react"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Container } from "../components/globals"
+import { Condensed } from "../components/globals"
 
 const PersonalPage = () => (
   <Layout>
     <SEO title="Personal Administrativo" />
-    <Container>
+    <Condensed>
       <h1>Personal Administrativo</h1>
-      <Table variant="striped" colorScheme="teal">
-        <TableCaption>Imperial to metric conversion factors</TableCaption>
+      <Table variant="striped" size="sm">
         <Thead>
           <Tr>
             <Th fontSize="xl">Nombre</Th>
@@ -62,7 +61,7 @@ const PersonalPage = () => (
           </Tr>
         </Tbody>
       </Table>
-    </Container>
+    </Condensed>
   </Layout>
 )
 

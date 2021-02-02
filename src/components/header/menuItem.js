@@ -24,10 +24,10 @@ const FlayOutPanel = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   &:first-child{
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
   &:last-child{
-    padding-right: 3rem;
+    padding-right: 2rem;
   }
   &:first-child .flayout-panel-section__container{
     margin-left: 0px;
@@ -54,12 +54,11 @@ const FlayOutPanel = styled.div`
   .flayout-panel-section__container{
     .flayout-panel-title{
       display: inline-block;
-      color:rgb(13, 14, 17);
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing:0.25px;
+      color: #777777;
+      font-size: 1.1rem;
+      letter-spacing:1px;
       padding: .5rem 0.625rem;
-      margin-bottom:4px;
+      margin-bottom: 2px;
       transform:translateX(-10px);
     }
     > ul {
@@ -68,11 +67,14 @@ const FlayOutPanel = styled.div`
       list-style-type:none;
       .flayout-li{
         a{
-          color: #777777;
-          font-weight: 600;
+          font-family: 'Libre Baskerville', serif;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0px;
+          color: #000;
           display: block;
-          padding: 8px 10px;
-          margin-bottom: 4px;
+          padding: 6px 10px;
+          margin-bottom: 2px;
           transform:translateX(-10px);
           &:hover{
             color: #15640f;
@@ -134,8 +136,9 @@ const MenuItem = ({link, value, subMenu, scrolling}) => {
         as={subMenu ? "div" : Link}
         to={link}
         color={scrolling ? "#000" : "#fff"}
-        fontSize="16px"
-        fontWeight="700"
+        fontFamily="Bebas Neue, sans-serif"
+        fontSize="1.1rem"
+        letterSpacing="1.2px"
         px=".8rem"
         h="60px"
         display="flex"
@@ -146,13 +149,16 @@ const MenuItem = ({link, value, subMenu, scrolling}) => {
         _hover={{
           color: "#15640f"
         }}
+        _last={ !subMenu && {
+          pr: 0,
+        }}
       >
         <Box as="span" mr="5px">{value}</Box>
         { subMenu && (
           <Box 
             as={MdKeyboardArrowDown}
             fontSize="1rem"
-            mt="1px"
+            mt=".5px"
             transition="transform .3s ease"
             _groupHover={{
               transform: "rotate(180deg)",

@@ -2,12 +2,12 @@ import React from "react"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Container } from "../components/globals"
+import { Condensed } from "../components/globals"
 
 const MessagePage = () => (
   <Layout>
     <SEO title="Mensaje del Presidente" />
-    <Container>
+    <Condensed>
       <h1>Mensaje del Presidente</h1>
       <p>En este especial momento que pasa nuestro País, el sector Agropecuario representado por la Federación Nacional de Agricultores y Ganaderos de Honduras-FENAGH- ha estado trabajando para brindar su apoyo a todos los sectores productivos que proveen la canasta básica de todos los hondureños.</p>
 
@@ -28,7 +28,7 @@ const MessagePage = () => (
       <p>Amigos, directivos, presidentes de las más de 45 organizaciones afiliadas a la FENAGH los invito a poner todo nuestro esfuerzo para poder dar un salto en el desarrollo,  en bien de todos los habitantes de este noble pueblo.</p>
 
       <p>Muchas gracias.</p>
-    </Container>
+    </Condensed>
   </Layout>
 )
 
