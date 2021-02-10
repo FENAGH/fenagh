@@ -1,8 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import { Constrain, SectionWrapperWithBackground } from '../globals'
+import { SectionWrapperWithBackground } from '../globals'
 
 export const MisionAndVision = () => {
   const data = useStaticQuery(graphql`

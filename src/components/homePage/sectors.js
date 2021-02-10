@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 import Slider from 'react-slick'
 import styled from '@emotion/styled'
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 // Components
 import { Constrain } from '../globals'
 // Styles
@@ -115,7 +115,7 @@ const SliderCard = ({base, childImageSharp}) => (
   >
     <Box
       as={Link}
-      to={`/sectores/${base.split(".")[0]}`}
+      // to={`/sectores/${base.split(".")[0]}`}
       to="/"
       display="block"
       pos="relative"

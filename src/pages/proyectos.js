@@ -1,7 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Icon } from "@chakra-ui/react"
-import { FiAlertTriangle, FiPieChart } from "react-icons/fi"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
