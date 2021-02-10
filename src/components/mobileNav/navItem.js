@@ -19,10 +19,9 @@ const MobileNavItem = ({link, value, subMenu}) => {
 				w="100%"
 				py="8px"
 				px={{base: "15px", md: "30px"}}
-				textTransform="uppercase"
-				fontSize="18px"
-				lineHeight="28px"
-				fontWeight="bold"
+				fontFamily="Bebas neue, sans-serif"
+				fontSize="1.2rem"
+				letterSpacing="1px"
 				display="inline-block"
 			>{value}</Box>
 		) : (

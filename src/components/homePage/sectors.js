@@ -1,15 +1,29 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import BackgroundImage from 'gatsby-background-image'
 import Slider from 'react-slick'
 import styled from '@emotion/styled'
 import { Box, Heading, Text } from '@chakra-ui/react'
 // Components
-import { Constrain, Container } from '../globals'
+import { Constrain } from '../globals'
 // Styles
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 import Border from '../border'
+
+const SliderBackgroundWrapper = styled(BackgroundImage)`
+  position:relative;
+  padding: 100px 0;
+  width: 100%;
+  background-color: #181818;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 768px){
+    padding: 150px 0;
+  }
+`
 
 const SliderWrapper = styled(Slider)`
   padding: 50px 0;
@@ -71,14 +85,14 @@ const CustomSlider = ({children}) => {
         }
       },
       {
-        breakpoint: 520,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 360,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -131,6 +145,13 @@ const SliderCard = ({base, childImageSharp}) => (
 const Sectors = () => {
   const data = useStaticQuery(graphql`
     query {
+      sliderBg: file(relativePath: { eq: "sectors-bg.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1280, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
       allFile(
         filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}}
       ) {
@@ -148,16 +169,13 @@ const Sectors = () => {
     }
   `)
   return (
-    <Constrain>
-      <Container
-        bg="brandGreen.70"
-        py="100px"
-        overflow="hidden"
-        bg={`#181818 url(${require('../../images/sectors-bg.webp')}) no-repeat 50% 50%`}
-        bgSize="cover"
-        pos="relative"
-      >
-        <Border top/>
+    <SliderBackgroundWrapper
+      Tag="section"
+      fluid={data.sliderBg.childImageSharp.fluid}
+      backgroundColor={`#000`}
+    >
+      <Border top/>
+      <Constrain>
         <Heading 
           as="h2"
           color="#fff"
@@ -176,9 +194,9 @@ const Sectors = () => {
             />
           ))}
         </CustomSlider> 
-        <Border bottom/>
-      </Container>
-    </Constrain>
+      </Constrain>
+      <Border bottom/>
+    </SliderBackgroundWrapper>
   )
 }
 

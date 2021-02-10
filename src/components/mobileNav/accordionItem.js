@@ -21,10 +21,10 @@ const AccordionItem = ({expanded, setExpanded, subMenu, value}) => {
 			>
 				<Box 
 					as="span"
-					textTransform="uppercase"
-					fontSize="18px"
+					fontFamily="Bebas neue, sans-serif"
+          fontSize="1.2rem"
+          letterSpacing="1px"
 					lineHeight="28px"
-					fontWeight="bold"
 				>{value}</Box>
 				<Icon 
 					transform="rotate(0deg)"
@@ -64,6 +64,10 @@ const AccordionItem = ({expanded, setExpanded, subMenu, value}) => {
           >
             <Box 
               as="span" 
+              color="#777777"
+              fontSize="1rem"
+              letterSpacing="-.2px"
+              fontWeight="bold"
               p="9px 35px"
               display="block"
               pos="relative"
@@ -85,9 +89,11 @@ const AccordionItem = ({expanded, setExpanded, subMenu, value}) => {
                   as={Link} 
                   to={item.flayOutMenu_link}
                   display="block"
-                  color="#777777"
+                  color="#000"
                   p="9px 35px"
-                  font-Sze="14px"
+                  fontFamily="Bebas neue, sans-serif"
+                  fontSize="1.1rem"
+                  letterSpacing="1px"
                   lineHeight="20px"
                   pos="relative"
                   _after={{

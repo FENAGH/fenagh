@@ -24,10 +24,10 @@ const FlayOutPanel = styled.div`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   &:first-child{
-    padding-left: 2rem;
+    padding-left: 1.5rem;
   }
   &:last-child{
-    padding-right: 2rem;
+    padding-right: 1.5rem;
   }
   &:first-child .flayout-panel-section__container{
     margin-left: 0px;
@@ -55,8 +55,10 @@ const FlayOutPanel = styled.div`
     .flayout-panel-title{
       display: inline-block;
       color: #777777;
-      font-size: 1.1rem;
-      letter-spacing:1px;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 14px;
+      letter-spacing: -.2px;
+      font-weight: bold;
       padding: .5rem 0.625rem;
       margin-bottom: 2px;
       transform:translateX(-10px);
@@ -67,10 +69,8 @@ const FlayOutPanel = styled.div`
       list-style-type:none;
       .flayout-li{
         a{
-          font-family: 'Libre Baskerville', serif;
-          font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 0px;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
           color: #000;
           display: block;
           padding: 6px 10px;
@@ -137,7 +137,7 @@ const MenuItem = ({link, value, subMenu, scrolling}) => {
         to={link}
         color={scrolling ? "#000" : "#fff"}
         fontFamily="Bebas Neue, sans-serif"
-        fontSize="1.1rem"
+        fontSize="1.2rem"
         letterSpacing="1.2px"
         px=".8rem"
         h="60px"

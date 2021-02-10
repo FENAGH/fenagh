@@ -10,22 +10,32 @@ const fakePosts = [
   {
     id: 0, 
     title: "Photo essay: In the kitchen of Mère Brazier", 
-    body: "Photographer Etienne Maury offers a rare behind-the-scenes glimpse of a legendary Lyonnais kitchen."
+    body: "Photographer Etienne Maury offers a rare behind-the-scenes glimpse of a legendary Lyonnais kitchen.",
+    tag: "evento"
   },
   {
     id: 1, 
     title: "The perfect day in Shanghai", 
-    body: "Scour the markets, get your fill of dumplings, and take in the sights of this hypermodern Chinese megalopolis."
+    body: "Scour the markets, get your fill of dumplings, and take in the sights of this hypermodern Chinese megalopolis.",
+    tag: "noticia"
   },
   {
     id: 2, 
     title: "Photo essay: the tattoo artists of Shanghai", 
-    body: "Shanghai is the center of China’s burgeoning ink scene."
+    body: "Shanghai is the center of China’s burgeoning ink scene.",
+    tag: "evento"
   },
   {
     id: 3, 
     title: "The perfect day in Santa Fe", 
-    body: "Grab a burrito and stroll around the railroad yards, restaurants, and groovy art installations of Santa Fe."
+    body: "Grab a burrito and stroll around the railroad yards, restaurants, and groovy art installations of Santa Fe.",
+    tag: "noticia"
+  },
+  {
+    id: 4, 
+    title: "EME ALFONSO ON OLD AND NEW CHALLENGES FOR CUBAN MUSICIANS", 
+    body: "Eme Alfonso on Cuban music education, new challenges for Cuban musicians, and growing up as the daughter of Cuban rock royalty.",
+    tag: "noticia"
   },
 ]
 
@@ -68,7 +78,7 @@ const ArticleWrapper = styled.article`
   }
 `
 
-const Article = ({title, body}) => {
+const Article = ({title, body, tag}) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "post-placeholder.webp" }) {
@@ -93,7 +103,7 @@ const Article = ({title, body}) => {
       >
         <Heading 
           as="h4"
-          size="md" 
+          size="sm" 
           display="inline-block"
           mb="20px"
           letterSpacing="2px"
@@ -104,11 +114,11 @@ const Article = ({title, body}) => {
             as="span" 
             bg="brandGreen.50" 
             color="#fff"
-            p="0 14px 0 14px"
+            p="6px 14px 4px 14px"
             display="inline-block"
             userSelect="none"
             transition="background-color .267s ease, color .267s ease"
-          >tag</Box>
+          >{tag}</Box>
         </Heading>
       </Box>
       <Box 
@@ -124,13 +134,13 @@ const Article = ({title, body}) => {
       </Box>
       <Box 
         as={Link} 
-        to="/" 
+        to="/blog" 
         display="inline-block" 
       >
         <Box px="10px" transform="translateZ(0)">
           <Heading as="h3" fontSize={{base:"20px", lg: "28px"}} lineHeight="125%" letterSpacing="1px" mb="6px">{title}</Heading>
-          <Box mt="4px" color="#a5a5a5">
-            <Text fontSize={{base: "14px", lg: "16px"}} lineHeight="150%">{body}</Text>
+          <Box mt="4px">
+            <Text fontSize={{base: "12px", lg: "14px"}} lineHeight="150%">{body}</Text>
           </Box>
         </Box>
       </Box>
@@ -156,6 +166,7 @@ const News = () => (
           key={data.id}
           title={data.title}
           body={data.body}
+          tag={data.tag}
         />
       ))}
     </ArticleList>

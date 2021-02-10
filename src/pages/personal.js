@@ -1,68 +1,57 @@
 import React from "react"
-import { Table, Thead, Tbody, Tr, Th, Td, TableCaption } from "@chakra-ui/react"
+import { useStaticQuery, graphql } from "gatsby"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Condensed } from "../components/globals"
+import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
+import Hero from "../components/hero"
+import Border from '../components/border'
+import { PERSONAL } from '../config/data'
 
-const PersonalPage = () => (
-  <Layout>
-    <SEO title="Personal Administrativo" />
-    <Condensed>
-      <h1>Personal Administrativo</h1>
-      <Table variant="striped" size="sm">
-        <Thead>
-          <Tr>
-            <Th fontSize="xl">Nombre</Th>
-            <Th fontSize="xl">Cargo</Th>
-            <Th fontSize="xl">Correo</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          <Tr>
-            <Td>Msc. Javier Barahona</Td>
-            <Td>Asistente Técnico Administrativo</Td>
-            <Td><a href="mailto:jbarahona@fenagh.net" target="_blank" rel="noopener noreferrer">jbarahona@fenagh.net</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Msc. Maria Jose Romero</Td>
-            <Td>Asistente Técnico Administrativo</Td>
-            <Td><a href="mailto:fenagh.oficial@gmail.com" target="_blank" rel="noopener noreferrer">fenagh.oficial@gmail.com</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Ing. José A. Chacón</Td>
-            <Td>Jefe de Registro Genealógico</Td>
-            <Td><a href="mailto:jchacon@fenagh.net" target="_blank" rel="noopener noreferrer">jchacon@fenagh.net</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Kenia Castellanos</Td>
-            <Td>Administradora</Td>
-            <Td><a href="mailto:kcastellanos@fenagh.net" target="_blank" rel="noopener noreferrer">kcastellanos@fenagh.net</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Ing. José A. Chacón</Td>
-            <Td>Jefe de Registro Genealógico</Td>
-            <Td><a href="mailto:jchacon@fenagh.net" target="_blank" rel="noopener noreferrer">jchacon@fenagh.net</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Lic. Marlen Torres</Td>
-            <Td>Supervisora de Recaudo</Td>
-            <Td><a href="mailto:mtorres@fenagh.net" target="_blank" rel="noopener noreferrer">mtorres@fenagh.net</a></Td>
-          </Tr>
-          <Tr>
-            <Td>Lic. Daniel Santos</Td>
-            <Td>Oficial de Recaudo PROMDECA</Td>
-            <Td/>
-          </Tr>
-          <Tr>
-            <Td>Angie Tillet</Td>
-            <Td>Oficial de Recaudo SENASA SPS</Td>
-            <Td/>
-          </Tr>
-        </Tbody>
-      </Table>
-    </Condensed>
-  </Layout>
-)
+const PersonalPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "solid-bg.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <Layout>
+      <SEO title="Personal Administrativo" />
+      <Hero
+        sources={data.file.childImageSharp.fluid}
+        className="hero-short hero-alignBottom no-overlay"
+        headline="Personal Administrativo"
+        section="Nuestra Gente"
+      />
+      <Border />
+      <Constrain>
+        <Table>
+          <TableHead>
+            <Cell data-title="Nombre">Nombre</Cell>
+            <Cell data-title="Cargo">Cargo</Cell>
+            <Cell data-title="Correo">Correo</Cell>
+          </TableHead>
+          {PERSONAL.map(({id, cargo, email, nombre}) => (
+            <TableRow key={id}>
+              <Cell data-title="Nombre">{nombre}</Cell>
+              <Cell data-title="Cargo">{cargo}</Cell>
+              <Cell data-title="Correo">
+                {email.length > 0 && (
+                  <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">{email}</a>
+                )}
+              </Cell>
+            </TableRow>
+          ))}
+        </Table>
+      </Constrain>
+    </Layout>
+  )
+}
 
 export default PersonalPage

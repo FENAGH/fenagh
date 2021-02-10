@@ -19,6 +19,14 @@ const HeroWrapper = styled(BackgroundImage)`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  &.hero-simple{
+    max-height: none;
+    margin-bottom: 60px;
+    padding-top: 100px;
+    .hero-overlay{
+      background: linear-gradient(#e3e3e3,rgba(255,255,255,0) 55%,rgba(255,255,255,0) 100%);
+    }
+  }
   &.hero-default{
     height: 175vw;
     min-height: 150vw;
@@ -56,6 +64,16 @@ const HeroWrapper = styled(BackgroundImage)`
       }
     }
   }
+  &.t-lightBackground{
+    color: #232323;
+    .hero-content .eyebrow-heading{
+      color: #fff;
+      background: #232323;
+    }
+  }
+  &.no-overlay .hero-overlay{
+    opacity: 0
+  }
   .hero-overlay{
     z-index: 2;
     position: absolute;
@@ -63,7 +81,7 @@ const HeroWrapper = styled(BackgroundImage)`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.65),transparent 25%,transparent);
+    background: linear-gradient(rgba(0,0,0,.65),transparent 55%,transparent);
   }
   .hero-content{
     z-index: 5;
@@ -83,8 +101,8 @@ const HeroWrapper = styled(BackgroundImage)`
     }
     .hero-title{
       font-family:'Bebas Neue', sans-serif;
-      color: #fff;
       font-size: 52px;
+      letter-spacing: 1px;
       line-height: 54px;
     }
   }
@@ -117,11 +135,13 @@ const HeroWrapper = styled(BackgroundImage)`
     &.hero-alignRight .hero-content{
       .hero-title{
         max-width: 55%;
+        letter-spacing: 2px;
       }
     }
     &.hero-alignLeft .hero-content{
       .hero-title{
         max-width: 55%;
+        letter-spacing: 2px;
       }
     }
     &.hero-default{

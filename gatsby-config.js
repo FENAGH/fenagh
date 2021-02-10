@@ -61,7 +61,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Convención',
-                flayOutMenu_link: '/convención'
+                flayOutMenu_link: 'https://convencion-fenagh.netlify.app/'
               },
               {
                 flayOutMenu_name: 'Convenios',
@@ -73,7 +73,7 @@ module.exports = {
             flayOutName: 'Leyes Agrícolas',
             flayOutMenu: [
               {
-                flayOutMenu_name: 'Tribuario',
+                flayOutMenu_name: 'Tributario y Financiero',
                 flayOutMenu_link: '/'
               },
               {
@@ -90,7 +90,38 @@ module.exports = {
               },
             ]
           },
-
+        ]
+      },
+      {
+        name: 'Plataformas Digitales',
+        link: null,
+        subMenu: [
+          {
+            flayOutName: 'Registro Genealógico',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Comercialización',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Plataforma',
+                flayOutMenu_link: '/'
+              },
+            ]
+          },
+          {
+            flayOutName: 'Cuota Pecuaria',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Ley Cuota Pecuaria',
+                flayOutMenu_link: '/'
+              },
+              {
+                flayOutMenu_name: 'Plataforma',
+                flayOutMenu_link: '/'
+              },
+            ]
+          },
         ]
       },
       {
@@ -99,22 +130,7 @@ module.exports = {
         subMenu: null
       },
       {
-        name: 'Cuota Pecuaria',
-        link: '/',
-        subMenu: null
-      },
-      {
-        name: 'Comercialización',
-        link: '/',
-        subMenu: null
-      },
-      {
-        name: 'Registro Genealógico',
-        link: '/',
-        subMenu: null
-      },
-      {
-        name: 'Noticias',
+        name: 'Noticias y Eventos',
         link: '/',
         subMenu: null
       },

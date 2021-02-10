@@ -18,7 +18,7 @@ const Border = ({bottom, top}) => (
       width: '100%',
       transform:"scaleY(-1)"
     } : {
-      marginBottom: "45px",
+      marginBottom: "80px",
       marginTop: "-38px"
     }}
   >

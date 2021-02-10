@@ -6,6 +6,8 @@ import About from './about'
 import Sectors from './sectors'
 import News from './news'
 import Border from '../border'
+import Objectives from './objectives'
+import MisionAndVision from './misionAndVision'
 
 const HomePage = () => {
   const data = useStaticQuery(graphql`
@@ -42,14 +44,16 @@ const HomePage = () => {
     <>
       <Hero
         sources={sources}
-        className="hero-default hero-alignBottom"
+        className="hero-default"
         headline="Cultivando el futuro de Honduras"
       />
       <Border />
       <About />
+      <MisionAndVision />
       <Border />
-      <News />
+      <Objectives />
       <Sectors />
+      <News />
     </> 
   )
 }
