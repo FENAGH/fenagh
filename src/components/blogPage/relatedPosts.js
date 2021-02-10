@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { Box, Flex, Heading, Text } from '@chakra-ui/react'
-import { ButtonLink, Container, FlexContainer } from '../globals'
+import { Constrain, FlexContainer, StyledLink } from '../globals'
 
 const RelatedPosts = () => {
   const data = useStaticQuery(graphql`
@@ -40,7 +40,7 @@ const RelatedPosts = () => {
       pt="112px"
       pb="112px"
     >
-      <Container pt="1rem" pb="3rem" textAlign="center">
+      <Constrain>
         <Heading 
           as="h3" 
           fontSize="3rem"
@@ -99,9 +99,9 @@ const RelatedPosts = () => {
           </Box>
         </FlexContainer>
         <Flex justifyContent="center">
-          <ButtonLink brand>ver todos</ButtonLink>
+          <StyledLink to="/">ver todos</StyledLink>
         </Flex>
-      </Container>
+      </Constrain>
     </Box>
   )
 }

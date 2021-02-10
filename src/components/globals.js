@@ -25,10 +25,15 @@ export const Content = styled.div`
   }
   h1, h2, h3, h4, h5{
     font-family: 'Bebas neue', sans-serif;
-    margin-bottom: 1em;
   }
   h2{
     font-size: 1.4rem;
+    margin-bottom: .9em;
+    padding-top: .9em;
+    line-height: 125%;
+    letter-spacing: -.5px;
+    text-align: left;
+    color: #181818;
   }
   blockquote{
     line-height: 0;
