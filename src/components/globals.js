@@ -16,15 +16,19 @@ export const Content = styled.div`
   p{
     margin-bottom: 1.9em;
   }
-  p, 
+  p, h2, h3, h4, h5,
   .content-condensed ul, 
   .content-condensed ol {
     max-width: 620px;
     margin-left: auto;
     margin-right: auto;
   }
-  h1, h2, h3, h4{
+  h1, h2, h3, h4, h5{
     font-family: 'Bebas neue', sans-serif;
+    margin-bottom: 1em;
+  }
+  h2{
+    font-size: 1.4rem;
   }
   blockquote{
     line-height: 0;
@@ -140,6 +144,9 @@ export const Content = styled.div`
     }
   }
   @media (min-width: 1024px){
+    h2{
+      font-size: 1.8rem;
+    }
     blockquote{
       p{
         font-size: 25px;

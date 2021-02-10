@@ -134,7 +134,7 @@ const Article = ({title, body, tag}) => {
       </Box>
       <Box 
         as={Link} 
-        to="/blog" 
+        to="/"
         display="inline-block" 
       >
         <Box px="10px" transform="translateZ(0)">
