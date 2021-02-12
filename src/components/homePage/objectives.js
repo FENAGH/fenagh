@@ -50,9 +50,6 @@ const Objectives = () => {
             </div>
           </div>
         </Content>
-        <p className="center">
-          <StyledLink to="/" className="primary">Leer más</StyledLink>
-        </p>
       </Constrain>
     </SectionWrapper>
   )

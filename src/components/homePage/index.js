@@ -7,7 +7,7 @@ import Sectors from './sectors'
 import News from './news'
 import Border from '../border'
 import Objectives from './objectives'
-import MisionAndVision from './misionAndVision'
+import SectionWithImage from './sectionWithImage'
 
 const HomePage = () => {
   const data = useStaticQuery(graphql`
@@ -49,7 +49,7 @@ const HomePage = () => {
       />
       <Border />
       <About />
-      <MisionAndVision />
+      <SectionWithImage />
       <Border />
       <Objectives />
       <Sectors />

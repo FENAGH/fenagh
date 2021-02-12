@@ -25,14 +25,13 @@ export const Content = styled.div`
   }
   h1, h2, h3, h4, h5{
     font-family: 'Bebas neue', sans-serif;
+    text-align: center;
   }
   h2{
     font-size: 1.4rem;
     margin-bottom: .9em;
     padding-top: .9em;
     line-height: 125%;
-    letter-spacing: -.5px;
-    text-align: left;
     color: #181818;
   }
   blockquote{
@@ -87,17 +86,23 @@ export const Content = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.9em;
-    .content-media-item{
-      padding-top: .6em;
-      .content-caption{
-        margin-top: 9px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font: 12px/180% "Roboto",Arial,sans-serif;
-        color: #a5a5a5;
-        text-align: center;
-      }
+    &--fullWidth{
+      max-width: none;
     }
+  }
+  .content-media-items{
+    width: 100%;
+  }
+  .content-media-item{
+    padding-top: .6em;
+  }
+  .content-caption{
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font: 12px/180% "Roboto",Arial,sans-serif;
+    color: #a5a5a5;
+    text-align: center;
   }
   .content-fact{
     max-width: 620px;
@@ -128,29 +133,47 @@ export const Content = styled.div`
   @media (min-width: 768px){
     font-size: 16px;
     padding-bottom: 80px;
+    h2{
+      font-size: 1.6rem;
+    }
     .content-fact{
       padding: 59px 60px 54px;
     }
     .content-pull{
       width: calc(50% - 60px);
-      .content-media {
+      .content-media{
         margin-bottom: .9em;
-        .content-caption{
-          font-size: 13px;
-          margin-left: auto;
-          margin-right: auto;
-        }
       }
+    }
+    .content-media--double .content-media-item{
+      width: calc(50% - 15px);
+    }
+    .content-media-items{
+      display: flex; 
+      justify-content: space-between;
+    }
+    .content-caption{
+      font-size: 13px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .content-pull--left{
       clear: left;
       float: left;
-      margin-right: 30px;
+      margin-right: 20px;
+    }
+    .content-pull--right{
+      clear: right;
+      float: right;
+      margin-left: 20px;
+    }
+    .content-pull--narrow{
+      width: 280px;
     }
   }
   @media (min-width: 1024px){
     h2{
-      font-size: 1.8rem;
+      font-size: 2.4rem;
     }
     blockquote{
       p{
@@ -223,9 +246,9 @@ export const SectionWrapper = styled.section`
       width: 100%;
     }
   }
-  @media (min-width: 1024px){
+  /* @media (min-width: 1024px){
     padding-bottom: 90px;
-  }
+  } */
   .center{
     text-align: center;
   }
@@ -255,6 +278,10 @@ export const SectionWrapperWithBackground = styled(BackgroundWrapper)`
   background-size: cover;
   .center{
     text-align: center;
+  }
+  .image-holder{
+    width: 100%;
+    max-width: 520px;
   }
 `
 
