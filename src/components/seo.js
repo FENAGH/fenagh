@@ -23,9 +23,7 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      bodyAttributes={{class: 'no-hero-page'}}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[

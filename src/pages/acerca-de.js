@@ -48,7 +48,7 @@ const HistoryPage = () => {
   ]
   return (
     <Layout>
-      <SEO title="Historia" />
+      <SEO title="Acerca de FENAGH" />
       <Hero
         sources={sources}
         className="hero-default hero-alignBottom hero-alignLeft"
@@ -64,14 +64,6 @@ const HistoryPage = () => {
           <p>Ser la institución líder e integradora que propicie las condiciones para el desarrollo de un sector agropecuario fuerte, competitivo y exitoso.</p>
 
           <h2>Historia</h2>
-
-          <div className="content-pull content-pull--left content-pull--narrow">
-            <figure className="content-media">
-              <div className="content-media-item">
-                <Img fluid={data.media_I.childImageSharp.fluid} alt="Misión y Visión FENAGH"/>
-              </div>
-            </figure>
-          </div>
           
           <p>Entre 1940 y 1950, surgen los primeros movimientos que van a constituir la base de la que hoy es la entidad que genuinamente representa a empresarios dedicados a las labores agrícolas y ganaderas en Honduras y fue hasta el 26 de junio de 1966 que la Federación Nacional de Agricultores y Ganaderos de Honduras (FENAGH) inicia sus actividades en la ciudad de San Pedro Sula.</p>
 

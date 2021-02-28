@@ -1,20 +1,26 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import styled from '@emotion/styled'
 import { Box, Flex } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 
 export const Content = styled.div`
   color: #3f3f3f;
   padding-bottom: 30px;
   font-size: 13px;
   line-height: 200%;
-  a{
+  .external-link{
     color: #15640f;
     text-decoration: none;
   }
   p{
     margin-bottom: 1.9em;
+  }
+  p.center{
+    text-align: center;
+  }
+  p.has-link{
+    margin-top: 2.9em;
   }
   p, h2, h3, h4, h5,
   .content-condensed ul, 
@@ -32,7 +38,7 @@ export const Content = styled.div`
     margin-bottom: .9em;
     padding-top: .9em;
     line-height: 125%;
-    color: #181818;
+    color: #181818; 
   }
   blockquote{
     line-height: 0;
@@ -47,7 +53,7 @@ export const Content = styled.div`
       opacity: .1;
       display: inline-block;
       margin-left: -14px;
-      margin-top: -74px;
+      margin-top: -74px;     
       font: 300 160px/100% 'Times New Roman',serif;
       letter-spacing: -14px;
     }
@@ -304,6 +310,7 @@ export const StyledLink = styled(Link)`
     color: #fff;
     border-color: #15640f;
   }
+  
 `
 
 export const Constrain = styled.div`

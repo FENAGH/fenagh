@@ -131,6 +131,7 @@ const MenuItem = ({link, value, subMenu, scrolling}) => {
     <>
       <Box
         role="group"
+        className="nav-link-container"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         as={subMenu ? "div" : Link}

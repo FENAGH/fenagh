@@ -12,12 +12,8 @@ module.exports = {
             flayOutName: 'Acerca de FENAGH',
             flayOutMenu: [
               {
-                flayOutMenu_name: 'Historia',
-                flayOutMenu_link: '/historia'
-              },
-              {
-                flayOutMenu_name: 'Misión & Visión',
-                flayOutMenu_link: '/mision-y-vision'
+                flayOutMenu_name: 'Sobre FENAGH',
+                flayOutMenu_link: '/acerca-de'
               },
               {
                 flayOutMenu_name: 'Objetivos',
@@ -93,18 +89,37 @@ module.exports = {
         ]
       },
       {
-        name: 'Plataformas Digitales',
+        name: 'Comercialización',
+        link: null,
+        subMenu: [
+          {
+            flayOutName: 'Comercialización',
+            flayOutMenu: [
+              {
+                flayOutMenu_name: 'Acerca de',
+                flayOutMenu_link: '/comercializacion'
+              },
+              {
+                flayOutMenu_name: 'Ejemplares en venta',
+                flayOutMenu_link: '/ejemplares-en-venta'
+              },
+            ]
+          },
+        ]
+      },
+      {
+        name: 'Plataformas',
         link: null,
         subMenu: [
           {
             flayOutName: 'Registro Genealógico',
             flayOutMenu: [
               {
-                flayOutMenu_name: 'Comercialización',
+                flayOutMenu_name: 'Sobre el Registro',
                 flayOutMenu_link: '/'
               },
               {
-                flayOutMenu_name: 'Plataforma',
+                flayOutMenu_name: 'Ir a la Plataforma',
                 flayOutMenu_link: '/'
               },
             ]
@@ -117,7 +132,7 @@ module.exports = {
                 flayOutMenu_link: '/'
               },
               {
-                flayOutMenu_name: 'Plataforma',
+                flayOutMenu_name: 'Ir a la Plataforma',
                 flayOutMenu_link: '/'
               },
             ]
@@ -138,6 +153,23 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-faunadb`,
+      options: {
+        // The secret for the key you're using to connect to your Fauna database.
+        // You can generate on of these in the "Security" tab of your Fauna Console.
+        secret: "fnAEDF55BVACDTwQn1_QFbe3rFZQOYKw7ttbUkrI",
+        // The name of the index you want to query
+        // You can create an index in the "Indexes" tab of your Fauna Console.
+        index: `todos_los_ejemplares_de_venta`,
+        // This is the name under which your data will appear in Gatsby GraphQL queries
+        // The following will create queries called `allBird` and `bird`.
+        type: "ejemplares",
+        // If you need to limit the number of documents returned, you can specify a 
+        // maximum number to read.
+        size: 100
+      },
+    },
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {

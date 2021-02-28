@@ -1,6 +1,6 @@
 import { Icon } from '@chakra-ui/react'
 import React from 'react'
-import { Constrain, Content, SectionWrapper, TitleSection, StyledLink } from '../globals'
+import { Constrain, Content, SectionWrapper, TitleSection } from '../globals'
 import { FiPieChart, FiAlertTriangle } from 'react-icons/fi'
 
 

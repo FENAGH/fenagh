@@ -111,7 +111,6 @@ const HeroWrapper = styled(BackgroundImage)`
       .hero-title{
         font-size: 126px;
         line-height: 116px;
-        letter-spacing: -4px;
       }
     }
     &.hero-alignRight .hero-content{
