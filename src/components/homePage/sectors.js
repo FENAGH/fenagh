@@ -153,7 +153,7 @@ const Sectors = () => {
         }
       },
       allFile(
-        filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "sectors"}}
+        filter: {extension: {regex: "/(webp)/"}, relativeDirectory: {eq: "sectors"}}
       ) {
         edges {
           node {

@@ -1,7 +1,7 @@
 import { Icon } from '@chakra-ui/react'
 import React from 'react'
 import { Constrain, Content, SectionWrapper, TitleSection } from '../globals'
-import { FiPieChart, FiAlertTriangle } from 'react-icons/fi'
+import { FiArchive, FiGlobe, FiAward } from 'react-icons/fi'
 
 
 const Objectives = () => {
@@ -17,35 +17,34 @@ const Objectives = () => {
             <div className="content-grid-item">
               <h3 className="content-grid-title">
                 <div className="icon">
-                  <Icon as={FiAlertTriangle} w={12} h={12} opacity=".25"/>
+                  <Icon as={FiArchive} w={12} h={12} opacity=".25"/>
                 </div>
-                <span>Phrasebook</span>
+                <span>Gestionar</span>
               </h3>
               <div className="content-grid-content">
-                <p>Malagasy: The people and language of Madagascar</p>
-                <p>Tana: Local shorthand for Antananarivo, Madagascar’s capital</p>
+                <p>Gestionar a nivel político las condiciones que permitan el desarrollo del sector agroalimentario nacional.</p>
               </div>
             </div>
             <div className="content-grid-item">
               <h3 className="content-grid-title">
                 <div className="icon">
-                  <Icon as={FiPieChart} w={12} h={12} opacity=".25"/>
+                  <Icon as={FiGlobe} w={12} h={12} opacity=".25"/>
                 </div>
-                <span>Know Before You Go</span>
+                <span>Representar</span>
               </h3>
               <div className="content-grid-content">
-                <p>Madagascar has a vegetarian-friendly food culture. Most Malagasy often don’t eat meat, because it’s expensive.</p>
+                <p>Representar a los sectores agroalimentarios a nivel político nacional e internacional.</p>
               </div>
             </div>
             <div className="content-grid-item">
               <h3 className="content-grid-title">
                 <div className="icon">
-                  <Icon as={FiPieChart} w={12} h={12} opacity=".25"/>
+                  <Icon as={FiAward} w={12} h={12} opacity=".25"/>
                 </div>
-                <span>Know Before You Go</span>
+                <span>Consolidar</span>
               </h3>
               <div className="content-grid-content">
-                <p>Madagascar has a vegetarian-friendly food culture. Most Malagasy often don’t eat meat, because it’s expensive.</p>
+                <p>Consolidar la institucionalidad con un enfoque integrador, de los sectores de distintas cadenas agroalimentarias del país, desde el sector primario, el sector transformador, el sector distribuidor de alimentos, y por integrar, el sector servicios con proveedores tecnológicos y servicios financieros.</p>
               </div>
             </div>
           </div>

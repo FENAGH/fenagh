@@ -5,13 +5,12 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
 import Hero from "../components/hero"
-import Border from '../components/border'
 import { PERSONAL } from '../config/data'
 
 const PersonalPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "solid-bg.webp" }) {
+      file(relativePath: { eq: "administrativo.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -25,11 +24,10 @@ const PersonalPage = () => {
       <SEO title="Personal Administrativo" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-short hero-alignBottom no-overlay"
+        className="hero-default hero-alignBottom hero-alignLeft"
         headline="Personal Administrativo"
         section="Nuestra Gente"
       />
-      <Border />
       <Constrain>
         <Table>
           <TableHead>

@@ -12,7 +12,7 @@ const About = () => (
         <p className="center">Hoy por hoy FENAGH es la institución cúpula del Sector agropecuario de Honduras y actualmente está gestionando importantes leyes a fin de expandir las capacidades del gremio y de potenciar cada vez más a nuestro sector.</p>
       </Content>
       <p className="center">
-        <StyledLink to="/historia" className="primary">Leer más</StyledLink>
+        <StyledLink to="/acerca-de" className="primary">Leer más</StyledLink>
       </p>
     </Constrain>
   </SectionWrapper>

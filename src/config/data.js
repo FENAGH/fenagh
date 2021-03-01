@@ -8,6 +8,14 @@ export const PERSONAL = [
   {id: "07", nombre: "Angie Tillet", cargo: "Oficial de Recaudo SENASA SPS", email: ""},
 ]
 
+export const EMPRESAS = [
+  {id: "01", siglas: "MSH", nombre: "Molino Harinero Sula"},
+  {id: "02", siglas: "Walmart", nombre: "Walmart Honduras"},
+  {id: "03", siglas: "Leyde", nombre: "Leche y Derivados"},
+  {id: "04", siglas: "LACTHOSA", nombre: "Lácteos de Honduras S.A"},
+  {id: "05", siglas: "DINANT", nombre: "Corporación Dinant"},
+]
+
 export const JUNTA = [
   {id: "01", nombre: "Anabel Gallardo", cargo:  "Ponce Presidente"},
   {id: "02", nombre: "Héctor Ferreira", cargo:  "Sabillon Vicepresidente"},

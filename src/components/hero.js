@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import BackgroundImage from 'gatsby-background-image'
 
 import { Constrain } from './globals'
+import Border from './border'
 
 const HeroWrapper = styled(BackgroundImage)`
   overflow: hidden;
@@ -161,22 +162,25 @@ const HeroWrapper = styled(BackgroundImage)`
 
 const Hero = ({sources, className, headline, section}) => {
   return (
-    <HeroWrapper
-      Tag="header"
-      className={className}
-      fluid={sources}
-      backgroundColor={`#000`}
-    >
-      <div className="hero-content">
-        <Constrain>
-          {section && (
-            <h4 className="eyebrow-heading">{section}</h4>
-          )}
-          <h1 className="hero-title">{headline}</h1>
-        </Constrain>
-      </div>
-      <div className="hero-overlay" />
-    </HeroWrapper>
+    <>
+      <HeroWrapper
+        Tag="header"
+        className={className}
+        fluid={sources}
+        backgroundColor={`#000`}
+      >
+        <div className="hero-content">
+          <Constrain>
+            {section && (
+              <h4 className="eyebrow-heading">{section}</h4>
+            )}
+            <h1 className="hero-title">{headline}</h1>
+          </Constrain>
+        </div>
+        <div className="hero-overlay" />
+      </HeroWrapper>
+      <Border />
+    </>
   )
 }
 

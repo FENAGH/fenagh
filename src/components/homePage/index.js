@@ -47,7 +47,6 @@ const HomePage = () => {
         className="hero-default"
         headline="Cultivando el futuro de Honduras"
       />
-      <Border />
       <About />
       <SectionWithImage />
       <Border />

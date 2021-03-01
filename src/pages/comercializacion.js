@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain, Content, StyledLink } from "../components/globals"
-import Border from "../components/border"
 import Hero from "../components/hero"
 
 const AssociationsPage = () => {
@@ -27,7 +26,6 @@ const AssociationsPage = () => {
         className="hero-default hero-alignBottom"
         headline="Comercializacion de ejemplares"
       />
-      <Border />
       <Constrain>
         <Content>
           <h2>Que es el Servicio de Comercialización?</h2>

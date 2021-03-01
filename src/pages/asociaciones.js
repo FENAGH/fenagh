@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
-import Border from "../components/border"
 import Hero from "../components/hero"
 import { ASOCIACIONES } from '../config/data'
 
@@ -29,7 +28,6 @@ const AssociationsPage = () => {
         headline="Asociaciones"
         section="Afiliados"
       />
-      <Border />
       <Constrain>
         <Table>
           <TableHead>

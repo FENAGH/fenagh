@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { Box, Icon, Image } from '@chakra-ui/react'
 import { MdVerifiedUser } from 'react-icons/md'
+import { ImArrowRight2 } from 'react-icons/im'
 import Img from "gatsby-image"
 
 import { CardWrapper } from './styles'
@@ -43,20 +44,54 @@ const Card = ({url, raza, ejemplar, featured, propietario, finca}) => {
           </div>
         )}
       </div>
-      <Link to="/" className="card-content">
-        <h2 className="card-content__title">
-          <small className="card-content__title-intro">{raza}</small>
-          {ejemplar}
-        </h2>
-        <div className="card-content__description">
-          <p className="card-content__description--item">
-            <span>Propietario:</span> {propietario}
-          </p>
-          <p className="card-content__description--item">
-            <span>Finca:</span>{finca}
-          </p>
-        </div>
-      </Link>
+      <div className="card-content">
+        <Link to="/">
+          <h2 className="card-content__title">
+            <small className="card-content__title-intro">{raza}</small>
+            {ejemplar}
+          </h2>
+          <div className="card-content__description">
+            <p className="card-content__description--item">
+              <span>Propietario:</span> {propietario}
+            </p>
+            <p className="card-content__description--item">
+              <span>Finca:</span>{finca}
+            </p>
+          </div>
+        </Link>
+        {featured && (
+          <Box 
+            as={Link} 
+            to="/"
+            color="#1d1d1d"
+            fontFamily="Bebas neue, sans-serif"
+            fontSize="1rem"
+            letterSpacing="2px"
+            lineHeight="100%"
+            mt="6px"
+            ml="-20px"
+            p="12px 20px"
+            position="relative"
+            height="auto"
+            display="inline-block"
+            transition="color 0.267s ease"
+            _hover={{
+              color: "#15640f"
+            }}
+          >
+            <Box 
+              as="span"
+              position="relative"
+              zIndex="2"
+              display="flex"
+              alignItems="center"
+            >
+              <Box as="span">ver perfil</Box>
+              <Icon as={ImArrowRight2} w={3} h={3} ml="2px"/>
+            </Box>
+          </Box>
+        )}
+      </div>
     </CardWrapper>
   )
 }

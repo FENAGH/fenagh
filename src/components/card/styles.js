@@ -19,7 +19,7 @@ export const CardWrapper = styled.article`
     position: relative;
     &__title{
       font-family: 'Bebas neue', sans-serif;
-      font-size: 32px;
+      font-size: 38px;
       line-height: 125%; 
       font-weight: regular;
       margin-bottom: 6px;
@@ -127,7 +127,7 @@ export const CardWrapper = styled.article`
         margin: 6px 0 20px 0;
       }
       &__featured-text{
-        font-size:14px;
+        font-size:16px;
         line-height:180%;
         margin-bottom: 20px;
       }
@@ -160,7 +160,7 @@ export const CardWrapper = styled.article`
         padding-top: 0;
         padding-right: 0;
         &__title{
-          font-size: 42px;
+          font-size: 48px;
         }
         &__featured-text{
           font-size: 14px;

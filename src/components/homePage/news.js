@@ -26,18 +26,6 @@ const fakePosts = [
     body: "Shanghai is the center of China’s burgeoning ink scene.",
     tag: "evento"
   },
-  {
-    id: 3, 
-    title: "The perfect day in Santa Fe", 
-    body: "Grab a burrito and stroll around the railroad yards, restaurants, and groovy art installations of Santa Fe.",
-    tag: "noticia"
-  },
-  {
-    id: 4, 
-    title: "EME ALFONSO ON OLD AND NEW CHALLENGES FOR CUBAN MUSICIANS", 
-    body: "Eme Alfonso on Cuban music education, new challenges for Cuban musicians, and growing up as the daughter of Cuban rock royalty.",
-    tag: "noticia"
-  },
 ]
 
 const Article = ({title, body, tag}) => {

@@ -16,9 +16,9 @@ module.exports = {
                 flayOutMenu_link: '/acerca-de'
               },
               {
-                flayOutMenu_name: 'Objetivos',
-                flayOutMenu_link: '/'
-              }
+                flayOutMenu_name: 'Sectores Represantados',
+                flayOutMenu_link: '/sectores'
+              },
             ]
           },
           {
@@ -53,7 +53,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Empresas',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/empresas'
               },
               {
                 flayOutMenu_name: 'Convención',
@@ -70,11 +70,11 @@ module.exports = {
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Tributario y Financiero',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/ley-tributaria-y-financiera'
               },
               {
                 flayOutMenu_name: 'Agrario',
-                flayOutMenu_link: '/'
+                flayOutMenu_link: '/ley-agrario'
               },
               {
                 flayOutMenu_name: 'Sanitario',

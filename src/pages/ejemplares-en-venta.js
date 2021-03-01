@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain } from "../components/globals"
-import Border from "../components/border"
 import Hero from "../components/hero"
 import Card from '../components/card'
 import CardList from '../components/cardList'
@@ -43,8 +42,6 @@ const ComercializacionPage = () => {
         className="hero-short hero-alignBottom"
         headline="Ejemplares en Venta"
       />
-      <Border />
-      <Border />
       <Constrain>
         <Card 
           featured

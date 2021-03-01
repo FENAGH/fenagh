@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
 import Hero from "../components/hero"
-import { JUNTA } from '../config/data'
+import { EMPRESAS } from '../config/data'
 
 const DirectivePage = () => {
   const data = useStaticQuery(graphql`
@@ -21,23 +21,25 @@ const DirectivePage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Junta Directiva" />
+      <SEO title="Empresas" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-default hero-alignBottom hero-alignLeft"
-        headline="Junta Directiva"
-        section="Nuestra Gente"
+        className="hero-short hero-alignBottom hero-alignCenter"
+        headline="Empresas"
+        section="Socios"
       />
       <Constrain>
         <Table>
           <TableHead>
-            <Cell data-title="No">Nombre</Cell>
-            <Cell data-title="Siglas">Cargo</Cell>
+            <Cell data-title="No.">No.</Cell>
+            <Cell data-title="Siglas">Siglas</Cell>
+            <Cell data-title="Nombre">Nombre</Cell>
           </TableHead>
-          {JUNTA.map(({id, cargo, nombre}) => (
+          {EMPRESAS.map(({id, siglas, nombre}) => (
             <TableRow key={id}>
+              <Cell data-title="No.">{id}</Cell>
+              <Cell data-title="Siglas">{siglas}</Cell>
               <Cell data-title="Nombre">{nombre}</Cell>
-              <Cell data-title="Cargo">{cargo}</Cell>
             </TableRow>
           ))}
         </Table>

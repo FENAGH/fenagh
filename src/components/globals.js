@@ -5,13 +5,27 @@ import { Box, Flex } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 export const Content = styled.div`
-  color: #3f3f3f;
+  color: #303030;
   padding-bottom: 30px;
   font-size: 13px;
   line-height: 200%;
+  .label{
+    color: #a0a0a0;
+  }
+  p.has-dropcap:first-child::first-letter {
+    float: left;
+    margin-top: .04em;
+    margin-right: 10px;
+    font-size: 615%;
+    line-height: 80%;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
   .external-link{
     color: #15640f;
     text-decoration: none;
+    font-weight: bold;
   }
   p{
     margin-bottom: 1.9em;
@@ -22,9 +36,7 @@ export const Content = styled.div`
   p.has-link{
     margin-top: 2.9em;
   }
-  p, h2, h3, h4, h5,
-  .content-condensed ul, 
-  .content-condensed ol {
+  p, h2, h3, h4, h5, ul, ol {
     max-width: 620px;
     margin-left: auto;
     margin-right: auto;
@@ -39,6 +51,18 @@ export const Content = styled.div`
     padding-top: .9em;
     line-height: 125%;
     color: #181818; 
+  }
+  ul{
+    list-style-type: disc;
+    border-left: 20px solid transparent;
+    margin-bottom: 1.6em;
+    padding: 0;
+    li{
+      padding: .3em 0;
+      &:first-child{
+        padding-top: 0;
+      }
+    }
   }
   blockquote{
     line-height: 0;

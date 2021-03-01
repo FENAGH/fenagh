@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Content, Constrain } from "../components/globals"
 import Hero from "../components/hero"
-import Border from "../components/border"
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
@@ -42,7 +41,6 @@ const ProjectsPage = () => {
         className="hero-short hero-alignBottom"
         headline="Proyectos"
       />
-      <Border />
       <Constrain>
         <Content>
           <h2>Programa “FENAGH Reforesta</h2>
@@ -64,6 +62,7 @@ const ProjectsPage = () => {
           <h2>Convenios</h2>
           <p>Convenio de gestión de becas internacionales para maestrías con el apoyo del Programa Presidencial Programa Presidencial de Becas 2020.</p>
           <p>Convenio de Becas a nivel técnico agropecuario en Colombia, con el apoyo de FUNDAPANACA y Programa Presidencial de Becas 2020</p>
+          <p>Convenio de Cooperación entre cargill, la escuela El Sembrador y FENAGH. Este convenio tiene como propósito establecer relaciones de cooperación y coordinación mutua que fortalezcan la capacitación agrícola, el emprendimiento estudiantil en producción animal y la generación de fondos que provengan de la comercialización de especies para que más jóvenes puedan financiar sus estudios en la Escuela El Sembrador.</p>
         </Content>
       </Constrain>
     </Layout>
