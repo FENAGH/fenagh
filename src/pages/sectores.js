@@ -48,7 +48,7 @@ const ProjectsPage = () => {
       <Constrain>
         <Content>
           
-          <h2>Sector Lácteo</h2>
+          <h2 id="lacteo">Sector Lácteo</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
@@ -67,7 +67,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="https://www.cahle.org/acerca-de-cahle" rel="noopener noreferrer" target="_blank">www.cahle.org</a>
           </p>
 
-          <h2>Sector Acuicola</h2>
+          <h2 id="acuicola">Sector Acuicola</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="https://andah.hn/andah/" rel="noopener noreferrer" target="_blank">andah.hn</a>
           </p>
 
-          <h2>Sector Embutidos</h2>
+          <h2 id="embutidos">Sector Embutidos</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
@@ -105,7 +105,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="http://www.ahproem.com/" rel="noopener noreferrer" target="_blank">www.ahproem.com</a>
           </p>
 
-          <h2>Sector Avicola</h2>
+          <h2 id="avicola">Sector Avicola</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
@@ -127,7 +127,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="https://www.facebook.com/anavih.hn/" rel="noopener noreferrer" target="_blank">anavih.hn</a>
           </p>
 
-          <h2>Sector Café</h2>
+          <h2 id="cafe">Sector Café</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
@@ -153,7 +153,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="http://www.ahprocafe.hn/" rel="noopener noreferrer" target="_blank">www.ahprocafe.hn</a>
           </p>
 
-          <h2>Sector Carne</h2>
+          <h2 id="carne">Sector Carne</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
@@ -174,7 +174,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="https://www.facebook.com/pg/camarafomentoganaderodehonduras/" rel="noopener noreferrer" target="_blank">camarafomentoganaderodehonduras</a>
           </p>
 
-          <h2>Sector Palma Africana</h2>
+          <h2 id="palma_africana">Sector Palma Africana</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
@@ -205,7 +205,7 @@ const ProjectsPage = () => {
             <a className="external-link" href="https://jaremar.com/" rel="noopener noreferrer" target="_blank">jaremar.com</a>
           </p>
 
-          <h2>Sector Porcino</h2>
+          <h2 id="porcino">Sector Porcino</h2>
 
           <div className="content-media">
             <div className="content-media-item">
@@ -215,7 +215,7 @@ const ProjectsPage = () => {
 
           <p>El sector porcino de Honduras está representado por la <strong>Asociación Nacional de Porcicultores de Honduras (ANAPOH)</strong> organización afiliada a la FENAGH. Honduras produce 35 millones de libras de carne de cerdo al año y se consumen 116 millones de libras por que se tienen que importar el 70% para satisfacer la demanda nacional.</p>
 
-          <h2>Sector Sal</h2>
+          <h2 id="sal">Sector Sal</h2>
 
           <div className="content-media">
             <div className="content-media-item">
@@ -226,7 +226,7 @@ const ProjectsPage = () => {
           <p>El sector sal en Honduras está representado por la <strong>Asociación de Productores de Sal de Honduras (ASOPROSALH)</strong> organización afiliada a la FENAGH.</p>
           <p>La producción de sal a nivel nacional es de un millón de quintales, este rubro genera más de 15 mil empleos directos.</p>
 
-          <h2>Sector Granos Básicos</h2>
+          <h2 id="granos">Sector Granos Básicos</h2>
 
           <div className="content-media">
             <div className="content-media-item">

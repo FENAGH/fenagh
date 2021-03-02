@@ -26,6 +26,7 @@ const HeroBlog = () => {
       pt="60px"
       mb="124px"
     >
+      <Box bg="#000" h="60px" pos="fixed" zIndex="10" left="0" top="0" w="100%" />
       <Container pt="1rem" pb="3rem">
         <FlexContainer>
           <Box 

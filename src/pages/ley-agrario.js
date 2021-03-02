@@ -9,7 +9,7 @@ import Hero from "../components/hero"
 const LeyAgrarioPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ley-tributaria.jpg" }) {
+      file(relativePath: { eq: "leyes_page.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid

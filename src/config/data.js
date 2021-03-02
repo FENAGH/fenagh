@@ -17,10 +17,10 @@ export const EMPRESAS = [
 ]
 
 export const JUNTA = [
-  {id: "01", nombre: "Anabel Gallardo", cargo:  "Ponce Presidente"},
-  {id: "02", nombre: "Héctor Ferreira", cargo:  "Sabillon Vicepresidente"},
-  {id: "03", nombre: "Gilberto Moreno", cargo:  "Alvarado Secretario"},
-  {id: "04", nombre: "Juan Jose", cargo:  "Cruz Tesorero"},
+  {id: "01", nombre: "Anabel Gallardo Ponce", cargo:  "Presidente"},
+  {id: "02", nombre: "Héctor Ferreira Sabillon", cargo:  "Vicepresidente"},
+  {id: "03", nombre: "Gilberto Moreno Alvarado", cargo:  "Secretario"},
+  {id: "04", nombre: "Juan Jose Cruz", cargo:  "Tesorero"},
   {id: "05", nombre: "Asterio Reyes", cargo:  "Vocal I"},
   {id: "06", nombre: "Roger Padilla", cargo:  "Vocal II"},
   {id: "07", nombre: "Ismael Espinal", cargo:  "Vocal III"},
@@ -31,8 +31,8 @@ export const JUNTA = [
   {id: "11", nombre: "Víctor Wilson", cargo:  "Asesor"},
   {id: "12", nombre: "Pablo Sierra", cargo:  "Asesor"},
   {id: "13", nombre: "Leopoldo Duran", cargo:  "Asesor"},
-  {id: "14", nombre: "Juan Carlos", cargo:  "Ramos Asesor"},
-  {id: "15", nombre: "José Manuel", cargo:  "España Asesor"},
+  {id: "14", nombre: "Juan Carlos Ramos", cargo:  "Asesor"},
+  {id: "15", nombre: "José Manuel España", cargo:  "Asesor"},
   {id: "16", nombre: "Mario Sánchez", cargo:  "Asesor"},
   {id: "16", nombre: "Denis Avendaño", cargo:  "Asesor"},
 ]

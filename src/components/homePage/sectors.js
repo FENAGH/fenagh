@@ -115,8 +115,7 @@ const SliderCard = ({base, childImageSharp}) => (
   >
     <Box
       as={Link}
-      // to={`/sectores/${base.split(".")[0]}`}
-      to="/"
+      to={`/sectores/#${base.split(".")[0].replace(" ","_")}`}
       display="block"
       pos="relative"
       overflow="hidden"

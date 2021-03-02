@@ -93,14 +93,15 @@ const FlayOut = ({subMenu}) => (
       <div className="flayout-panel-section__container">
         <span className="flayout-panel-title">{menu.flayOutName}</span>
         <ul>
-          {menu.flayOutMenu.map(({flayOutMenu_name, flayOutMenu_link}) => (
+          {menu.flayOutMenu.map(({flayOutMenu_name, flayOutMenu_link }) => {
+            return (
             <li
               key={flayOutMenu_name}
               className="flayout-li"
             >
               <Link to={flayOutMenu_link}>{flayOutMenu_name}</Link>
             </li>
-          ))}
+          )})}
         </ul>
       </div>
     </FlayOutPanel>

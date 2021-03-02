@@ -12,13 +12,6 @@ export const Content = styled.div`
   .label{
     color: #a0a0a0;
   }
-  p.has-dropcap:first-child::first-letter {
-    float: left;
-    margin-top: .04em;
-    margin-right: 10px;
-    font-size: 615%;
-    line-height: 80%;
-  }
   b, strong {
     font-weight: bolder;
   }
@@ -30,16 +23,23 @@ export const Content = styled.div`
   p{
     margin-bottom: 1.9em;
   }
+  p, h2, h3, h4, h5, ul, ol {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   p.center{
     text-align: center;
   }
   p.has-link{
     margin-top: 2.9em;
   }
-  p, h2, h3, h4, h5, ul, ol {
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
+  p.has-dropcap:first-child::first-letter {
+    float: left;
+    margin-top: .04em;
+    margin-right: 10px;
+    font-size: 615%;
+    line-height: 80%;
   }
   h1, h2, h3, h4, h5{
     font-family: 'Bebas neue', sans-serif;
@@ -127,12 +127,13 @@ export const Content = styled.div`
     padding-top: .6em;
   }
   .content-caption{
-    margin-top: 9px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    font: 12px/180% "Roboto",Arial,sans-serif;
     color: #a5a5a5;
     text-align: center;
+    font: 12px/180% "Libre Baskerville", "Times New Roman", serif;
+    font-style: italic;
   }
   .content-fact{
     max-width: 620px;
@@ -183,9 +184,9 @@ export const Content = styled.div`
       justify-content: space-between;
     }
     .content-caption{
-      font-size: 13px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 30px;
+      margin-right: 30px;
+      font-size: 14px;
     }
     .content-pull--left{
       clear: left;

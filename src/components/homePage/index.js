@@ -12,14 +12,7 @@ import SectionWithImage from './sectionWithImage'
 const HomePage = () => {
   const data = useStaticQuery(graphql`
     query {
-      tablet: file(relativePath: { eq: "home-md.webp" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      desktop: file(
+      bgImage: file(
         relativePath: { eq: "home.webp" }
       ) {
         childImageSharp {
@@ -30,20 +23,10 @@ const HomePage = () => {
       }
     }
   `)
-  const sources = [
-    {
-      ...data.tablet.childImageSharp.fluid,
-      media: "(min-width: 521px) and (max-width: 1024px)",
-    },
-    {
-      ...data.desktop.childImageSharp.fluid,
-      media: `(min-width: 1025px)`,
-    },
-  ]
   return (
     <>
       <Hero
-        sources={sources}
+        sources={data.bgImage.childImageSharp.fluid}
         className="hero-default"
         headline="Cultivando el futuro de Honduras"
       />

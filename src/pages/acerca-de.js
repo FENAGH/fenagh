@@ -17,15 +17,8 @@ const HistoryPage = () => {
           }
         }
       }
-      tablet: file(relativePath: { eq: "about-page-md.webp" }) {
-        childImageSharp {
-          fluid(maxWidth: 1024, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      desktop: file(
-        relativePath: { eq: "about-page.webp" }
+      bgImage: file(
+        relativePath: { eq: "about_page.webp" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
@@ -35,21 +28,11 @@ const HistoryPage = () => {
       }
     }
   `)
-  const sources = [
-    {
-      ...data.tablet.childImageSharp.fluid,
-      media: "(max-width: 1024)",
-    },
-    {
-      ...data.desktop.childImageSharp.fluid,
-      media: `(min-width: 1025px)`,
-    },
-  ]
   return (
     <Layout>
       <SEO title="Acerca de FENAGH" />
       <Hero
-        sources={sources}
+        sources={data.bgImage.childImageSharp.fluid}
         className="hero-default hero-alignBottom hero-alignLeft"
         headline="Acerca de la institución"
       />
