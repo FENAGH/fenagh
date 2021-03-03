@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { Box, Flex, Heading, Icon, Text, Link } from "@chakra-ui/react"
 import { FaFacebookF, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 // Components
@@ -11,20 +10,6 @@ import Layout from "../components/layout"
 import { Constrain, Content, FlexContainer } from '../components/globals'
 
 const Blog = ({data}) => {
-  console.log(data)
-    
-  const options = {
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: ({children}) => (
-        <p className="copy">{children}</p>
-      ),
-    },
-    renderMark: {
-      [MARKS.BOLD]: ({children}) => ( 
-        <strong>{children}</strong>
-      )
-    }
-  }
   return (
     <Layout>
       <SEO title="Blog" />

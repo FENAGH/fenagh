@@ -16,6 +16,30 @@ const LeyTributarioFinancieroPage = () => {
           }
         }
       }
+      leyFinanciero: contentfulDocumentList(id: {eq: "a513caf2-d08c-523a-b06e-8a980455deae"}) {
+        title
+        assets {
+          id
+          title
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
+      leyTributario: contentfulDocumentList(id: {eq: "3b3d265a-bfea-5ae1-84e2-a77d3ba36b38"}) {
+        title
+        assets {
+          id
+          title
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
     }
   `)
   return (
@@ -24,12 +48,42 @@ const LeyTributarioFinancieroPage = () => {
       <Hero
         sources={data.file.childImageSharp.fluid}
         className="hero-short hero-alignBottom hero-alignLeft"
-        headline="Tributataria y Financiera"
+        headline="Tributatario y Financiero"
         section="Leyes"
       />
       <Constrain>
         <Content>
           <p>En este espacio tienes acceso a las leyes vigentes en Honduras que están relacionadas al pago de impuestos establecidos por ley.</p>
+          <h2>{data.leyFinanciero.title}</h2>
+          <ul>
+            {data.leyFinanciero.assets.map(asset => (
+              <li key={asset.id}>
+                <a 
+                  href={asset.file.url} 
+                  download
+                  rel="noopener noreferrer" 
+                  target="_blank"
+                >
+                  {asset.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2>{data.leyTributario.title}</h2>
+          <ul>
+            {data.leyTributario.assets.map(asset => (
+              <li key={asset.id}>
+                <a
+                  href={asset.file.url} 
+                  download
+                  rel="noopener noreferrer" 
+                  target="_blank"
+                >
+                  {asset.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </Content>
       </Constrain>
     </Layout>

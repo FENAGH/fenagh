@@ -62,6 +62,9 @@ export const Content = styled.div`
       &:first-child{
         padding-top: 0;
       }
+      a{
+        color: #63b3ed;
+      }
     }
   }
   blockquote{

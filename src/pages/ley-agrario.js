@@ -16,6 +16,30 @@ const LeyAgrarioPage = () => {
           }
         }
       }
+      derechoPropiedad: contentfulDocumentList(id: {eq: "1853f804-d948-528a-bd63-2f902277f42c"}) {
+        title
+        assets {
+          id
+          title
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
+      derechoAmbiental: contentfulDocumentList(id: {eq: "1a639816-ed60-5e5f-aa69-bf2f601fa572"}) {
+        title
+        assets {
+          id
+          title
+          file {
+            url
+            fileName
+            contentType
+          }
+        }
+      }
     }
   `)
   return (
@@ -30,6 +54,37 @@ const LeyAgrarioPage = () => {
       <Constrain>
         <Content>
           <p>En este espacio tienes acceso a las leyes vigentes en Honduras que están relacionadas al derecho agrario, regulación de la propiedad entre otros.</p>
+          <h2>{data.derechoPropiedad.title}</h2>
+          <ul>
+            {data.derechoPropiedad.assets.map(asset => (
+              <li key={asset.id}>
+                <a 
+                  href={asset.file.url} 
+                  download
+                  rel="noopener noreferrer" 
+                  target="_blank"
+                >
+                  {asset.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2>{data.derechoAmbiental.title}</h2>
+          <ul>
+            {data.derechoAmbiental.assets.map(asset => (
+              <li key={asset.id}>
+                <a
+                  href={asset.file.url} 
+                  download
+                  rel="noopener noreferrer" 
+                  target="_blank"
+                >
+                  {asset.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+
         </Content>
       </Constrain>
     </Layout>
