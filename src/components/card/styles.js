@@ -11,8 +11,10 @@ export const CardWrapper = styled.article`
   .card-image{
     position:relative;
     width:100%;
+    height: 258px;
     margin-bottom: 30px;
     transition: transform .267s ease-out;
+    overflow: hidden;
   }
   .card-content{
     width: 100%;
@@ -80,6 +82,7 @@ export const CardWrapper = styled.article`
     .card-image{
       box-shadow:0 40px 80px rgba(0,0,0,0.2);
       z-index: 2;
+      height: auto;
     }
     .card-image-secondary{
       width: calc(100% + 2rem);

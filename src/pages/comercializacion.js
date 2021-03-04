@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import { Constrain, Content, StyledLink } from "../components/globals"
 import Hero from "../components/hero"
 
-const AssociationsPage = () => {
+const ComercializacionPage = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "comercializacion-hero.webp" }) {
@@ -41,4 +41,4 @@ const AssociationsPage = () => {
   )
 }
 
-export default AssociationsPage
+export default ComercializacionPage

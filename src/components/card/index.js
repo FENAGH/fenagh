@@ -7,10 +7,17 @@ import Img from "gatsby-image"
 
 import { CardWrapper } from './styles'
 
-const Card = ({url, raza, ejemplar, featured, propietario, finca}) => {
+const Card = ({url, raza, ejemplar, featured, propietario, finca, especie}) => {
   const data = useStaticQuery(graphql`
     query {
-      bgImage: file(relativePath: { eq: "ejemplar-destacado.jpg" }) {
+      bovino: file(relativePath: { eq: "ejemplar-bovino-destacado.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 720, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      equino: file(relativePath: { eq: "ejemplar-equino-destacado.webp" }) {
         childImageSharp {
           fluid(maxWidth: 720, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -19,6 +26,7 @@ const Card = ({url, raza, ejemplar, featured, propietario, finca}) => {
       }
     }
   `)
+  console.log(featured, especie)
   return (
     <CardWrapper featured={featured}>
       <div className="card-image-wrapper">
@@ -36,7 +44,7 @@ const Card = ({url, raza, ejemplar, featured, propietario, finca}) => {
           <div className="card-image-secondary">
             <Box
               as={Img}
-              fluid={data.bgImage.childImageSharp.fluid} 
+              fluid={especie === "BOVINO" && featured ? data.bovino.childImageSharp.fluid : data.equino.childImageSharp.fluid}
               w={["100%", null, "80%"]}
               h={["auto", null, "100%"]}
               opacity="0.1"

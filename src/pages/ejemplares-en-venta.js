@@ -22,6 +22,7 @@ const ComercializacionPage = () => {
         nodes {
           _id
           raza
+          especie
           ejemplar
           propietario
           finca
@@ -33,7 +34,7 @@ const ComercializacionPage = () => {
   `)
   
   const featuredEjemplar = data.ejemplares.nodes.filter(e => e.descatado)
-  const ejemplares = data.ejemplares.nodes.filter(e => !e.destacado)
+  const ejemplares = data.ejemplares.nodes.filter(e => !e.descatado)
   return (
     <Layout>
       <SEO title="Comercialización: Ejemplares en Venta" />
@@ -50,9 +51,10 @@ const ComercializacionPage = () => {
           ejemplar={featuredEjemplar[0].ejemplar}
           propietario={featuredEjemplar[0].propietario}
           finca={featuredEjemplar[0].finca}
+          especie={featuredEjemplar[0].especie}
         />
         <CardList>
-          {ejemplares.map(({_id, ejemplar, propietario, finca, raza, url}) => (
+          {ejemplares.map(({_id, ejemplar, propietario, finca, raza, url, especie}) => (
             <Card 
               id={_id}
               url={url}
@@ -60,6 +62,7 @@ const ComercializacionPage = () => {
               ejemplar={ejemplar}
               propietario={propietario}
               finca={finca}
+              epecie={especie}
             />
           ))}
         </CardList>
