@@ -1,11 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
+import { Box } from "@chakra-ui/layout"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
+import { Constrain } from "../components/globals"
 import Hero from "../components/hero"
-import { EMPRESAS } from '../config/data'
 
 const DirectivePage = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +17,42 @@ const DirectivePage = () => {
             ...GatsbyImageSharpFluid
           }
         }
-      }
+      },
+      dinant: file(relativePath: { eq: "logo-dinant.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      lacthosa: file(relativePath: { eq: "logo-lacthosa.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      leyde: file(relativePath: { eq: "logo-leyde.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      molino: file(relativePath: { eq: "logo-molino-harinero.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      walmart: file(relativePath: { eq: "logo-walmart.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
   return (
@@ -29,20 +65,39 @@ const DirectivePage = () => {
         section="Afiliados"
       />
       <Constrain>
-        <Table>
-          <TableHead>
-            <Cell data-title="No.">No.</Cell>
-            <Cell data-title="Siglas">Siglas</Cell>
-            <Cell data-title="Nombre">Nombre</Cell>
-          </TableHead>
-          {EMPRESAS.map(({id, siglas, nombre}) => (
-            <TableRow key={id}>
-              <Cell data-title="No.">{id}</Cell>
-              <Cell data-title="Siglas">{siglas}</Cell>
-              <Cell data-title="Nombre">{nombre}</Cell>
-            </TableRow>
-          ))}
-        </Table>
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          alignItems="center"
+          w="100%"
+        >
+          <Box 
+            as={Img}
+            fluid={data.dinant.childImageSharp.fluid}
+            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
+          />
+          <Box 
+            as={Img}
+            fluid={data.lacthosa.childImageSharp.fluid}
+            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
+          />
+          <Box 
+            as={Img}
+            fluid={data.leyde.childImageSharp.fluid}
+            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
+          />
+          <Box 
+            as={Img}
+            fluid={data.molino.childImageSharp.fluid}
+            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
+          />
+          <Box 
+            as={Img}
+            fluid={data.walmart.childImageSharp.fluid}
+            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
+          />
+        </Box>
       </Constrain>
     </Layout>
   )
