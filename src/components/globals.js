@@ -93,6 +93,12 @@ export const Content = styled.div`
       margin-top: -84px;
     }
   }
+  .highlights{
+    color: #15640f;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: .3rem;
+  }
   .signature{
     span{
       display: block;
@@ -169,6 +175,11 @@ export const Content = styled.div`
     padding-bottom: 80px;
     h2{
       font-size: 1.6rem;
+    }
+    .highlights{
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      margin-bottom: .5rem;
     }
     .content-fact{
       padding: 59px 60px 54px;

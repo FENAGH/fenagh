@@ -10,7 +10,7 @@ import { ASOCIACIONES } from '../config/data'
 const AssociationsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "solid-bg.webp" }) {
+      file(relativePath: { eq: "asociaciones_page.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -24,7 +24,7 @@ const AssociationsPage = () => {
       <SEO title="Asociaciones" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-short hero-alignBottom no-overlay"
+        className="hero-default hero-alignBottom hero-alignRight"
         headline="Asociaciones"
         section="Afiliados"
       />

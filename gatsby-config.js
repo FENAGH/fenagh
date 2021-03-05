@@ -120,7 +120,7 @@ module.exports = {
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Sobre el Registro',
-                flayOutMenu_link: '/',
+                flayOutMenu_link: '/sobre-el-registro',
               },
               {
                 flayOutMenu_name: 'Ir a la Plataforma',
@@ -137,7 +137,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Ir a la Plataforma',
-                flayOutMenu_link: '/',
+                flayOutMenu_link: 'http://recaudo.fonacsah.hn/cfpo/view/login.aspx',
               },
             ]
           },

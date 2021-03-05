@@ -24,7 +24,7 @@ const ComercializacionPage = () => {
       <Hero
         sources={data.file.childImageSharp.fluid}
         className="hero-default hero-alignBottom"
-        headline="Comercializacion de ejemplares"
+        headline="Comercialización de Ejemplares"
       />
       <Constrain>
         <Content>

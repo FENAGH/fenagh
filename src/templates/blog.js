@@ -2,8 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { Box, Flex, Heading, Icon, Text, Link } from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
 import { FaFacebookF, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { FacebookShareButton, WhatsappShareButton, TwitterShareButton } from 'react-share'
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -122,7 +123,27 @@ const Blog = ({data}) => {
                 mt="20px"
                 justify="space-between"
               >
-                <Link
+                <Box
+                  as="span"
+                  w="52px"
+                  h="52px"
+                  borderRadius="50%"
+                  background="brandGreen.50"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  target="_blank"
+                  href="facebook.com"
+                >
+                  <FacebookShareButton
+                    url={`https://fenagh.netlify.app/noticias-y-eventos/${data.contentfulBlogPost.slug}`}
+                    quote={data.contentfulBlogPost.title}
+                  >
+                    <Icon as={FaFacebookF} color="brandGreen.30" boxSize={6} mb="4px"/>
+                  </FacebookShareButton>
+                </Box>
+                <Box
+                  as="span"
                   w="56px"
                   h="56px"
                   borderRadius="50%"
@@ -133,9 +154,15 @@ const Blog = ({data}) => {
                   target="_blank"
                   href="facebook.com"
                 >
-                  <Icon as={FaFacebookF} color="brandGreen.30" boxSize={6}/>
-                </Link>
-                <Link
+                  <TwitterShareButton
+                    url={`https://fenagh.netlify.app/noticias-y-eventos/${data.contentfulBlogPost.slug}`}
+                    quote={data.contentfulBlogPost.title}
+                  >
+                    <Icon as={FaTwitter} color="brandGreen.30" boxSize={6} mb="4px"/>
+                  </TwitterShareButton>
+                </Box>
+                <Box
+                  as="span"
                   w="56px"
                   h="56px"
                   borderRadius="50%"
@@ -146,21 +173,13 @@ const Blog = ({data}) => {
                   target="_blank"
                   href="facebook.com"
                 >
-                  <Icon as={FaTwitter} color="brandGreen.30" boxSize={6}/>
-                </Link>
-                <Link
-                  w="56px"
-                  h="56px"
-                  borderRadius="50%"
-                  background="brandGreen.50"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  target="_blank"
-                  href="facebook.com"
-                >
-                  <Icon as={FaWhatsapp} color="brandGreen.30" boxSize={6}/>
-                </Link>
+                   <WhatsappShareButton
+                    url={`https://fenagh.netlify.app/noticias-y-eventos/${data.contentfulBlogPost.slug}`}
+                    quote={data.contentfulBlogPost.title}
+                  >
+                    <Icon as={FaWhatsapp} color="brandGreen.30" boxSize={6} mb="4px"/>
+                  </WhatsappShareButton>
+                </Box>
               </Flex>
             </Box>
           </Box>
@@ -177,6 +196,7 @@ export const query = graphql`
     contentfulBlogPost(id: {eq: $id}) {
       title
       tag
+      slug
       body{
         raw
         references {

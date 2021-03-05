@@ -38,8 +38,9 @@ const ConveniosPage = () => {
       <SEO title="Convenios" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-short hero-alignBottom"
+        className="hero-default hero-alignBottom hero-alignLeft"
         headline="Convenios"
+        section="Afiliados"
       />
       <Constrain>
         <Content>

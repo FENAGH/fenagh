@@ -24,9 +24,9 @@ const DirectivePage = () => {
       <SEO title="Empresas" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-short hero-alignBottom hero-alignCenter"
+        className="hero-default hero-alignBottom"
         headline="Empresas"
-        section="Socios"
+        section="Afiliados"
       />
       <Constrain>
         <Table>

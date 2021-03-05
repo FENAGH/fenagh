@@ -23,7 +23,7 @@ const LeyCuotaPecuariaPage = () => {
       <SEO title="Ley Cuota Pecuaria" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-short hero-alignBottom hero-alignLeft"
+        className="hero-default hero-alignBottom hero-alignLeft"
         headline="Ley Cuota Pecuaria"
       />
       <Constrain>
@@ -32,7 +32,8 @@ const LeyCuotaPecuariaPage = () => {
           <p>La ley del <strong>FONACSAH</strong> tiene por objeto mantener y fomentar el sector agropecuario nacional dentro de un marco de sostenibilidad y conservación del medio ambiente y hacerle frente a los efectos de la globalización y tratados comerciales.</p>
           <p>A través del siguiente enlace todos lo importadores nacionales pueden realizar los trámites correspondientes de los productos contenidos en la ley de la cuota pecuaria de Honduras.</p>
           <p>
-            <a className="external-link" href="https://www.facebook.com/pg/camarafomentoganaderodehonduras/" rel="noopener noreferrer" target="_blank">camarafomentoganaderodehonduras</a>
+            Ingresar a {" "}
+            <a className="external-link" href="http://recaudo.fonacsah.hn/cfpo/view/login.aspx" rel="noopener noreferrer" target="_blank">Recaudo FONACSAH</a>
           </p>
         </Content>
       </Constrain>
