@@ -34,7 +34,7 @@ export const Content = styled.div`
   p.has-link{
     margin-top: 2.9em;
   }
-  p.has-dropcap:first-child::first-letter {
+  p.has-dropcap:first-of-type::first-letter {
     float: left;
     margin-top: .04em;
     margin-right: 10px;
@@ -52,7 +52,7 @@ export const Content = styled.div`
     line-height: 125%;
     color: #181818; 
   }
-  ul{
+  > ul{
     list-style-type: disc;
     border-left: 20px solid transparent;
     margin-bottom: 1.6em;
@@ -149,6 +149,59 @@ export const Content = styled.div`
     margin: 2.5em auto;
     padding: 39px 40px 34px;
     border: 4px solid #232323;
+  }
+  .page-meta{
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+    margin-bottom: 1.5rem;
+    &__nav{
+      order: 1;
+      font: 14px/180% "Bebas neue", sans-serif;
+      border-bottom: 1px solid #f5f5f5;
+      &--list {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        .list-item{
+          padding: 0;
+          display: inline-flex;
+          align-items: center;
+          flex: 0 0 auto;
+          &:not(:last-child):after{
+            content:"\\2044";
+            color: #b9df3c;
+          }
+          > a {
+            outline: 0;
+            position: relative;
+            display: block;
+            padding: 6px 9px;
+            color: #3f3f3f;
+            transition: color .267s ease-out;
+            .tag-name{
+              hr {
+                display: none;
+              }
+            }
+          }
+          &:hover {
+            a{
+              color: #b9df3c;
+            }
+          }
+        }
+        .list-item:first-child{
+          margin-left: auto;
+          border-left: 6px solid transparent;
+        }
+        .list-item:last-child{
+          margin-right: auto;
+          border-right: 6px solid transparent;
+        }
+      }
+    }
   }
   /* :::::::::: Grid Items :::::::::: */
   .content-grid{
@@ -247,6 +300,61 @@ export const Content = styled.div`
         }
         &:nth-child(2n) {
           margin-right: 0;
+        }
+      }
+    }
+    .page-meta{
+      float: left;
+      width: calc((100% - 620px)/2 - 45px);
+      padding-top: 2rem;
+      margin-top: 0;
+      margin-bottom: 0;
+      &__nav{
+        font: 16px/180% "Bebas neue", sans-serif;
+        order: initial;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 24px;
+        border-bottom: 0px solid transparent;
+        &--list {
+          display: inline-block;
+          .list-item{
+            margin-left: auto;
+            display: block;
+            &:first-child{
+              border-left: 0;
+            }
+            &:last-child{
+              border-right: 0;
+            }
+            &:after{
+              content: "" !important;
+            }
+            > a {
+              outline: 0;
+              padding: 3px 0;
+              .tag-name{
+                display: inline-block;
+                hr {
+                  display: block;
+                  position: relative;
+                  top: -6px;
+                  display: block;
+                  width: 9px;
+                  height: 1px;
+                  margin: 0;
+                  background: #b9df3c;
+                  border: 0;
+                  transition: width .267s ease-out;
+                }
+              }
+              &:hover {
+                hr{
+                  width: 100%;
+                }
+              }
+            }
+          }
         }
       }
     }

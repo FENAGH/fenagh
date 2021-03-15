@@ -61,7 +61,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Convención',
-                flayOutMenu_link: 'https://convencion-fenagh.netlify.app/',
+                flayOutMenu_link: '/convencion',
               },
               {
                 flayOutMenu_name: 'Convenios',
