@@ -49,8 +49,7 @@ const ConvencioPage = () => {
       <Hero
         sources={data.file.childImageSharp.fluid}
         className="hero-default hero-alignBottom hero-alignRight"
-        section="LXXXVIII CONVENCIÓN "
-        headline="Convención Nacional"
+        headline="LXXXVIII Convención Nacional Ordinaria"
       />
       <Constrain>
         <Content>
@@ -58,22 +57,22 @@ const ConvencioPage = () => {
             <div className="page-meta__files">
               <span className="page-meta__files--title">Descargar Archivos: </span>
               <a 
-                href='//assets.ctfassets.net/zg4fwo9e8dmk/56ZrHkqsTEIi9zrKnD6ryp/1ab19aeca06e98e4e7d38947224da87a/CONVOCATORIA_CONVENCION_2021.docx' 
-                download
-                rel="noopener noreferrer" 
-                target="_blank"
-                className="page-meta__files--file"
-              >
-                Convocatoria Oficial
-              </a>
-              <a 
                 href='https://assets.ctfassets.net/zg4fwo9e8dmk/36Vv8Ui4xffTc6d8I0ImBj/a0c5d0704d49abaeb77adc451096b029/WhatsApp_Image_2021-03-11_at_8.52.12_AM.jpeg' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Imagen
+                Convocatoria
+              </a>
+              <a 
+                href='https://assets.ctfassets.net/zg4fwo9e8dmk/76feXc8ns8OooHVSIp3JFl/f002e1dbad2b9cbc1c8d305e59fc9e46/CREDENCIAL_2021.pdf' 
+                download
+                rel="noopener noreferrer" 
+                target="_blank"
+                className="page-meta__files--file"
+              >
+                Credencial
               </a>
             </div>
             <nav className="page-meta__nav">

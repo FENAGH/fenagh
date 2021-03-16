@@ -105,12 +105,13 @@ const HeroWrapper = styled(BackgroundImage)`
       font-size: 52px;
       letter-spacing: 1px;
       line-height: 54px;
+      text-shadow: 1px 1px 0 rgb(0 0 0 / 10%), -1px -1px 0 rgb(0 0 0 / 10%);
     }
   }
   @media (min-width: 768px){
     .hero-content{
       .hero-title{
-        font-size: 126px;
+        font-size: 116px;
         line-height: 116px;
       }
     }

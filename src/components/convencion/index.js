@@ -7,6 +7,15 @@ function dataWithImage(WrappedComponent){
     <StaticQuery
       query={graphql`
         query {
+          convocatoria: file(
+            relativePath: { eq: "convencion_convocatoria.webp" }
+          ) {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          },
           florencia: file(
             relativePath: { eq: "hotel_florencia.webp" }
           ) {
@@ -32,11 +41,17 @@ function dataWithImage(WrappedComponent){
   )
 }
 
-const Convocatoria = () => (
+const Convocatoria = dataWithImage(props => (
   <>
     <h2>Convocatoria</h2>
 
     <p className="has-dropcap">La Federación Nacional de Agricultores y Ganaderos de Honduras <strong>(FENAGH)</strong> por este medio  CONVOCA a todas las asociaciones afiliadas a la <strong>LXXXVIII Convención Nacional Ordinaria en memoria del <em>“Sr. Roberto Gallardo Lardizábal”</em></strong>. Que se realizara en el Campo de Exposiciones de la Asociación de Ganaderos y Agricultores de Francisco Morazán <strong>(AGAFAM)</strong> el día <strong>jueves 15 de abril del 2021</strong> a partir de las 10:00 am, de acuerdo con la agenda.</p>
+
+    <div className="content-media">
+      <div className="content-media-item">
+      <Img fluid={props.imageData.convocatoria.childImageSharp.fluid} alt="Convocatoria LXXXVIII Convención Nacional Ordinaria FENAGH"/>
+      </div>
+    </div>
     
     <p>A falta de quorum en la primera convocatoria, la convención se reunirá en segunda convocatoria una hora después, en el mismo lugar, cualquiera sea el número de votos de los miembros de FENAGH asistentes.</p>
     
@@ -47,7 +62,7 @@ const Convocatoria = () => (
       <span>Secretario | FENAGH</span>
     </p>
   </>
-)
+))
 
 const Agenda = () => (
   <>

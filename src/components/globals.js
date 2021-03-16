@@ -345,6 +345,9 @@ export const Content = styled.div`
           &:first-of-type:after{
             content: "" !important;
           }
+          &:before {
+            content: "- ";
+          }
         }
       }
       &__nav{
