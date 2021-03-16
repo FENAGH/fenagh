@@ -1,8 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import { device } from '../../../../landing-fenagh/src/utils/breakpoints';
+import styled from '@emotion/styled';
 
 const Logos = styled.div`
   max-width: 620px;
@@ -22,7 +21,7 @@ const Logos = styled.div`
       max-width: 60px;
       opacity: .7;
     }
-    @media ${device.tablet}{
+    @media (min-width: 1024px){
       .gatsby-image-wrapper{
         margin: 0 1.325rem 1.55rem;
         max-width: 100px;
