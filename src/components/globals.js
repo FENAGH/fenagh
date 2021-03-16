@@ -155,9 +155,24 @@ export const Content = styled.div`
     flex-direction: column;
     margin-top: -50px;
     margin-bottom: 1.5rem;
+    &__files{
+      order: 2;
+      padding-top: 6px;
+      font-style: italic;
+      font-size: 12px;
+      line-height: 166%;
+      text-align: center;
+      color: #a5a5a5;
+      &--title{
+        font-weight: bold;
+      }
+      &--file:first-of-type:after{
+        content: ", ";
+      }
+    }
     &__nav{
       order: 1;
-      font: 14px/180% "Bebas neue", sans-serif;
+      font: 15px/180% "Bebas neue", sans-serif;
       border-bottom: 1px solid #f5f5f5;
       &--list {
         display: flex;
@@ -173,12 +188,13 @@ export const Content = styled.div`
             content:"\\2044";
             color: #b9df3c;
           }
-          > a {
+          > span {
             outline: 0;
             position: relative;
             display: block;
             padding: 6px 9px;
             color: #3f3f3f;
+            cursor: pointer;
             transition: color .267s ease-out;
             .tag-name{
               hr {
@@ -186,8 +202,13 @@ export const Content = styled.div`
               }
             }
           }
+          &__active{
+            > span{
+              color: #b9df3c;
+            }
+          }
           &:hover {
-            a{
+            span{
               color: #b9df3c;
             }
           }
@@ -309,8 +330,25 @@ export const Content = styled.div`
       padding-top: 2rem;
       margin-top: 0;
       margin-bottom: 0;
+      &__files{
+        order: initial;
+        margin-bottom: 20px;
+        padding-top: 0;
+        border-top: 0;
+        text-align: left;
+        &--title{
+          font: 16px/180% "Bebas neue", Arial, sans-serif;
+          color: #3f3f3f;
+        }
+        &--file{
+          display: block;
+          &:first-of-type:after{
+            content: "" !important;
+          }
+        }
+      }
       &__nav{
-        font: 16px/180% "Bebas neue", sans-serif;
+        font: 16px/180% "Bebas neue", Arial, sans-serif;
         order: initial;
         margin-left: 0;
         margin-right: 0;
@@ -330,7 +368,7 @@ export const Content = styled.div`
             &:after{
               content: "" !important;
             }
-            > a {
+            > span {
               outline: 0;
               padding: 3px 0;
               .tag-name{
