@@ -1,12 +1,55 @@
 import React from 'react';
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from '@emotion/styled'
+import { device } from '../../../../landing-fenagh/src/utils/breakpoints';
+
+const Logos = styled.div`
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    .gatsby-image-wrapper{
+      position: relative;
+      overflow: hidden;
+      margin: 0 1rem 1.55rem;
+      width: 100%;
+      max-width: 60px;
+      opacity: .7;
+    }
+    @media ${device.tablet}{
+      .gatsby-image-wrapper{
+        margin: 0 1.325rem 1.55rem;
+        max-width: 100px;
+      }
+    }
+  }
+`
 
 function dataWithImage(WrappedComponent){
   return props => (
     <StaticQuery
       query={graphql`
         query {
+          partners: allFile(
+            filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "partners"}}
+          ) {
+            edges {
+              node {
+                base
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
           convocatoria: file(
             relativePath: { eq: "convencion_convocatoria.webp" }
           ) {
@@ -27,6 +70,15 @@ function dataWithImage(WrappedComponent){
           },
           alameda: file(
             relativePath: { eq: "hotel_alameda.webp" }
+          ) {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          },
+          minister: file(
+            relativePath: { eq: "hotel_minister.webp" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -149,7 +201,7 @@ const Hoteles = dataWithImage(props => (
     <h2>Hotel Alameda</h2>
     <div className="content-media">
       <div className="content-media-item">
-      <Img fluid={props.imageData.alameda.childImageSharp.fluid} alt="Hotel Florencia"/>
+      <Img fluid={props.imageData.alameda.childImageSharp.fluid} alt="Hotel Alameda"/>
       </div>
     </div>
     <ul>
@@ -161,7 +213,36 @@ const Hoteles = dataWithImage(props => (
       <li>Teléfono: 9809-0213</li>
     </ul>
     <p>Habitaciones incluye: desayuno, estacionamiento, wifi, piscina, aire acondicionado.</p>
+
+    <h2>Minister Business Hotel</h2>
+    <div className="content-media">
+      <div className="content-media-item">
+      <Img fluid={props.imageData.minister.childImageSharp.fluid} alt="Hotel Minister"/>
+      </div>
+    </div>
+    <ul>
+      <li>Ubicación: Blvd. Suyapa, contiguo a Torre Libertad</li>
+      <li>Precios: Impuestos ya incluidos</li>
+      <li>Habitación sencilla: <strong>L. 2,024.19</strong></li>
+      <li>Por cada persona extra en habitación $11.90 (isv incluido)</li>
+      <li>Contácto: Christian Rivera</li>
+      <li>Teléfono: 2263-6464</li>
+    </ul>
+    <p>Habitaciones incluye: desayuno, impuestos, wifi, uso del gimnasio, estacionamiento.</p>
   </>
 ))
 
-export { Convocatoria, Agenda, Registro, Hoteles }
+const Patrocinadores = dataWithImage(props => (
+  <>
+    <h2>Con el Patrocinio de</h2>
+    <Logos>
+      <div>
+        {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
+          <Img id={base} fluid={childImageSharp.fluid}/>
+        ))}
+      </div>
+    </Logos>
+  </>
+))
+
+export { Convocatoria, Agenda, Registro, Hoteles, Patrocinadores }

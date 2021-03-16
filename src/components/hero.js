@@ -108,11 +108,25 @@ const HeroWrapper = styled(BackgroundImage)`
       text-shadow: 1px 1px 0 rgb(0 0 0 / 10%), -1px -1px 0 rgb(0 0 0 / 10%);
     }
   }
+  &.hero-largeText .hero-content{
+    .hero-title{
+      text-align: center;
+      font-size: 32px !important;
+      line-height: 100% !important;
+      max-width: 100% !important;
+    }
+  }
   @media (min-width: 768px){
     .hero-content{
       .hero-title{
         font-size: 116px;
         line-height: 116px;
+      }
+    }
+    &.hero-largeText .hero-content{
+      .hero-title{
+        font-size: 72px !important;
+        max-width: 100% !important;
       }
     }
     &.hero-alignRight .hero-content{
@@ -131,6 +145,12 @@ const HeroWrapper = styled(BackgroundImage)`
       .hero-content{
         margin-top: auto;
         padding-bottom: 70px;
+      }
+    }
+    &.hero-alignRight.hero-largeText .hero-content{
+      .hero-title{
+        text-align: right;
+        max-width: 70% !important;
       }
     }
     &.hero-alignRight .hero-content{

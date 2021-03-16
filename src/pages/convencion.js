@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Content, Constrain } from "../components/globals"
 import Hero from "../components/hero"
-import { Convocatoria, Agenda, Registro, Hoteles } from '../components/convencion'
+import { Convocatoria, Agenda, Registro, Hoteles, Patrocinadores } from '../components/convencion'
 
 const ConvencionContent = [
   {
@@ -28,6 +28,11 @@ const ConvencionContent = [
     name: 'Hoteles',
     content: <Hoteles />
   },
+  {
+    id: 4,
+    name: 'Patrocinadores',
+    content: <Patrocinadores />
+  },
 ]
 
 const ConvencioPage = () => {
@@ -48,8 +53,8 @@ const ConvencioPage = () => {
       <SEO title="Convención: Convocatoria" />
       <Hero
         sources={data.file.childImageSharp.fluid}
-        className="hero-default hero-alignBottom hero-alignRight"
-        headline="LXXXVIII Convención Nacional Ordinaria"
+        className="hero-default hero-alignBottom hero-alignRight hero-largeText"
+        headline='LXXXVIII Convención en memoria del “Sr. Roberto Gallardo Lardizábal"'
       />
       <Constrain>
         <Content>
