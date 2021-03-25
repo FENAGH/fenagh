@@ -85,6 +85,15 @@ function dataWithImage(WrappedComponent){
               }
             }
           },
+          distritoHotelero: file(
+            relativePath: { eq: "hotel_san-martin.webp" }
+          ) {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          },
         }
       `}
       render={ data => <WrappedComponent {...props} imageData={data} /> }
@@ -228,6 +237,32 @@ const Hoteles = dataWithImage(props => (
       <li>Teléfono: 2263-6464</li>
     </ul>
     <p>Habitaciones incluye: desayuno, impuestos, wifi, uso del gimnasio, estacionamiento.</p>
+
+    <div className="content-media">
+      <div className="content-media-item">
+      <Img fluid={props.imageData.distritoHotelero.childImageSharp.fluid} alt="Distrito hotelero"/>
+      </div>
+    </div>
+    <h2>Hotel Plaza Juan Carlos</h2>
+    <ul>
+      <li>Ubicación: Distrito Hotelero Plaza San Martin, Col. Palmira</li>
+      <li>Habitación sencilla: <strong>$90.00 + 19%</strong></li>
+      <li>Habitación doble: <strong>$115 + 19%</strong></li>
+    </ul>
+    <h2>Hotel Plaza San Martin</h2>
+    <ul>
+      <li>Ubicación: Distrito Hotelero Plaza San Martin, Col. Palmira</li>
+      <li>Habitación sencilla: <strong>$79.00 + 19%</strong></li>
+      <li>Habitación doble: <strong>$94 + 19%</strong></li>
+    </ul>
+    <h2>Hotel Plaza del Libertador</h2>
+    <ul>
+      <li>Ubicación: Distrito Hotelero Plaza San Martin, Col. Palmira</li>
+      <li>Habitación sencilla: <strong>$69.00 + 19%</strong></li>
+      <li>Habitación doble: <strong>$84 + 19%</strong></li>
+    </ul>
+    <p>Todas las habitaciones del Distrito Hotelero Plaza San Martin incluyen: Desayuno, internet, periódicos locales, cafetera, Plancha, Planchador, caja fuerte, mini refrigerador, gimnasio y Sauna, agua embotellada, room service</p>
+    <p>Contacto: Melissa, teléfono: 2216-4300</p>
   </>
 ))
 
