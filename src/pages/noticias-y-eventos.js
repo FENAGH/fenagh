@@ -17,7 +17,10 @@ const ProjectsPage = () => {
           }
         }
       }
-      posts: allContentfulBlogPost(limit: 20, sort: {fields: createdAt, order: ASC}) {
+      posts: allContentfulBlogPost(
+        limit: 20, 
+        sort: {order: ASC, fields: body___references___createdAt}
+      ) {
         nodes {
           id
           title

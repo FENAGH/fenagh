@@ -6,7 +6,10 @@ import ContentfulListing from '../contentfulListing'
 const News = () => {
   const data = useStaticQuery(graphql`
     query {
-      posts: allContentfulBlogPost(limit: 6, sort: {fields: createdAt, order: ASC}) {
+      posts: allContentfulBlogPost(
+        limit: 10, 
+        sort: {order: ASC, fields: body___references___createdAt}
+      ) {
         nodes {
           id
           title

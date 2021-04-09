@@ -69,7 +69,7 @@ const Blog = ({data}) => {
                 fontSize="16px"
                 lineHeight="24px"
               >
-                <Box as="span">Noviembre 20, 2020</Box>
+                <Box as="span">{data.contentfulBlogPost.customDate}</Box>
               </Box>
             </Flex>
           </FlexContainer>
@@ -197,6 +197,7 @@ export const query = graphql`
       title
       tag
       slug
+      customDate
       body{
         raw
         references {
