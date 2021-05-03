@@ -1,11 +1,12 @@
 export const PERSONAL = [
-  {id: "01", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "jbarahona@fenagh.net"},
-  {id: "02", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
-  {id: "03", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jchacon@fenagh.net"},
-  {id: "04", nombre: "Kenia Castellanos", cargo: "Administradora", email: "kcastellanos@fenagh.net"},
-  {id: "05", nombre: "Lic. Marlen Torres", cargo: "Supervisora de Recaudo", email: "mtorres@fenagh.net"},
-  {id: "06", nombre: "Lic. Daniel Santos", cargo: "Oficial de Recaudo PROMDECA", email: ""},
-  {id: "07", nombre: "Angie Tillet", cargo: "Oficial de Recaudo SENASA SPS", email: ""},
+  {id: "01", nombre: "Ing. Guillermo Cerritos", cargo: "Director Ejecutivo", email: "cerritosg@gmail.com"},
+  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "jbarahona@fenagh.net"},
+  {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
+  {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
+  {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "kcastellanos@fenagh.net"},
+  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Supervisora de Recaudo", email: "mtorres@fenagh.net"},
+  {id: "07", nombre: "Lic. Daniel Santos", cargo: "Oficial de Recaudo PROMDECA", email: ""},
+  {id: "08", nombre: "Angie Tillet", cargo: "Oficial de Recaudo SENASA SPS", email: ""},
 ]
 
 export const EMPRESAS = [
@@ -21,21 +22,30 @@ export const JUNTA = [
   {id: "02", nombre: "Héctor Ferreira Sabillon", cargo:  "Vicepresidente"},
   {id: "03", nombre: "Gilberto Moreno Alvarado", cargo:  "Secretario"},
   {id: "04", nombre: "Juan Jose Cruz", cargo:  "Tesorero"},
-  {id: "05", nombre: "Asterio Reyes", cargo:  "Vocal I"},
+
+  {id: "05", nombre: "Dr. Leopoldo Duran Puerto", cargo:  "Vocal I"},
   {id: "06", nombre: "Roger Padilla", cargo:  "Vocal II"},
-  {id: "07", nombre: "Ismael Espinal", cargo:  "Vocal III"},
-  {id: "08", nombre: "Francisco Sandoval", cargo:  "Vocal IV"},
+  {id: "07", nombre: "Manuel España", cargo:  "Vocal III"},
+  {id: "07", nombre: "Cristóbal Ismael Espinal", cargo:  "Vocal IV"},
+
   {id: "01", nombre: "Flavio Tinoco", cargo:  "Junta Fiscalizadora"},
   {id: "09", nombre: "Mario Lovo", cargo:  "Junta Fiscalizadora"},
   {id: "10", nombre: "Gerardo Guillen", cargo:  "Junta Fiscalizadora"},
+
+  {id: "08", nombre: "Francisco Sandoval", cargo:  "Asesor"},
+  {id: "08", nombre: "Pedro Mendoza", cargo:  "Asesor"},
   {id: "11", nombre: "Víctor Wilson", cargo:  "Asesor"},
   {id: "12", nombre: "Pablo Sierra", cargo:  "Asesor"},
-  {id: "13", nombre: "Leopoldo Duran", cargo:  "Asesor"},
-  {id: "14", nombre: "Juan Carlos Ramos", cargo:  "Asesor"},
-  {id: "15", nombre: "José Manuel España", cargo:  "Asesor"},
-  {id: "16", nombre: "Mario Sánchez", cargo:  "Asesor"},
   {id: "16", nombre: "Denis Avendaño", cargo:  "Asesor"},
+  {id: "13", nombre: "Justo Rene Martínez.", cargo:  "Asesor"},
 ]
+
+
+
+
+
+
+
 
 export const ASOCIACIONES = [
   {
