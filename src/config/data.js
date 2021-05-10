@@ -78,7 +78,7 @@ export const ASOCIACIONES = [
   },
   {
     id: "05",
-    asociacion: "AGAE",
+    asociacion: "AGABO",
     nombre: "Asociacion de Ganaderos y Agricultores de Bonito Oriental",
     presidente: "Clemente Cardona",
     telefono: "2438-9542"
@@ -121,7 +121,7 @@ export const ASOCIACIONES = [
   {
     id: "11",
     asociacion: "PROAVIH",
-    nombre: "Asociacion de Ganaderos y Agricultores de Pueto Cortes y Omoa",
+    nombre: "Asociacion de Productores Avícolas de Honduras",
     presidente: "Juan Jose Cruz",
     telefono: "2557-4636"
   },

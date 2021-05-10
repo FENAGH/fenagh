@@ -60,8 +60,8 @@ module.exports = {
                 flayOutMenu_link: '/empresas',
               },
               {
-                flayOutMenu_name: 'Convención',
-                flayOutMenu_link: '/convencion',
+                flayOutMenu_name: 'Convenciones',
+                flayOutMenu_link: '/convenciones',
               },
               {
                 flayOutMenu_name: 'Convenios',
