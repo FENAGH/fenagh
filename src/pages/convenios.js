@@ -59,6 +59,19 @@ const ConveniosPage = () => {
       <Constrain>
         <Content>
           <p>La FENAGH gestiona <strong>alianzas estratégicas</strong> con <strong>organismos públicos y privados</strong> con el propósito de crear <strong>convenios</strong> o programas que ofrezcan a los productores elementos que les permita ya sea adquirir nuevos conocimientos, protección de intereses, mejoras a la producción en si todas aquellas oportunidades que permitan potencializar a nuestros productores.</p>
+          <h2>Cooperación Cargill, FENAGH y El Sembrador</h2>
+          <p>Convenio de Cooperación entre cargill, la escuela El Sembrador y FENAGH. Este convenio tiene como propósito establecer relaciones de cooperación y coordinación mutua que fortalezcan la capacitación agrícola, el emprendimiento estudiantil en producción animal y la generación de fondos que provengan de la comercialización de especies para que más jóvenes puedan financiar sus estudios en la Escuela El Sembrador.</p>
+          <div className="content-media content-media--fullWidth content-media--double">
+            <div className="content-media-items">
+              <div className="content-media-item">
+                <Img fluid={data.sembradorI.childImageSharp.fluid} alt="Convencio Sembrador"/>
+              </div>
+              <div className="content-media-item">
+                <Img fluid={data.sembradorII.childImageSharp.fluid} alt="Convencio Sembrador"/>
+              </div>
+            </div>
+            <figure className="content-caption">Firma del convenio entre Cargill, FENAGH y El Sembrador.</figure>
+          </div>
           <h2>Becas 2020</h2>
           <p>Convenio de gestión de becas internacionales para maestrías con el apoyo del Programa Presidencial Programa Presidencial de Becas 2020.</p>
           <div className="content-media">
@@ -74,19 +87,6 @@ const ConveniosPage = () => {
               <Img fluid={data.fundapanaca.childImageSharp.fluid} alt="Becas FUNDAPANACA"/>
             </div>
             <figure className="content-caption">Becarios de FUNDAPANACA.</figure>
-          </div>
-          <h2>Cooperación Cargill, FENAGH y El Sembrador</h2>
-          <p>Convenio de Cooperación entre cargill, la escuela El Sembrador y FENAGH. Este convenio tiene como propósito establecer relaciones de cooperación y coordinación mutua que fortalezcan la capacitación agrícola, el emprendimiento estudiantil en producción animal y la generación de fondos que provengan de la comercialización de especies para que más jóvenes puedan financiar sus estudios en la Escuela El Sembrador.</p>
-          <div className="content-media content-media--fullWidth content-media--double">
-            <div className="content-media-items">
-              <div className="content-media-item">
-                <Img fluid={data.sembradorI.childImageSharp.fluid} alt="Convencio Sembrador"/>
-              </div>
-              <div className="content-media-item">
-                <Img fluid={data.sembradorII.childImageSharp.fluid} alt="Convencio Sembrador"/>
-              </div>
-            </div>
-            <figure className="content-caption">Firma del convenio entre Cargill, FENAGH y El Sembrador.</figure>
           </div>
         </Content>
       </Constrain>
