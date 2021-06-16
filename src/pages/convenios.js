@@ -31,6 +31,20 @@ const ConveniosPage = () => {
           }
         }
       }
+      sembradorI: file(relativePath: {eq: "convenios/convenio_sembrador_I.webp"}){
+        childImageSharp {
+          fluid(maxWidth: 620, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sembradorII: file(relativePath: {eq: "convenios/convenio_sembrador_II.webp"}){
+        childImageSharp {
+          fluid(maxWidth: 620, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return(
@@ -61,8 +75,19 @@ const ConveniosPage = () => {
             </div>
             <figure className="content-caption">Becarios de FUNDAPANACA.</figure>
           </div>
-          <h2>Cooperación Cargill y El Sembrador</h2>
+          <h2>Cooperación Cargill, FENAGH y El Sembrador</h2>
           <p>Convenio de Cooperación entre cargill, la escuela El Sembrador y FENAGH. Este convenio tiene como propósito establecer relaciones de cooperación y coordinación mutua que fortalezcan la capacitación agrícola, el emprendimiento estudiantil en producción animal y la generación de fondos que provengan de la comercialización de especies para que más jóvenes puedan financiar sus estudios en la Escuela El Sembrador.</p>
+          <div className="content-media content-media--fullWidth content-media--double">
+            <div className="content-media-items">
+              <div className="content-media-item">
+                <Img fluid={data.sembradorI.childImageSharp.fluid} alt="Convencio Sembrador"/>
+              </div>
+              <div className="content-media-item">
+                <Img fluid={data.sembradorII.childImageSharp.fluid} alt="Convencio Sembrador"/>
+              </div>
+            </div>
+            <figure className="content-caption">Firma del convenio entre Cargill, FENAGH y El Sembrador.</figure>
+          </div>
         </Content>
       </Constrain>
     </Layout>

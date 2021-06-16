@@ -1,10 +1,10 @@
 export const PERSONAL = [
   {id: "01", nombre: "Ing. Guillermo Cerritos", cargo: "Director Ejecutivo", email: "cerritosg@gmail.com"},
-  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "jbarahona@fenagh.net"},
+  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn@gmail.com"},
   {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
   {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
-  {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "kcastellanos@fenagh.net"},
-  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Supervisora de Recaudo", email: "mtorres@fenagh.net"},
+  {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com"},
+  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Supervisora de Recaudo", email: "mtorresfenagh@gmail.com"},
   {id: "07", nombre: "Lic. Daniel Santos", cargo: "Oficial de Recaudo PROMDECA", email: ""},
   {id: "08", nombre: "Angie Tillet", cargo: "Oficial de Recaudo SENASA SPS", email: ""},
 ]
@@ -71,7 +71,7 @@ export const ASOCIACIONES = [
   },
   {
     id: "04",
-    asociacion: "AGAGADESAT",
+    asociacion: "AGADES",
     nombre: "Asociacion de Ganaderos y Agricultores de Saba, Colon",
     presidente: "Juan Edgardo Ruiz",
     telefono: "2424-8343",
@@ -281,9 +281,9 @@ export const ASOCIACIONES = [
   },
   {
     id: "33",
-    asociacion: "AHPROEM",
-    nombre: "Asociacion Hondureña de Procesadores de Embutidos",
-    presidente: "Sergio Moreno",
+    asociacion: "AHPROCEM",
+    nombre: "Asociacion Hondureña de Procesadores de Carne y Embutidos",
+    presidente: "Patricio Perez",
     telefono: "2564-9470"
   },
   {

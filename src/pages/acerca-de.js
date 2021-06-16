@@ -46,7 +46,7 @@ const HistoryPage = () => {
 
           <h2>Historia</h2>
           
-          <p>Entre 1940 y 1950, surgen los primeros movimientos que van a constituir la base de la que hoy es la entidad que genuinamente representa a empresarios dedicados a las labores agrícolas y ganaderas en Honduras y fue hasta el 26 de junio de 1966 que la Federación Nacional de Agricultores y Ganaderos de Honduras (FENAGH) inicia sus actividades en la ciudad de San Pedro Sula.</p>
+          <p className="has-dropcap">Entre 1940 y 1950, surgen los primeros movimientos que van a constituir la base de la que hoy es la entidad que genuinamente representa a empresarios dedicados a las labores agrícolas y ganaderas en Honduras y fue hasta el 26 de junio de 1966 que la Federación Nacional de Agricultores y Ganaderos de Honduras (FENAGH) inicia sus actividades en la ciudad de San Pedro Sula.</p>
 
           <p>Los miembros fundadores que integraron la histórica reunión son el Doctor Arturo Bendaña y Don Miguel  A. Cubero Dacosta designados presidente y secretario respectivamente, a ellos se agregan prominentes productores como ser: Jorge J. Handal, José Andonie Fernández, Salvador Quiroz, Héctor Callejas Valentine, Vicente Murillo Durón, Arturo Álvarez C., Manuel de J. Mercado, Enrique Javier Maradiaga entre otros.</p>
 
