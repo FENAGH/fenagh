@@ -8,7 +8,7 @@ const News = () => {
     query {
       posts: allContentfulBlogPost(
         limit: 10, 
-        sort: {order: ASC, fields: body___references___createdAt}
+        sort: {order: DESC, fields: createdAt}
       ) {
         nodes {
           id

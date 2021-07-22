@@ -11,6 +11,7 @@ const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "proyectos_page.webp" }) {
+        
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -19,7 +20,7 @@ const ProjectsPage = () => {
       }
       posts: allContentfulBlogPost(
         limit: 20, 
-        sort: {order: ASC, fields: body___references___createdAt}
+        sort: {order: DESC, fields: createdAt}
       ) {
         nodes {
           id
