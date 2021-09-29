@@ -33,7 +33,7 @@ const ComercializacionPage = () => {
           <h2>Como funciona?</h2>
           <p>Typewriter seitan meditation swag distillery gentrify DIY austin prism art party affogato. Locavore post-ironic swag austin vaporware hella. Cliche enamel pin meh, four loko williamsburg sriracha church-key occupy. Vice waistcoat bespoke, roof party normcore deep v vexillologist pour-over portland health goth skateboard before they sold out iPhone pop-up tattooed. Whatever ethical mlkshk humblebrag portland venmo. Vaporware vice slow-carb kombucha, mumblecore portland cardigan celiac squid bicycle rights enamel pin biodiesel copper mug yr. Tumeric cray bicycle rights locavore blue bottle kale chips.</p>
           <p className="center has-link">
-            <StyledLink to="/ejemplares-en-venta" className="primary">Ver Ejemplares</StyledLink>
+            <StyledLink to="/" className="primary">Ver Ejemplares</StyledLink>
           </p>
         </Content>
       </Constrain>

@@ -105,7 +105,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Ejemplares en venta',
-                flayOutMenu_link: '/ejemplares-en-venta',
+                flayOutMenu_link: '/',
               },
             ]
           },
@@ -139,6 +139,10 @@ module.exports = {
                 flayOutMenu_name: 'Ir a la Plataforma',
                 flayOutMenu_link: 'http://recaudo.fonacsah.hn/cfpo/view/login.aspx',
               },
+              {
+                flayOutMenu_name: 'Producción Nacional',
+                flayOutMenu_link: 'http://recaudo.fonacsah.hn/cpn/View/Login.aspx',
+              },
             ]
           },
         ]
@@ -163,23 +167,6 @@ module.exports = {
         spaceId: `e4da5bv5j8g0`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-source-faunadb`,
-      options: {
-        // The secret for the key you're using to connect to your Fauna database.
-        // You can generate on of these in the "Security" tab of your Fauna Console.
-        secret: process.env.FAUNA_ACCESS_TOKEN,
-        // The name of the index you want to query
-        // You can create an index in the "Indexes" tab of your Fauna Console.
-        index: `todos_los_ejemplares_de_venta`,
-        // This is the name under which your data will appear in Gatsby GraphQL queries
-        // The following will create queries called `allBird` and `bird`.
-        type: "ejemplares",
-        // If you need to limit the number of documents returned, you can specify a 
-        // maximum number to read.
-        size: 100
       },
     },
     {
