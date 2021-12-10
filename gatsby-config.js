@@ -136,7 +136,7 @@ module.exports = {
                 flayOutMenu_link: '/ley-cuota-pecuaria',
               },
               {
-                flayOutMenu_name: 'Ir a la Plataforma',
+                flayOutMenu_name: 'Importaciones',
                 flayOutMenu_link: 'http://recaudo.fonacsah.hn/cfpo/view/login.aspx',
               },
               {
