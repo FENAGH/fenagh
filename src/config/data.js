@@ -45,8 +45,8 @@ export const ASOCIACIONES = [
     id: "01",
     asociacion: "AGAA",
     nombre: "Asociacion de Ganaderos y Agricultores de Atlantida",
-    presidente: "Juan Carlos Sauceda",
-    telefono: "3166-3030"
+    presidente: "Juan Alberto Sauceda",
+    telefono: "9478-7981"
   },
   {
     id: "02",
@@ -61,7 +61,7 @@ export const ASOCIACIONES = [
     asociacion: "AGABO",
     nombre: "Asociacion de Ganaderos y Agricultores de Bonito Oriental",
     presidente: "Clemente Cardona",
-    telefono: "9976-0260"
+    telefono: "9944-3744"
   },
   {
     id: "04",
@@ -76,21 +76,21 @@ export const ASOCIACIONES = [
     asociacion: "AGAC",
     nombre: "Asociacion de Ganaderos y Agricultores de Copan",
     presidente: "Gilberto Moreno",
-    telefono: "2662-0856"
+    telefono: "9979-9487"
   },
   {
     id: "06",
     asociacion: "AGAS",
     nombre: "Asociacion de Ganaderos y Agricultores de Sula",
     presidente: "Hector Ferreira",
-    telefono: "9472-4811"
+    telefono: "9995-1010"
   },
   {
     id: "07",
     asociacion: "ANAPOH",
     nombre: "Asociacion Nacional de Porcicultores de Honduras",
     presidente: "Flavio Tinoco",
-    telefono: "2580-1525"
+    telefono: "9995-6639"
   },
   {
     id: "08",
@@ -104,7 +104,7 @@ export const ASOCIACIONES = [
     asociacion: "ANAVIH",
     nombre: "Asociacion Nacional de Avicultores de Honduras",
     presidente: "Luis Eduardo Valle",
-    telefono: "2550-2343"
+    telefono: "9977-3759"
   },
   {
     id: "10",
@@ -117,12 +117,12 @@ export const ASOCIACIONES = [
     id: "11",
     asociacion: "ANDAH",
     nombre: "Asociacion Nacional  De Acuicultores de Honduras",
-    presidente: "Juan Carlos Medina",
-    telefono: "2782-0986"
+    presidente: "Juan Carlos Javier",
+    telefono: "9453-3293"
   },
   {
     id: "12",
-    asociacion: "AGASM",
+    asociacion: "AGASAM",
     nombre: "Asociacion de Ganaderos y Agricultores de San Marcos",
     presidente: "Luis Abraham Guillen",
     telefono: "8835-0040"
@@ -132,21 +132,21 @@ export const ASOCIACIONES = [
     asociacion: "ADAGO",
     nombre: "Asociacion de Ganaderos y Agricultores de Oriente",
     presidente: "Adolfo Leonel Sevilla",
-    telefono: "9867-7641"
+    telefono: "9973-8791"
   },
   {
     id: "13",
     asociacion: "AGADI",
     nombre: "Asociacion de Ganaderos y Agricultores de Intibuca",
-    presidente: "Jose Ernesto Mejia",
-    telefono: "3215-2605"
+    presidente: "Hugo Eduardo Vasquez",
+    telefono: "9970-7682"
   },
   {
     id: "14",
     asociacion: "AGAO",
     nombre: "Asociacion de Ganaderos y Agricultores de Olancho",
     presidente: "Oscar Neptali Espinal",
-    telefono: "9483-9989"
+    telefono: "9916-0180"
   },
   {
     id: "15",
@@ -160,56 +160,56 @@ export const ASOCIACIONES = [
     asociacion: "SAGO",
     nombre: "Sociedad de Agricultores y Ganaderos de Olanchito",
     presidente: "Medardo Guevara",
-    telefono: "2446-6858"
+    telefono: "9841-6657"
   },
   {
     id: "17",
     asociacion: "PROGRANO",
     nombre: "Productores de Granos Basicos",
     presidente: "Dulio Medina",
-    telefono: "9586-3826"
+    telefono: "3380-0916"
   },
   {
     id: "18",
     asociacion: "APAH",
     nombre: "Asociacion de Productores de Azucar de Honduras",
-    presidente: "Mateo Yibrin",
-    telefono: "2239-4933"
+    presidente: "Ricardo Fasquelle",
+    telefono: "N/A"
   },
   {
     id: "19",
     asociacion: "CAFOGAH",
     nombre: "Camara del Fomento Ganadero de Honduras",
     presidente: "Leopoldo Duran",
-    telefono: "N/D"
+    telefono: "9982-5859"
   },
   {
     id: "20",
-    asociacion: "GRUPO JAREMAR",
+    asociacion: "GRUPO JARERMAR",
     nombre: "Palmas San Alejo",
     presidente: "Danny Gabrie Salles",
-    telefono: "2561-7410"
+    telefono: "2429-0013"
   },
   {
     id: "21",
     asociacion: "AGROPALMA",
     nombre: "Agroindustrial Palma Real",
     presidente: "Danny Gabrie Salles",
-    telefono: "N/D"
+    telefono: "2429-0013"
   },
   {
     id: "22",
     asociacion: "AHPROCEM",
     nombre: "Asociacion Hondureña de Procesadores de Carnes y Embutidos",
     presidente: "Patricio Perez",
-    telefono: "2557-4669"
+    telefono: "N/A"
   },
   {
     id: "23",
     asociacion: "CAHLE",
     nombre: "Asociacion Camara Hondureña de la Leche",
     presidente: "Hector Ferreira",
-    telefono: "2231-1102"
+    telefono: "9995-1010"
   },
   {
     id: "24",
@@ -223,28 +223,28 @@ export const ASOCIACIONES = [
     asociacion: "AGATC",
     nombre: "Asociacion de Ganaderos Y Agricultores de Tocoa Colon",
     presidente: "Cesar Mauricio Artica",
-    telefono: "9979-6695"
+    telefono: "9512-6051"
   },
   {
     id: "26",
     asociacion: "AGAG",
     nombre: "Asociacion de Ganaderos Y Agricultores de Guaimaca",
     presidente: "Oscar Armando Neda",
-    telefono: "9883-5872"
+    telefono: "9464-5847"
   },
   {
     id: "27",
     asociacion: "AHPROCAFE",
     nombre: "Asociacion Hondureña de Productores Café",
     presidente: "Pedro Mendoza",
-    telefono: "2236-8286"
+    telefono: "9990-6896"
   },
   {
     id: "28",
     asociacion: "ASOPROSALH",
     nombre: "Asociacion de Productores Saleros de Honduras",
-    presidente: "Pablo Sierra",
-    telefono: "2757-6897"
+    presidente: "Marcio Molina",
+    telefono: "3336-0000"
   },
   {
     id: "29",
@@ -265,7 +265,7 @@ export const ASOCIACIONES = [
     asociacion: "AGAFAM",
     nombre: "Asociacion de Ganaderos y Agricultores de Francisco Morazan",
     presidente: "Juan Carlos Ramos",
-    telefono: "9748-0132"
+    telefono: "8740-0432"
   },
   {
     id: "32",
@@ -274,6 +274,70 @@ export const ASOCIACIONES = [
     presidente: "Roger Padilla",
     telefono: "9455-1826"
   },
+  {
+    id: "33",
+    asociacion: "AGAPCO",
+    nombre: "Asociacion de Ganaderos y Agricultores de Puerto Cortes y Omoa",
+    presidente: "Eduardo Yalu",
+    telefono: "9918-9034"
+  },
+  {
+    id: "34",
+    asociacion: "AGACH",
+    nombre: "Asociacion de Ganaderos y Agricultores de Choluteca",
+    presidente: "Mario Argeñal",
+    telefono: "3194-7312"
+  },
+  {
+    id: "35",
+    asociacion: "AGADEG",
+    nombre: "Asociacion de Ganaderos y Agricultores de Gracias",
+    presidente: "Jorge Omar Batres",
+    telefono: "9701-1934"
+  },
+  {
+    id: "36",
+    asociacion: "MSH",
+    nombre: "Molino Harinero Sula",
+    presidente: "N/A",
+    telefono: "N/A"
+  },
+  {
+    id: "37",
+    asociacion: "WALMART",
+    nombre: "Walmart Honduras",
+    presidente: "Mey Hung",
+    telefono: "N/A"
+  },
+  {
+    id: "38",
+    asociacion: "LEYDE",
+    nombre: "Leyde y Derivados",
+    presidente: "Erick Nehring",
+    telefono: "N/A"
+  },
+  {
+    id: "39",
+    asociacion: "DINANT",
+    nombre: "Corporacion Dinant",
+    presidente: "Ana Maria Rivera",
+    telefono: "3390-5437"
+  },
+  {
+    id: "40",
+    asociacion: "AGASBRUL",
+    nombre: "Asociacion de Agricultores y Ganaderos de Brus Laguna",
+    presidente: "Juan angel Aguilar",
+    telefono: "9865-8590"
+  },
+  {
+    id: "41",
+    asociacion: "PALCASA",
+    nombre: "Palmas Centroamericanas",
+    presidente: "Sergio Orlando Maradiaga",
+    telefono: "3345-5488"
+  },
+
 ]
 				
 			
