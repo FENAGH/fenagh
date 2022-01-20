@@ -46,7 +46,7 @@ export const ASOCIACIONES = [
     asociacion: "AGAA",
     nombre: "Asociacion de Ganaderos y Agricultores de Atlantida",
     presidente: "Juan Alberto Sauceda",
-    telefono: "9478-7981"
+    telefono: "N/A"
   },
   {
     id: "02",
