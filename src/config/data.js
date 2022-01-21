@@ -117,7 +117,7 @@ export const ASOCIACIONES = [
     id: "11",
     asociacion: "ANAVIH",
     nombre: "Asociación Nacional de Avicultores de Honduras",
-    presidente: "Luis Eduardo Valle coello",
+    presidente: "Luis Eduardo Valle Coello",
     telefono: "9977-3759"
   },
   {
