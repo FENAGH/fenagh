@@ -202,7 +202,7 @@ export const ASOCIACIONES = [
     asociacion: "CAFOGAH",
     nombre: "Cámara de Fomento Ganadero de Honduras",
     presidente: "Leopoldo Durán",
-    telefono: "9982-5859"
+    telefono: "9995-7718"
   },
   {
     id: "24",
@@ -244,7 +244,7 @@ export const ASOCIACIONES = [
     asociacion: "AGAG",
     nombre: "Asociación de Ganadores y Agricultores de Guaimaca",
     presidente: "Oscar Armando Neda",
-    telefono: "9464-5847,9793-6753"
+    telefono: "9464-5847"
   },
   {
     id: "30",
