@@ -77,11 +77,7 @@ const DirectivePage = () => {
             fluid={data.dinant.childImageSharp.fluid}
             w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
           />
-          <Box 
-            as={Img}
-            fluid={data.lacthosa.childImageSharp.fluid}
-            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
-          />
+          
           <Box 
             as={Img}
             fluid={data.leyde.childImageSharp.fluid}
