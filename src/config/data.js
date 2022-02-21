@@ -309,6 +309,15 @@ export const ASOCIACIONES = [
     presidente: "Sergio Orlando Maradiaga ",
     telefono: "3345-5488"
   },
+  {
+    id: "39",
+    asociacion: "ASPAH",
+    nombre: "Asociación de Productores de Aguacate de Honduras",
+    presidente: "Mario Dubon",
+    telefono: "9695-5363"
+  },
+
+
  
 ]
 				
