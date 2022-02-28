@@ -92,7 +92,7 @@ const ProjectsPage = () => {
       />
       <Constrain>
         <Content>
-          <h2>Programa “FENAGH Reforesta</h2>
+          <h2>Programa “FENAGH Reforesta"</h2>
           <p>Gracias a un convenio firmado entre la FENAGH y el Instituto de Conservación Forestal en junio del 2019. A la fecha se han reforestado 1365 manzanas de distintos productores a nivel nacional. Se han instalado 2 viveros en las asociaciones de la FENAGH (AGATC, AGASE).</p>
           <div className="content-media content-media--fullWidth content-media--double">
             <div className="content-media-items">
