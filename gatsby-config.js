@@ -150,12 +150,19 @@ module.exports = {
         subMenu: null
       },
       {
+        name: 'Registro de Productores',
+        link: '/registro-de-productores',
+        subMenu: null
+      },
+      {
         name: 'Noticias y Eventos',
         link: '/noticias-y-eventos',
         subMenu: null
       },
     ],
+ 
   },
+  
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

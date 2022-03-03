@@ -1,0 +1,68 @@
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
+// Components
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import { Content, Constrain } from "../components/globals"
+import Hero from "../components/hero"
+
+
+const ProjectsPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "proyectos_page.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      fenaghproductores1: file(relativePath: {eq: "registro_de_productores/registro_de_productores.webp"}){
+        childImageSharp {
+          fluid(maxWidth: 620, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+     
+        
+    }
+  `)
+  return(
+    <Layout>
+      <SEO title="Registro de Productores" />
+      <Hero
+        sources={data.file.childImageSharp.fluid}
+        className="hero-short hero-alignBottom"
+        headline="Registro de Productores"
+      />
+      <Constrain>
+        <Content>
+          <h2>Lineamientos para Inscribirse</h2>
+          <p>Las solicitudes para el registro de productores son atendidas por: <br></br>  
+          Bessy Gómez<br></br>
+          INFOAGRO<br></br>
+          correo: productores_isv@infoagro.hn </p> 
+          
+         
+          <div className="content-media content-media--fullWidth content-media--double">
+            <div className="content-media-items">
+              <div className="content-media-item">
+                <Img fluid={data.fenagproductores1.childImageSharp.fluid} alt="FENAGH productores"/>
+                
+              </div>
+            
+            </div>
+            
+          </div>
+          
+          
+         
+        </Content>
+      </Constrain>
+    </Layout>
+  )
+}
+
+export default ProjectsPage
