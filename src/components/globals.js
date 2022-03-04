@@ -266,6 +266,8 @@ export const Content = styled.div`
     }
     .content-media--double .content-media-item{
       width: calc(50% - 15px);
+      margin :0 auto
+      
     }
     .content-media-items{
       display: flex; 
