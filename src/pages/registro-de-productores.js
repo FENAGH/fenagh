@@ -18,15 +18,13 @@ const ProjectsPage = () => {
           }
         }
       },
-      fenaghproductores1: file(relativePath: {eq: "registro_de_productores/registro_de_productores.webp"}){
+      fenaghproductores1: file(relativePath: {eq: "productores/registro_de_ productores.jpg"}){
         childImageSharp {
           fluid(maxWidth: 620, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
-      }
-     
-        
+      } 
     }
   `)
   return(
@@ -49,7 +47,7 @@ const ProjectsPage = () => {
           <div className="content-media content-media--fullWidth content-media--double">
             <div className="content-media-items">
               <div className="content-media-item">
-                <Img fluid={data.fenagproductores1.childImageSharp.fluid} alt="FENAGH productores"/>
+                <Img fluid={data.fenaghproductores1.childImageSharp.fluid} alt="FENAGH productores"/>
                 
               </div>
             
