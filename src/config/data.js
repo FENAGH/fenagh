@@ -4,9 +4,9 @@ export const PERSONAL = [
   {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
   {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
   {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com"},
-  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Supervisora de Recaudo", email: "mtorresfenagh@gmail.com"},
-  {id: "07", nombre: "Lic. Daniel Santos", cargo: "Oficial de Recaudo PROMDECA", email: ""},
-  {id: "08", nombre: "Angie Tillet", cargo: "Oficial de Recaudo SENASA SPS", email: ""},
+  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Jefe de Recaudo", email: "mtorresfenagh@gmail.com"},
+  {id: "07", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com"},
+  {id: "08", nombre: "Ana del Cid", cargo: "Oficial de Recaudo SENASA ", email: "anadelcid.fenagh@gmail.com"},
 ]
 
 export const EMPRESAS = [
@@ -274,49 +274,70 @@ export const ASOCIACIONES = [
     presidente: "Antonio Francisco Guillen",
     telefono: "2566-2587"
   },
+  
   {
     id: "34",
-    asociacion: "WALMART",
-    nombre: "Walmart Honduras ",
-    presidente: "Mey Hung",
-    telefono: "2222-0722"
-  },
-  {
-    id: "35",
     asociacion: "LEYDE",
     nombre: "Leche y Derivados",
     presidente: "Christian Nehring",
     telefono: "2225-4955"
   },
   {
-    id: "36",
+    id: "35",
     asociacion: "DINANT",
     nombre: "Corporacion Dinant",
     presidente: "Ana Maria Rivera",
     telefono: "3390-5437"
   },
   {
-    id: "37",
+    id: "36",
     asociacion: "AGABRUL",
     nombre: "Asociación de Agricultores y Ganadores de Brus Laguna  ",
     presidente: "Juan Angel Aguilar",
     telefono: "9865-8590"
   },
   {
-    id: "38",
+    id: "37",
     asociacion: "PALCASA",
     nombre: "Palmas Centroamericanas S.A. de C.V. ",
     presidente: "Sergio Orlando Maradiaga ",
     telefono: "3345-5488"
   },
   {
-    id: "39",
+    id: "38",
     asociacion: "ASPAH",
     nombre: "Asociación de Productores de Aguacate de Honduras",
     presidente: "Mario Dubon",
     telefono: "9695-5363"
   },
-
+  {
+    id: "39",
+    asociacion: "AGAVI",
+    nombre: "Asociacion de Ganaderos y Agricultores de Villanueva",
+    presidente: "Mauro Caballero Alvarado ",
+    telefono: "3172-1398"
+  },
+  {
+    id: "40",
+    asociacion: "AGAV",
+    nombre: "Asociacion de Ganaderos y Agricultores de Valle",
+    presidente: "Jose Everth Rubio ",
+    telefono: "9614-4410"
+  },
+  {
+    id: "41",
+    asociacion: "AGATRO",
+    nombre: "Asociacion de Ganaderos y Agricultores de Trojes",
+    presidente: "Marvin Herrera ",
+    telefono: "9980-9207"
+  },
+  {
+    id: "42",
+    asociacion: "AGASAG ",
+    nombre: "Asociacion de Ganaderos y Agriculores de Sabanagrande",
+    presidente: "Santos Sierra ",
+    telefono: "9600-0614"
+  },
 
  
 ]
