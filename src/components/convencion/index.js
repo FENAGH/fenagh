@@ -50,7 +50,7 @@ function dataWithImage(WrappedComponent){
             }
           }
           imagen01: file(
-            relativePath: { eq: "convencion_2021_1.webp" }
+            relativePath: { eq: "convencion_2022.jpeg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -58,15 +58,7 @@ function dataWithImage(WrappedComponent){
               }
             }
           },
-          imagen02: file(
-            relativePath: { eq: "convencion_2021_2.webp" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
+         
         }
       `}
       render={ data => <WrappedComponent {...props} imageData={data} /> }
@@ -76,20 +68,20 @@ function dataWithImage(WrappedComponent){
 
 const Convencion = dataWithImage(props => (
   <>
-    <h2>CONVENCIÓN 2021</h2>
+   <h2>ASAMBLEA 2022</h2>
 
-    <p className="has-dropcap">La Federación Nacional de Agricultores y Ganaderos de Honduras <strong>(FENAGH)</strong> convocó a todas las asociaciones afiliadas a la <strong>LXXXVIII Convención Nacional Ordinaria en memoria del <em>“Sr. Roberto Gallardo Lardizábal”</em></strong>. Que se realizó en el Campo de Exposiciones de la Asociación de Ganaderos y Agricultores de Francisco Morazán <strong>(AGAFAM)</strong> el día <strong>jueves 15 de abril del 2021</strong> a partir de las 10:00 am.</p>
+    <p className="has-dropcap"> <strong></strong> <strong><em></em></strong> <strong></strong>  <strong></strong></p>
 
     <div className="content-media content-media--fullWidth content-media--double">
       <div className="content-media-items">
         <div className="content-media-item">
-          <Img fluid={props.imageData.imagen01.childImageSharp.fluid} alt="FENAGH convención 2021"/>
+          <Img fluid={props.imageData.imagen01.childImageSharp.fluid} alt="FENAGH convención 2021"/> 
+          <figure className="content-caption">Asamblea de la FENAGH 2022.</figure>
         </div>
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen02.childImageSharp.fluid} alt="FENAGH convención 2021"/>
-        </div>
+       
+        
       </div>
-      <figure className="content-caption">Convención de la FENAGH 2021.</figure>
+      
     </div>
     
     <h2>Patrocinadores</h2>

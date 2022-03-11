@@ -10,7 +10,7 @@ import { Convencion } from '../components/convencion'
 const ConvencionContent = [
   {
     id: 0,
-    name: 'Convención 2021',
+    name: 'Asamblea 2022',
     content: <Convencion />
   },
 ]
@@ -30,11 +30,11 @@ const ConvencioPage = () => {
   `)
   return(
     <Layout>
-      <SEO title="Convenciones" />
+      <SEO title="Asambleas" />
       <Hero
         sources={data.file.childImageSharp.fluid}
         className="hero-short hero-alignBottom hero-alignLeft"
-        headline='Convenciones'
+        headline='Asambleas'
       />
       <Constrain>
         <Content>
@@ -42,22 +42,31 @@ const ConvencioPage = () => {
             <div className="page-meta__files">
               <span className="page-meta__files--title">Archivos descargables: </span>
               <a 
-                href='https://assets.ctfassets.net/zg4fwo9e8dmk/36Vv8Ui4xffTc6d8I0ImBj/a0c5d0704d49abaeb77adc451096b029/WhatsApp_Image_2021-03-11_at_8.52.12_AM.jpeg' 
+                href='https://images.ctfassets.net/e4da5bv5j8g0/6xC2eTm9bvikOc5a9Ymuos/1d802ea6e4fe9ccd739bc6750acc4aec/convocatoria_2022.jpeg' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Convocatoria 2021
+                Convocatoria 2022
               </a>
               <a 
-                href='https://assets.ctfassets.net/zg4fwo9e8dmk/76feXc8ns8OooHVSIp3JFl/f002e1dbad2b9cbc1c8d305e59fc9e46/CREDENCIAL_2021.pdf' 
+                href='chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fassets.ctfassets.net%2Fe4da5bv5j8g0%2FzMLoXX6gevxxcxqMKlrRI%2F63c7222fe2840fb5a13352e02011e190%2FCREDENCIAL_2022.pdf&clen=88746&chunk=true' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Credencial 2021
+                Credencial 2022
+              </a>
+              <a 
+                href='chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fassets.ctfassets.net%2Fe4da5bv5j8g0%2F6wzKdKIH5qegE0uWIOSxUV%2F170f40088521d027471af35d22545ec8%2FHOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf&clen=413080&chunk=true' 
+                download
+                rel="noopener noreferrer" 
+                target="_blank"
+                className="page-meta__files--file"
+              >
+                Hoteles Sugeridos
               </a>
             </div>
             <nav className="page-meta__nav">
