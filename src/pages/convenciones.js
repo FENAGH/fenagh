@@ -51,7 +51,7 @@ const ConvencioPage = () => {
                 Convocatoria 2022
               </a>
               <a 
-                href='chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fassets.ctfassets.net%2Fe4da5bv5j8g0%2FzMLoXX6gevxxcxqMKlrRI%2F63c7222fe2840fb5a13352e02011e190%2FCREDENCIAL_2022.pdf&clen=88746&chunk=true' 
+                href='https://assets.ctfassets.net/e4da5bv5j8g0/zMLoXX6gevxxcxqMKlrRI/63c7222fe2840fb5a13352e02011e190/CREDENCIAL_2022.pdf' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
@@ -60,7 +60,7 @@ const ConvencioPage = () => {
                 Credencial 2022
               </a>
               <a 
-                href='chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/viewer.html?pdfurl=https%3A%2F%2Fassets.ctfassets.net%2Fe4da5bv5j8g0%2F6wzKdKIH5qegE0uWIOSxUV%2F170f40088521d027471af35d22545ec8%2FHOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf&clen=413080&chunk=true' 
+                href='https://assets.ctfassets.net/e4da5bv5j8g0/6wzKdKIH5qegE0uWIOSxUV/170f40088521d027471af35d22545ec8/HOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
