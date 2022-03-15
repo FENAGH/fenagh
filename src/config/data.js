@@ -194,7 +194,7 @@ export const ASOCIACIONES = [
     id: "22",
     asociacion: "APAH",
     nombre: "Asociación de Productores de Azúcar Honduras ",
-    presidente: "Ricardo Fasquelle",
+    presidente: "Robert Vinelli",
     telefono: "2239-4933"
   },
   {
