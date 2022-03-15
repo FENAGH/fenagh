@@ -17,20 +17,8 @@ const ConveniosPage = () => {
           }
         }
       },
-      fundapanaca: file(relativePath: {eq: "convenios/fundapanaca.webp"}){
-        childImageSharp {
-          fluid(maxWidth: 620, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      afiche: file(relativePath: {eq: "convenios/becas_2020.webp"}){
-        childImageSharp {
-          fluid(maxWidth: 620, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+     
+      
       sembradorI: file(relativePath: {eq: "convenios/convenio_sembrador_I.webp"}){
         childImageSharp {
           fluid(maxWidth: 620, quality: 100) {
@@ -72,22 +60,8 @@ const ConveniosPage = () => {
             </div>
             <figure className="content-caption">Firma del convenio entre Cargill, FENAGH y El Sembrador.</figure>
           </div>
-          <h2>Becas 2020</h2>
-          <p>Convenio de gestión de becas internacionales para maestrías con el apoyo del Programa Presidencial Programa Presidencial de Becas 2020.</p>
-          <div className="content-media">
-            <div className="content-media-item">
-              <Img fluid={data.afiche.childImageSharp.fluid} alt="FENAGH reforesta"/>
-            </div>
-            <figure className="content-caption">Diseño del afiche promocional FENAGH Becas 2020.</figure>
-          </div>
-          <h2>Becas FUNDAPANACA</h2>
-          <p>Convenio de Becas a nivel técnico agropecuario en Colombia, con el apoyo de FUNDAPANACA y Programa Presidencial de Becas 2020</p>
-          <div className="content-media">
-            <div className="content-media-item">
-              <Img fluid={data.fundapanaca.childImageSharp.fluid} alt="Becas FUNDAPANACA"/>
-            </div>
-            <figure className="content-caption">Becarios de FUNDAPANACA.</figure>
-          </div>
+         
+          
         </Content>
       </Constrain>
     </Layout>
