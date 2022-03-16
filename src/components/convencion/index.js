@@ -24,7 +24,7 @@ const Logos = styled.div`
     @media (min-width: 1024px){
       .gatsby-image-wrapper{
         margin: 0 1.325rem 1.55rem;
-        max-width: 150px;
+        max-width: 100px;
       }
     }
   }
