@@ -110,7 +110,7 @@ export const ASOCIACIONES = [
     id: "10",
     asociacion: "PROAVIH",
     nombre: " Productores Avícolas de Honduras",
-    presidente: "Juan José Cruz",
+    presidente: "Mildred Reyes de Handal",
     telefono: "2557-4636"
   },
   {
