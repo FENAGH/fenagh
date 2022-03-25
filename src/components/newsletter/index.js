@@ -9,6 +9,22 @@ const Newsletter = () => {
     <NewsletterWrapper>
       <Constrain>
         <NewsletterHeader>
+         
+        </NewsletterHeader>
+        <NewsletterContent>
+          
+        </NewsletterContent>
+        <NewsletterForm />
+      </Constrain>
+    </NewsletterWrapper>
+  )
+}
+/*
+const Newsletter = () => {
+  return (
+    <NewsletterWrapper>
+      <Constrain>
+        <NewsletterHeader>
           <h3>NEWSLETTER</h3>
           <h2>FENAGH INSIDER</h2>
         </NewsletterHeader>
@@ -20,5 +36,5 @@ const Newsletter = () => {
     </NewsletterWrapper>
   )
 }
-
+*/
 export default Newsletter

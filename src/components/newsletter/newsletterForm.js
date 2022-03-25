@@ -4,6 +4,13 @@ import { Form } from './styles'
 
 const NewsletterForm = () => (
   <Form>
+    
+   
+  </Form>
+)
+/*
+const NewsletterForm = () => (
+  <Form>
     <input 
       type="email" 
       placeholder="Correo electronico"
@@ -11,5 +18,6 @@ const NewsletterForm = () => (
     <button type="submit">suscríbete</button>
   </Form>
 )
+*/
 
 export default NewsletterForm
