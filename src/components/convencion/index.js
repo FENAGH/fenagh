@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled';
 
 const Logos = styled.div`
-  max-width: 620px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   div{
@@ -24,7 +24,7 @@ const Logos = styled.div`
     @media (min-width: 1024px){
       .gatsby-image-wrapper{
         margin: 0 1.325rem 1.55rem;
-        max-width: 150px;
+        max-width: 200px;
       }
     }
   }
