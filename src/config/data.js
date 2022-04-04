@@ -243,8 +243,8 @@ export const ASOCIACIONES = [
     id: "29",
     asociacion: "AGAG",
     nombre: "Asociación de Ganadores y Agricultores de Guaimaca",
-    presidente: "Oscar Armando Neda",
-    telefono: "9464-5847"
+    presidente: "Jonathan Efren Ayala Artica ",
+    telefono: "9653-2419"
   },
   {
     id: "30",
