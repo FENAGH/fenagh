@@ -19,7 +19,7 @@ const ConvencioPage = () => {
   const [active, setActive] = useState(ConvencionContent[0].id);
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "convencion_page.webp" }) {
+      file(relativePath: { eq: "asamblea_2022_page.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -42,7 +42,7 @@ const ConvencioPage = () => {
             <div className="page-meta__files">
               <span className="page-meta__files--title">Archivos descargables: </span>
               <a 
-                href='https://images.ctfassets.net/e4da5bv5j8g0/6xC2eTm9bvikOc5a9Ymuos/1d802ea6e4fe9ccd739bc6750acc4aec/convocatoria_2022.jpeg' 
+               // href='https://images.ctfassets.net/e4da5bv5j8g0/6xC2eTm9bvikOc5a9Ymuos/1d802ea6e4fe9ccd739bc6750acc4aec/convocatoria_2022.jpeg' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
@@ -51,16 +51,16 @@ const ConvencioPage = () => {
                 Convocatoria 2022
               </a>
               <a 
-                href='https://assets.ctfassets.net/e4da5bv5j8g0/zMLoXX6gevxxcxqMKlrRI/63c7222fe2840fb5a13352e02011e190/CREDENCIAL_2022.pdf' 
+               // href='https://assets.ctfassets.net/e4da5bv5j8g0/zMLoXX6gevxxcxqMKlrRI/63c7222fe2840fb5a13352e02011e190/CREDENCIAL_2022.pdf' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Credencial 2022
+               Credencial 2022
               </a>
               <a 
-                href='https://assets.ctfassets.net/e4da5bv5j8g0/6wzKdKIH5qegE0uWIOSxUV/170f40088521d027471af35d22545ec8/HOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf' 
+               // href='https://assets.ctfassets.net/e4da5bv5j8g0/6wzKdKIH5qegE0uWIOSxUV/170f40088521d027471af35d22545ec8/HOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
