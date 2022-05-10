@@ -338,8 +338,27 @@ export const ASOCIACIONES = [
     presidente: "Santos Sierra ",
     telefono: "9600-0614"
   },
-
- 
+  {
+    id: "43",
+    asociacion: "AGASE ",
+    nombre: "Asociacion de Ganaderos y Agricultores de San Esteban",
+    presidente: "Edgar Oliva ",
+    telefono: "9838-9616"
+  },
+  {
+    id: "44",
+    asociacion: "AGAT ",
+    nombre: "Asociacion de Ganaderos y Agricultores de Tela",
+    presidente: "Gerardo Munguia ",
+    telefono: "3174-4847"
+  },
+  {
+    id: "45",
+    asociacion: "AGAP ",
+    nombre: "Asociacion de Ganaderos y Agricultores de Patuca",
+    presidente: "Nahun Rodriguez ",
+    telefono: ""
+  },
 ]
 				
 			
