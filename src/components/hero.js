@@ -106,6 +106,13 @@ const HeroWrapper = styled(BackgroundImage)`
       letter-spacing: 1px;
       line-height: 54px;
       text-shadow: 1px 1px 0 rgb(0 0 0 / 10%), -1px -1px 0 rgb(0 0 0 / 10%);
+      display: inline-block;
+
+
+              margin: 0 0.5rem;
+
+              animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+              animation-duration: 2s; /* don't forget to set a duration! */
     }
   }
   &.hero-largeText .hero-content{
@@ -195,7 +202,7 @@ const Hero = ({sources, className, headline, section}) => {
             {section && (
               <h4 className="eyebrow-heading">{section}</h4>
             )}
-            <h1 className="hero-title">{headline}</h1>
+            <h1 className="hero-title"   >{headline}</h1>
           </Constrain>
         </div>
         <div className="hero-overlay" />

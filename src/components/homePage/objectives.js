@@ -9,7 +9,7 @@ const Objectives = () => {
     <SectionWrapper>
       <TitleSection>
         <h4 className="eyebrow">sobre nosotros</h4>
-        <h2 className="section-title">Nuestros Objetivos</h2>
+        <h2 className="section-title" >Nuestros Objetivos</h2>
       </TitleSection>
       <Constrain>
         <Content>
@@ -19,7 +19,7 @@ const Objectives = () => {
                 <div className="icon">
                   <Icon as={FiArchive} w={12} h={12} opacity=".25"/>
                 </div>
-                <span>Gestionar</span>
+                <span >Gestionar</span>
               </h3>
               <div className="content-grid-content">
                 <p>Gestionar a nivel político las condiciones que permitan el desarrollo del sector agroalimentario nacional.</p>

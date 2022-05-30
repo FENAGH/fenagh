@@ -25,8 +25,8 @@ const HomePage = () => {
   `)
   return (
     <>
-      <Hero
-        sources={data.bgImage.childImageSharp.fluid}
+      <Hero 
+         sources={data.bgImage.childImageSharp.fluid}
         className="hero-default"
         headline="Cultivando el futuro de Honduras"
       />
