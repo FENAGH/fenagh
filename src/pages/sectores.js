@@ -55,13 +55,13 @@ const ProjectsPage = () => {
             <div className="content-media">
               <div className="content-media-item" >
                  
-                <Img data-aos="fade-left" fluid={handleSelectedImage("lacteo")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("lacteo")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               
             </div>
           </div>
         </div> 
         
-        <div data-aos="fade-right">
+    
              <p>El sector lácteo de Honduras está representado por la <strong>Cámara Hondureña de la Leche (CAHLE)</strong> organización afiliada a la FENAGH.</p>
              <p ><strong>CAHLE</strong> es la entidad líder que representa, promueve y fomenta el desarrollo sostenible de la producción, procesamiento y comercialización de la leche y sus derivados en Honduras.</p>
 
@@ -70,20 +70,20 @@ const ProjectsPage = () => {
               <strong>Sitio web: {" "}</strong>
               <a className="external-link" href="https://www.cahle.org/acerca-de-cahle" rel="noopener noreferrer" target="_blank">www.cahle.org</a>
               </p>
-
-         </div>
+   
+      
 
           <h2 id="acuicola">Sector Acuicola</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-right" fluid={handleSelectedImage("acuicola")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("acuicola")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div >
+    
           <p >El sector acuícola de Honduras está representado por la <strong>Asociación Nacional de Acuicultores de Honduras (ANDAH)</strong> organización afiliada a la FENAGH.</p>
           <p><strong>ANDAH</strong> cuenta con más de 300 miembros, entre empresas, productores individuales, cooperativas y agrupaciones de camarón cultivado y laboratorios larvarios; integrándose periódicamente, otros acuicultores a nivel nacional, así como plantas procesadoras y empresas de insumos y servicios relacionados directamente con la acuicultura del país.</p>
           
@@ -93,7 +93,7 @@ const ProjectsPage = () => {
             <strong>Sitio web: {" "}</strong>  
             <a className="external-link" href="https://andah.hn/andah/" rel="noopener noreferrer" target="_blank">andah.hn</a>
           </p>
-          </div>
+         
       
      
 
@@ -102,12 +102,12 @@ const ProjectsPage = () => {
           <div className="content-pull content-pull--right">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-left" fluid={handleSelectedImage("embutidos")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("embutidos")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div >
+    
           <p>El sector de embutidos de Honduras está representado por la <strong>Asociación Hondureña de Productores de Embutidos (AHPROEM)</strong> organización afiliada a la FENAGH.</p>
           <p><strong>AHPROEM</strong> se ha dinamizado en los últimos años, estableciendo alianzas estratégicas con asociaciones nacionales e internacionales que vienen a fomentar la productividad de las empresas, garantizar la calidad de los productos con charlas técnicas y talleres prácticos.</p>
           
@@ -116,19 +116,19 @@ const ProjectsPage = () => {
             <strong>Sitio web: {" "}</strong>
             <a className="external-link" href="http://www.ahproem.com/" rel="noopener noreferrer" target="_blank">www.ahproem.com</a>
           </p>
-       </div> 
+     
 
           <h2 id="avicola">Sector Avicola</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-right" fluid={handleSelectedImage("avicola")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("avicola")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div >
+     
           <p>El sector avícola de Honduras está representado por la <strong>Asociación Nacional de Avicultores de Honduras (ANAVIH)</strong> y por los <strong>Productores Avícolas de Honduras (PROAVIH)</strong> ambas instituciones están afiliadas a la FENAGH.</p>
           <p>La industria avícola produce unas 350 millones de libras de carne al año e invierte unos 400 millones de lempiras al año.</p>
           <p>La producción de huevo y pollo registró un crecimiento del 4 y 2.7% respectivamente. Ese crecimiento se traduce en 20 millones de libras de carne de pollo y 300,000 unidades de huevo al día.</p>
@@ -140,19 +140,19 @@ const ProjectsPage = () => {
             <strong>Facebook de ANAVIH: {" "}</strong>
             <a className="external-link" href="https://www.facebook.com/anavih.hn/" rel="noopener noreferrer" target="_blank">anavih.hn</a>
           </p>
-      </div>   
+       
 
           <h2 id="cafe">Sector Café</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-left" fluid={handleSelectedImage("cafe")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("cafe")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div >
+   
 
           <p>El sector productor de café de Honduras está representado por La <strong>Asociación Hondureña de Productores de Café (AHPROCAFE)</strong> organización afiliada a la FENAGH.</p>
           <p><strong>AHPROCAFE</strong> es una organización gremial sin fines de lucro, creada mediante personalidad jurídica número 17, emitida el 03 de agosto de 1967 al servicio de los productores y productoras de café de Honduras. Cuenta con una membresía de más de 110,252 afiliados, diseminados en 210 municipios de 298 y en 15 de los 18 departamentos que conforman el territorio hondureño.</p>
@@ -169,19 +169,19 @@ const ProjectsPage = () => {
             <strong>Sitio web: {" "}</strong>
             <a className="external-link" href="http://www.ahprocafe.hn/" rel="noopener noreferrer" target="_blank">www.ahprocafe.hn</a>
           </p>
-      </div> 
+   
 
           <h2 id="carne">Sector Carne</h2>
 
           <div className="content-pull content-pull--left">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-right" fluid={handleSelectedImage("carne")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("carne")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div>
+     
           <p>El sector cárnico de Honduras está representado por la <strong>Cámara de Fomento Ganadero de Honduras (CAFOGAH)</strong> organización afiliada a la FENAGH.</p>
           <p><strong>CAFOGAH</strong> tiene como objetivo fomentar la competitividad y sostenibilidad del Rubro de la Carne Bovina.</p>
           <p>El sector de producción de carne bovina en Honduras está representado por ocho diferentes eslabones que son los criadores, engordadores o repastadores, empacadoras o procesador industrial, los mataderos municipales y rurales, los intermediarios, distribuidores, mayoristas y consumidores (Reyes Puerto et al., 2013).</p>
@@ -192,19 +192,19 @@ const ProjectsPage = () => {
             <strong>Facebook: {" "}</strong>
             <a className="external-link" href="https://www.facebook.com/pg/camarafomentoganaderodehonduras/" rel="noopener noreferrer" target="_blank">camarafomentoganaderodehonduras</a>
           </p>
-      </div>    
+      
 
           <h2 id="palma_africana">Sector Palma Africana</h2>
 
           <div className="content-pull content-pull--right">
             <div className="content-media">
               <div className="content-media-item">
-                <Img data-aos="fade-left" fluid={handleSelectedImage("palma africana")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+                <Img fluid={handleSelectedImage("palma africana")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
               </div>
             </div>
           </div>
 
-      <div >
+    
           <p>Según cifras de la <a className="external-link" href="https://sag.gob.hn/" rel="noopener noreferrer" target="_blank">Secretaría de Agricultura y Ganadería (SAG)</a> indican que el área cultivada con palma africana creció de 147,000 a 190,000 hectáreas sembradas. El incremento es de 43,000 hectáreas o 29.2 puntos porcentuales.</p>
           <p>La siembra se concentra en <strong>Colón, Cortés, Atlántida y Yoro</strong>. Asimismo, la producción de fruta es de 2.4 millones de toneladas y 480,000 toneladas de aceite.</p>
           <p>Las empresas <strong>AGROPALMA y JAREMAR</strong> son organizaciones afiliadas a la FENAGH.</p>
@@ -225,32 +225,32 @@ const ProjectsPage = () => {
             <strong>Sitio web: {" "}</strong>
             <a className="external-link" href="https://jaremar.com/" rel="noopener noreferrer" target="_blank">jaremar.com</a>
           </p>
-      </div>   
+      
 
           <h2 id="porcino">Sector Porcino</h2>
 
           <div className="content-media">
             <div className="content-media-item">
-              <Img data-aos="fade-down"fluid={handleSelectedImage("porcino")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+              <Img fluid={handleSelectedImage("porcino")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
             </div>
           </div>
-      <div >
+     
           <p>El sector porcino de Honduras está representado por la <strong>Asociación Nacional de Porcicultores de Honduras (ANAPOH)</strong> organización afiliada a la FENAGH. Honduras produce 35 millones de libras de carne de cerdo al año y se consumen 116 millones de libras por que se tienen que importar el 70% para satisfacer la demanda nacional.</p>
 
-      </div>
+   
 
           <h2 id="sal">Sector Sal</h2>
 
           <div className="content-media">
             <div className="content-media-item">
-              <Img data-aos="fade-down"  fluid={handleSelectedImage("sal")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
+              <Img fluid={handleSelectedImage("sal")[0]?.node.childImageSharp.fluid} alt="Sector Lácteo"/>
             </div>
           </div>
 
-      <div >
+    
           <p>El sector sal en Honduras está representado por la <strong>Asociación de Productores de Sal de Honduras (ASOPROSALH)</strong> organización afiliada a la FENAGH.</p>
           <p>La producción de sal a nivel nacional es de un millón de quintales, este rubro genera más de 15 mil empleos directos.</p>
-      </div>
+    
 
           <h2 id="granos">Sector Granos Básicos</h2>
 
@@ -260,10 +260,10 @@ const ProjectsPage = () => {
             </div>
           </div>
 
-      <div>
+    
           <p>El sector de granos básicos de Honduras está representado por la <strong>Asociación Nacional de Agricultores y Productores de Granos Básicos de Honduras (PROGRANO)</strong> organización afiliada a la FENAGH.</p>
           <p>En la reciente cosecha de maíz 2021-2021 Honduras alcanzó producir 12 millones de quintales de maíz.</p>
-      </div>
+      
         </Content>
       </Constrain>
     </Layout>
