@@ -82,8 +82,8 @@ export const ASOCIACIONES = [
     id: "06",
     asociacion: "AGAC",
     nombre: "Asociación de Ganaderos y Agricultores de Copán ",
-    presidente: "Gilberto Moreno",
-    telefono: "9979-9487"
+    presidente: "Milton Yanuario Santos",
+    telefono: "2662-0856"
   },
   {
     id: "07",

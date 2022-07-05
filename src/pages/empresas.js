@@ -46,13 +46,8 @@ const DirectivePage = () => {
           }
         }
       },
-      walmart: file(relativePath: { eq: "logo-walmart.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
+      
+    
     }
   `)
   return (
@@ -88,11 +83,8 @@ const DirectivePage = () => {
             fluid={data.molino.childImageSharp.fluid}
             w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
           />
-          <Box 
-            as={Img}
-            fluid={data.walmart.childImageSharp.fluid}
-            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
-          />
+          
+        
         </Box>
       </Constrain>
     </Layout>
