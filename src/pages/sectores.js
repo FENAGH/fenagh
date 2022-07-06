@@ -188,11 +188,15 @@ const ProjectsPage = () => {
           <p>En el sector primario podemos encontrar a los criadores y los engordadores o repastadores. Los criadores están clasificados en criador puro y criador comercial. Los últimos se diferencian de los primeros ya que producen animales encastados principalmente de razas cebuinas.</p>
           <p>Por otro lado, los criadores puros se caracterizan por la producción de razas cebuinas y europeas. Algunos de estos productores pasan sus animales a los repastadores sirviendo estos como enlaces con las plantas procesadoras, aunque también están aquellos criadores que lo hacen directamente con las plantas.</p>
           <p>Para el año 2011, en Honduras se estimaba un total de 8,696 explotaciones que realizaban prácticas exclusivas de cría y engorde de los cuales 100 eran criadores puros y el resto criadores comerciales <strong>(OIRSA, 2011)</strong>.</p>
+          
           <p>
-            <strong>Facebook: {" "}</strong>
+          <strong>Facebook: {" "}</strong>
             <a className="external-link" href="https://www.facebook.com/pg/camarafomentoganaderodehonduras/" rel="noopener noreferrer" target="_blank">camarafomentoganaderodehonduras</a>
           </p>
-      
+          <p>
+          <strong>Sitio web: {" "}</strong>
+              <a className="external-link" href="http://www.cafogah.com" rel="noopener noreferrer" target="_blank">www.cafogah.com</a>
+              </p>
 
           <h2 id="palma_africana">Sector Palma Africana</h2>
 
