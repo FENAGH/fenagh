@@ -45,8 +45,8 @@ export const ASOCIACIONES = [
     id: "01",
     asociacion: "AGAFAM",
     nombre: "Asociación de Ganaderos y Agricultores de Francisco Morazán ",
-    presidente: "Juan Carlos Ramos",
-    telefono: "8740-0432"
+    presidente: "Roberto Gallardo",
+    telefono: "9961-5644"
   },
   {
     id: "02",
