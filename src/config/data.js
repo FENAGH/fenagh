@@ -313,50 +313,58 @@ export const ASOCIACIONES = [
   {
     id: "39",
     asociacion: "AGAVI",
-    nombre: "Asociacion de Ganaderos y Agricultores de Villanueva",
+    nombre: "Asociación de Ganaderos y Agricultores de Villanueva",
     presidente: "Mauro Caballero Alvarado ",
     telefono: "3172-1398"
   },
   {
     id: "40",
     asociacion: "AGAV",
-    nombre: "Asociacion de Ganaderos y Agricultores de Valle",
+    nombre: "Asociación de Ganaderos y Agricultores de Valle",
     presidente: "Jose Everth Rubio ",
     telefono: "9614-4410"
   },
   {
     id: "41",
     asociacion: "AGATRO",
-    nombre: "Asociacion de Ganaderos y Agricultores de Trojes",
+    nombre: "Asociación de Ganaderos y Agricultores de Trojes",
     presidente: "Marvin Herrera ",
     telefono: "9980-9207"
   },
   {
     id: "42",
     asociacion: "AGASAG ",
-    nombre: "Asociacion de Ganaderos y Agriculores de Sabanagrande",
+    nombre: "Asociación de Ganaderos y Agriculores de Sabanagrande",
     presidente: "Santos Sierra ",
     telefono: "9600-0614"
   },
   {
     id: "43",
     asociacion: "AGASE ",
-    nombre: "Asociacion de Ganaderos y Agricultores de San Esteban",
+    nombre: "Asociación de Ganaderos y Agricultores de San Esteban",
     presidente: "Edgar Oliva ",
     telefono: "9838-9616"
   },
   {
     id: "44",
     asociacion: "AGAT ",
-    nombre: "Asociacion de Ganaderos y Agricultores de Tela",
+    nombre: "Asociación de Ganaderos y Agricultores de Tela",
     presidente: "Gerardo Munguia ",
     telefono: "3174-4847"
   },
   {
     id: "45",
     asociacion: "AGAP ",
-    nombre: "Asociacion de Ganaderos y Agricultores de Patuca",
+    nombre: "Asociación de Ganaderos y Agricultores de Patuca",
     presidente: "Nahun Rodriguez ",
+    telefono: ""
+  },
+
+  {
+    id: "46",
+    asociacion: "APPIH ",
+    nombre: "Asociación de Productores Piscícolas de Honduras ",
+    presidente: "Johnny Talhami ",
     telefono: ""
   },
 ]
