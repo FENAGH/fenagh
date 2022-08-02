@@ -365,7 +365,7 @@ export const ASOCIACIONES = [
     asociacion: "APPIH ",
     nombre: "Asociación de Productores Piscícolas de Honduras ",
     presidente: "Johnny Talhami ",
-    telefono: ""
+    telefono: "9978-8988"
   },
 ]
 				
