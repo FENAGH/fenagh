@@ -294,7 +294,7 @@ export const ASOCIACIONES = [
     asociacion: "AGABRUL",
     nombre: "Asociación de Agricultores y Ganadores de Brus Laguna  ",
     presidente: "Juan Angel Aguilar",
-    telefono: "9865-8590"
+    telefono: "9738-0158"
   },
   {
     id: "37",
