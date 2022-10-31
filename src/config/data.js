@@ -349,8 +349,8 @@ export const ASOCIACIONES = [
     id: "44",
     asociacion: "AGAT ",
     nombre: "Asociación de Ganaderos y Agricultores de Tela",
-    presidente: "Gerardo Munguia ",
-    telefono: "3174-4847"
+    presidente: "Amadeo Rapalo ",
+    telefono: "3384-5829"
   },
   {
     id: "45",
