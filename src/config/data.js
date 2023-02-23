@@ -4,9 +4,9 @@ export const PERSONAL = [
   {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
   {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
   {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com"},
-  {id: "06", nombre: "Lic. Marlen Torres", cargo: "Jefe de Recaudo", email: "mtorresfenagh@gmail.com"},
+  {id: "06", nombre: "Kathy Sierra", cargo: "Jefe de Recaudo", email: "recaudo.fenagh@gmail.com"},
   {id: "07", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com"},
-  {id: "08", nombre: "Ana del Cid", cargo: "Oficial de Recaudo SENASA ", email: "anadelcid.fenagh@gmail.com"},
+  //{id: "08", nombre: "Ana del Cid", cargo: "Oficial de Recaudo SENASA ", email: "anadelcid.fenagh@gmail.com"},//
 ]
 
 export const EMPRESAS = [
@@ -117,7 +117,7 @@ export const ASOCIACIONES = [
     id: "11",
     asociacion: "ANAVIH",
     nombre: "Asociación Nacional de Avicultores de Honduras",
-    presidente: "Luis Eduardo Valle Coello",
+    presidente: "Norman Fasquelle",//Luis Eduardo Valle Coello//
     telefono: "9977-3759"
   },
   {
