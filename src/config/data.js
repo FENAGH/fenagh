@@ -118,7 +118,7 @@ export const ASOCIACIONES = [
     asociacion: "ANAVIH",
     nombre: "Asociación Nacional de Avicultores de Honduras",
     presidente: "Norman Fasquelle",//Luis Eduardo Valle Coello//
-    telefono: "9977-3759"
+    telefono: "2550-2343"//"9977-3759"//
   },
   {
     id: "12",
