@@ -42,7 +42,7 @@ const ConvencioPage = () => {
             <div className="page-meta__files">
               <span className="page-meta__files--title">Archivos descargables: </span>
               <a 
-                  href= 'https://images.ctfassets.net/e4da5bv5j8g0/SN3dg27wKJLkx7X2tgsvq/af3e02777e60c8cece7cf736667a3fd9/FENAGH_C-3_CONVOCATORIA_XC_ASAMBLEA.jpg'
+                  //href= 'https://images.ctfassets.net/e4da5bv5j8g0/SN3dg27wKJLkx7X2tgsvq/af3e02777e60c8cece7cf736667a3fd9/FENAGH_C-3_CONVOCATORIA_XC_ASAMBLEA.jpg'
                // href='https://images.ctfassets.net/e4da5bv5j8g0/6xC2eTm9bvikOc5a9Ymuos/1d802ea6e4fe9ccd739bc6750acc4aec/convocatoria_2022.jpeg' 
                 download
                 rel="noopener noreferrer" 
