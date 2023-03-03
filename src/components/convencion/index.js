@@ -360,35 +360,28 @@ const Convencion = dataWithImage(props => (
           <Img fluid={props.imageData.imagen17.childImageSharp.fluid} alt="FENAGH convención 2022"/>
         </div>
         <div className="content-media-item">
-          <Img fluid={props.imageData.imagen18.childImageSharp.fluid} alt="FENAGH convención 2022"/>
+          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2022"/>
         </div> 
        
       </div>
       <figure className="content-caption"> Asamblea de la FENAGH 2022.</figure>
     </div> */
 <>
-    <h2>ASAMBLEA 2023</h2>
-</>
-     /* <div className="content-media content-media--fullWidth content-media--double">
-      <div className="content-media-items">
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div> 
-       
-      </div>
-      <figure className="content-caption"> Promocional_2023.</figure> 
-    </div>  
-    
-
+<h2>
+<br></br>ASAMBLEA 2023<br></br><br></br></h2>
+    <div className="content-media-item">
+          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2022"/>
+        </div>  
     <h2>Patrocinadores</h2>
-   <Logos>
+    </> 
+   /*<Logos>
       <div>
         {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
           <Img id={base} fluid={childImageSharp.fluid}/>
         ))}
       </div>
-    </Logos>*/
-  
+    </Logos>
+    </>*/
 ))
 
 export { Convencion }

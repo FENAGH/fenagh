@@ -10,7 +10,7 @@ import { Convencion } from '../components/convencion'
 const ConvencionContent = [
   {
     id: 0,
-    name: 'Asamblea 2023',
+    name: '',
     content: <Convencion />
   },
 ]
