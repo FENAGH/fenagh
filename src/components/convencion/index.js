@@ -373,15 +373,15 @@ const Convencion = dataWithImage(props => (
           <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2022"/>
         </div>  
     <h2>Patrocinadores</h2>
-    </> 
-   /*<Logos>
+    
+   <Logos>
       <div>
         {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
           <Img id={base} fluid={childImageSharp.fluid}/>
         ))}
       </div>
     </Logos>
-    </>*/
+    </>
 ))
 
 export { Convencion }
