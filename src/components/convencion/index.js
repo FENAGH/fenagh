@@ -223,7 +223,15 @@ function dataWithImage(WrappedComponent){
               }
             }
           },
-
+          imagen19: file(
+            relativePath: { eq: "Promocional_2023.jpeg" }
+          ) {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          },
 
 
 
@@ -237,11 +245,10 @@ function dataWithImage(WrappedComponent){
 }
 
 const Convencion = dataWithImage(props => (
-  <>
-   <h2>ASAMBLEA 2022</h2>
 
-   <p className="has-dropcap">La Federación Nacional de Agricultores y Ganaderos de Honduras <strong>(FENAGH)</strong> realizó su 89 asamblea <strong>LXXXIX Asamblea Nacional Ordinaria<em>“Ing. Justo René Martínez”</em></strong>en la Asociación de Ganaderos y Agricultores de Olacho<strong>(AGAO)</strong> el día <strong>viernes 1 de abril del 2022</strong> a partir de las 9:00 am. <br></br> El objetivo de la Asamblea fue dar a conocer a los agremiados las diversas actividades que ha realizado la Junta Directiva periodo 2021-2023 en pro del desarrollo y protección de los intereses de los productores a nivel nacional.    </p>
+/*<h2>ASAMBLEA 2022</h2>*/
 
+/* <p className="has-dropcap">La Federación Nacional de Agricultores y Ganaderos de Honduras <strong>(FENAGH)</strong> realizó su 89 asamblea <strong>LXXXIX Asamblea Nacional Ordinaria<em>“Ing. Justo René Martínez”</em></strong>en la Asociación de Ganaderos y Agricultores de Olacho<strong>(AGAO)</strong> el día <strong>viernes 1 de abril del 2022</strong> a partir de las 9:00 am. <br></br> El objetivo de la Asamblea fue dar a conocer a los agremiados las diversas actividades que ha realizado la Junta Directiva periodo 2021-2023 en pro del desarrollo y protección de los intereses de los productores a nivel nacional.    </p>
 
    <div className="content-media content-media--fullWidth content-media--double">
       <div className="content-media-items">
@@ -358,19 +365,30 @@ const Convencion = dataWithImage(props => (
        
       </div>
       <figure className="content-caption"> Asamblea de la FENAGH 2022.</figure>
-    </div>
-
-
+    </div> */
+<>
+    <h2>ASAMBLEA 2023</h2>
+</>
+     /* <div className="content-media content-media--fullWidth content-media--double">
+      <div className="content-media-items">
+        <div className="content-media-item">
+          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2023"/>
+        </div> 
+       
+      </div>
+      <figure className="content-caption"> Promocional_2023.</figure> 
+    </div>  
+    
 
     <h2>Patrocinadores</h2>
-    <Logos>
+   <Logos>
       <div>
         {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
           <Img id={base} fluid={childImageSharp.fluid}/>
         ))}
       </div>
-    </Logos>
-  </>
+    </Logos>*/
+  
 ))
 
 export { Convencion }
