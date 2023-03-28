@@ -9,7 +9,7 @@ import Hero from '../components/hero'
 const MessagePage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "PresidenteFerreira.webp" }) {
+      file(relativePath: { eq: "proyectos_page.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
             ...GatsbyImageSharpFluid
