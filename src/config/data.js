@@ -18,19 +18,19 @@ export const EMPRESAS = [
 ]
 
 export const JUNTA = [
-  {id: "01", nombre: "Anabel Gallardo Ponce", cargo:  "Presidente"},
-  {id: "02", nombre: "Héctor Ferreira Sabillon", cargo:  "Vicepresidente"},
-  {id: "03", nombre: "Gilberto Moreno Alvarado", cargo:  "Secretario"},
-  {id: "04", nombre: "Juan Jose Cruz", cargo:  "Tesorero"},
+  {id: "01", nombre: "Héctor Alberto Ferreira", cargo:  "Presidente"},
+  {id: "02", nombre: "Mario Alberto Lovo", cargo:  "Vicepresidente"},
+  {id: "03", nombre: "Rigoberto Erazo Oseguera", cargo:  "Secretario"},
+  {id: "04", nombre: "Gilberto Moreno Alvarado", cargo:  "Tesorero"},
 
-  {id: "05", nombre: "Dr. Leopoldo Duran Puerto", cargo:  "Vocal I"},
-  {id: "06", nombre: "Roger Padilla", cargo:  "Vocal II"},
-  {id: "07", nombre: "Manuel España", cargo:  "Vocal III"},
-  {id: "07", nombre: "Cristóbal Ismael Espinal", cargo:  "Vocal IV"},
+  {id: "05", nombre: "José Manuel España", cargo:  "Vocal I"},
+  {id: "06", nombre: "Wilmer Barahona", cargo:  "Vocal II"},
+  {id: "07", nombre: "Leopoldo Duran Puerto", cargo:  "Vocal III"},
+  {id: "07", nombre: "Juan Valladares Salgado", cargo:  "Vocal IV"},
 
-  {id: "01", nombre: "Flavio Tinoco", cargo:  "Junta Fiscalizadora"},
-  {id: "09", nombre: "Mario Lovo", cargo:  "Junta Fiscalizadora"},
-  {id: "10", nombre: "Gerardo Guillen", cargo:  "Junta Fiscalizadora"},
+  {id: "01", nombre: "Juan José Sabillón Cruz", cargo:  "Junta Fiscalizadora"},
+  {id: "09", nombre: "Gerardo Guillén", cargo:  "Junta Fiscalizadora"},
+  {id: "10", nombre: "Norman Fasquelle", cargo:  "Junta Fiscalizadora"},
 
   {id: "08", nombre: "Francisco Sandoval", cargo:  "Asesor"},
   {id: "08", nombre: "Pedro Mendoza", cargo:  "Asesor"},
@@ -38,6 +38,7 @@ export const JUNTA = [
   {id: "12", nombre: "Pablo Sierra", cargo:  "Asesor"},
   {id: "16", nombre: "Denis Avendaño", cargo:  "Asesor"},
   {id: "13", nombre: "Justo Rene Martínez.", cargo:  "Asesor"},
+
 ]
 
 export const ASOCIACIONES = [
