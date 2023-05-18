@@ -52,7 +52,7 @@ const ConvencioPage = () => {
                 Convocatoria 2023.
               </a>
               <a 
-              href= 'https://assets.ctfassets.net/e4da5bv5j8g0/5XFeStLaOvBfYNq8U9Yvkd/fabe30d0d06f5604720629a05c9fef7d/CREDENCIAL_2023.pdf'
+              //href= 'https://assets.ctfassets.net/e4da5bv5j8g0/5XFeStLaOvBfYNq8U9Yvkd/fabe30d0d06f5604720629a05c9fef7d/CREDENCIAL_2023.pdf'
                // href='https://assets.ctfassets.net/e4da5bv5j8g0/zMLoXX6gevxxcxqMKlrRI/63c7222fe2840fb5a13352e02011e190/CREDENCIAL_2022.pdf' 
                 download
                 rel="noopener noreferrer" 
@@ -62,7 +62,7 @@ const ConvencioPage = () => {
                Credencial 2023.
               </a>
               <a 
-                href='https://assets.ctfassets.net/e4da5bv5j8g0/1jc9AADdF04GKGeEO2WqNE/8cd52d60f510d0509c9e78a7de20e9fb/Fenagh_Hoteles.pdf'
+               // href='https://assets.ctfassets.net/e4da5bv5j8g0/1jc9AADdF04GKGeEO2WqNE/8cd52d60f510d0509c9e78a7de20e9fb/Fenagh_Hoteles.pdf'
                // href='https://assets.ctfassets.net/e4da5bv5j8g0/6wzKdKIH5qegE0uWIOSxUV/170f40088521d027471af35d22545ec8/HOTELES_SUGERIDOS_CONVENCION_FENAGH_2022.pdf' 
                 download
                 rel="noopener noreferrer" 

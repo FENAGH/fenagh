@@ -1,6 +1,6 @@
 export const PERSONAL = [
   {id: "01", nombre: "Ing. Guillermo Cerritos", cargo: "Director Ejecutivo", email: "cerritosg@gmail.com"},
-  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn@gmail.com"},
+  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn2@gmail.com"},
   {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com"},
   {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
   {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com"},
@@ -32,12 +32,12 @@ export const JUNTA = [
   {id: "09", nombre: "Gerardo Guillén", cargo:  "Junta Fiscalizadora"},
   {id: "10", nombre: "Norman Fasquelle", cargo:  "Junta Fiscalizadora"},
 
-  {id: "08", nombre: "Francisco Sandoval", cargo:  "Asesor"},
+ /* {id: "08", nombre: "Francisco Sandoval", cargo:  "Asesor"},
   {id: "08", nombre: "Pedro Mendoza", cargo:  "Asesor"},
   {id: "11", nombre: "Víctor Wilson", cargo:  "Asesor"},
   {id: "12", nombre: "Pablo Sierra", cargo:  "Asesor"},
   {id: "16", nombre: "Denis Avendaño", cargo:  "Asesor"},
-  {id: "13", nombre: "Justo Rene Martínez.", cargo:  "Asesor"},
+  {id: "13", nombre: "Justo Rene Martínez.", cargo:  "Asesor"},*/
 
 ]
 
@@ -195,7 +195,7 @@ export const ASOCIACIONES = [
     id: "22",
     asociacion: "APAH",
     nombre: "Asociación de Productores de Azúcar Honduras ",
-    presidente: "Robert Vinelli",
+    presidente: "Yamal Yibrin Canahuati", /*"Robert Vinelli"*/
     telefono: "2239-4933"
   },
   {

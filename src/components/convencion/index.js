@@ -365,15 +365,17 @@ const Convencion = dataWithImage(props => (
        
       </div>
       <figure className="content-caption"> Asamblea de la FENAGH 2022.</figure>
-    </div> */
-<>
+    </div> 
+
 <h2>
 <br></br>ASAMBLEA 2023<br></br><br></br></h2>
     <div className="content-media-item">
           <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2022"/>
-        </div>  
-    <h2>Patrocinadores</h2>
-    
+        </div>  */
+
+ <> 
+    <h2>Patrocinadores</h2> 
+
    <Logos>
       <div>
         {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
