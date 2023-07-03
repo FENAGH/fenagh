@@ -76,8 +76,8 @@ export const ASOCIACIONES = [
     id: "05",
     asociacion: "AAGI",
     nombre: "Asociación de Ganaderos y Agricultores de Ilanga ",
-    presidente: "Mario Barralaga",
-    telefono: "9930-0954"
+    presidente: "Lizardo Perez", //"Mario Barralaga",//
+    telefono: "9970-5629" //"9930-0954"//
   },
   {
     id: "06",
@@ -230,8 +230,8 @@ export const ASOCIACIONES = [
     id: "27",
     asociacion: "CAHLE",
     nombre: "Asociación de Beneficio Mutuo Cámara Hondureña de la Leche",
-    presidente: "Hector Ferreira",
-    telefono: "9995-1010"
+    presidente: "Gilberto Moreno",
+    telefono: "9979-9487"  //"9995-1010"//
   },
   {
     id: "28",
@@ -244,7 +244,7 @@ export const ASOCIACIONES = [
     id: "29",
     asociacion: "AGAG",
     nombre: "Asociación de Ganadores y Agricultores de Guaimaca",
-    presidente: "Jonathan Efren Ayala Artica ",
+    presidente: "Armando Chavez", //"Jonathan Efren Ayala Artica ",//
     telefono: "9653-2419"
   },
   {
