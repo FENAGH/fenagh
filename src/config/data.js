@@ -167,8 +167,8 @@ export const ASOCIACIONES = [
     id: "18",
     asociacion: "AGAO",
     nombre: "Asociación de Ganaderos y Agricultores de Olancho",
-    presidente: "Oscar Neptali Espinal",
-    telefono: "9916-0180"
+    presidente: "Luis Efren Espinal Garcia",//"Oscar Neptali Espinal",//
+    telefono: "9885-9192" //"9916-0180"//
   },
   {
     id: "19",
