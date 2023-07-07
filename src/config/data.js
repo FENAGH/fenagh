@@ -275,86 +275,78 @@ export const ASOCIACIONES = [
     presidente: "Antonio Francisco Guillen",
     telefono: "2566-2587"
   },
-  
   {
     id: "34",
-    asociacion: "LEYDE",
-    nombre: "Leche y Derivados",
-    presidente: "Christian Nehring",
-    telefono: "2225-4955"
-  },
-  {
-    id: "35",
     asociacion: "DINANT",
     nombre: "Corporacion Dinant",
     presidente: "Ana Maria Rivera",
     telefono: "3390-5437"
   },
   {
-    id: "36",
+    id: "35",
     asociacion: "AGABRUL",
     nombre: "Asociación de Agricultores y Ganadores de Brus Laguna  ",
     presidente: "Juan Angel Aguilar",
     telefono: "9738-0158"
   },
   {
-    id: "37",
+    id: "36",
     asociacion: "PALCASA",
     nombre: "Palmas Centroamericanas S.A. de C.V. ",
     presidente: "Sergio Orlando Maradiaga ",
     telefono: "3345-5488"
   },
   {
-    id: "38",
+    id: "37",
     asociacion: "ASPAH",
     nombre: "Asociación de Productores de Aguacate de Honduras",
     presidente: "Mario Dubon",
     telefono: "9695-5363"
   },
   {
-    id: "39",
+    id: "38",
     asociacion: "AGAVI",
     nombre: "Asociación de Ganaderos y Agricultores de Villanueva",
     presidente: "Mauro Caballero Alvarado ",
     telefono: "3172-1398"
   },
   {
-    id: "40",
+    id: "39",
     asociacion: "AGAV",
     nombre: "Asociación de Ganaderos y Agricultores de Valle",
     presidente: "Jose Everth Rubio ",
     telefono: "9614-4410"
   },
   {
-    id: "41",
+    id: "40",
     asociacion: "AGATRO",
     nombre: "Asociación de Ganaderos y Agricultores de Trojes",
     presidente: "Marvin Herrera ",
     telefono: "9980-9207"
   },
   {
-    id: "42",
+    id: "41",
     asociacion: "AGASAG ",
     nombre: "Asociación de Ganaderos y Agriculores de Sabanagrande",
     presidente: "Santos Sierra ",
     telefono: "9600-0614"
   },
   {
-    id: "43",
+    id: "42",
     asociacion: "AGASE ",
     nombre: "Asociación de Ganaderos y Agricultores de San Esteban",
     presidente: "Edgar Oliva ",
     telefono: "9838-9616"
   },
   {
-    id: "44",
+    id: "43",
     asociacion: "AGAT ",
     nombre: "Asociación de Ganaderos y Agricultores de Tela",
     presidente: "Amadeo Rapalo ",
     telefono: "3384-5829"
   },
   {
-    id: "45",
+    id: "44",
     asociacion: "AGAP ",
     nombre: "Asociación de Ganaderos y Agricultores de Patuca",
     presidente: "Nahun Rodriguez ",
@@ -362,7 +354,7 @@ export const ASOCIACIONES = [
   },
 
   {
-    id: "46",
+    id: "45",
     asociacion: "APPIH ",
     nombre: "Asociación de Productores Piscícolas de Honduras ",
     presidente: "Johnny Talhami ",
