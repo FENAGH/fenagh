@@ -32,13 +32,7 @@ const DirectivePage = () => {
           }
         }
       },
-      leyde: file(relativePath: { eq: "logo-leyde.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
+      
       molino: file(relativePath: { eq: "logo-molino-harinero.png" }) {
         childImageSharp {
           fluid(maxWidth: 250, quality: 100) {
@@ -73,11 +67,7 @@ const DirectivePage = () => {
             w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
           />
           
-          <Box 
-            as={Img}
-            fluid={data.leyde.childImageSharp.fluid}
-            w={["100%", "calc(50% - 20px)",  "calc(25% - 20px)", "calc(20% - 25px)"]}
-          />
+        
           <Box 
             as={Img}
             fluid={data.molino.childImageSharp.fluid}
