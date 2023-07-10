@@ -68,7 +68,7 @@ function dataWithImage(WrappedComponent){
             }
           },
           imagen03: file(
-            relativePath: { eq: "Convencion_2023_3.jpg" }
+            relativePath: { eq: "Convencion_2023_3.jpeg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -78,7 +78,7 @@ function dataWithImage(WrappedComponent){
           },
          
           imagen04: file(
-            relativePath: { eq: "Convencion_2023_4.jpg" }
+            relativePath: { eq: "Convencion_2023_4.jpeg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -87,7 +87,7 @@ function dataWithImage(WrappedComponent){
             }
           },
           imagen05: file(
-            relativePath: { eq: "Convencion_2023_5.JPG" }
+            relativePath: { eq: "Convencion_2023_5.jpeg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -96,7 +96,7 @@ function dataWithImage(WrappedComponent){
             }
           },
           imagen06: file(
-            relativePath: { eq: "Convencion_2023_6.jpg" }
+            relativePath: { eq: "Convencion_2023_6.jpeg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
