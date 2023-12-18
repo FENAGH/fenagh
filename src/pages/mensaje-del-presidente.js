@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Content, Constrain } from "../components/globals"
+//import { Content, Constrain } from "../components/globals"
 import Hero from '../components/hero'
 
 const MessagePage = () => {

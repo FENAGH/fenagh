@@ -116,15 +116,15 @@ module.exports = {
         link: null,
         subMenu: [
           {
-            flayOutName: 'Registro Genealógico',
+            flayOutName: 'Conócenos',
             flayOutMenu: [
               {
                 flayOutMenu_name: 'Sobre el Registro',
                 flayOutMenu_link: '/sobre-el-registro',
               },
               {
-                flayOutMenu_name: 'Ir a la Plataforma',
-                flayOutMenu_link: '/',
+                flayOutMenu_name: 'Revista FENAGH',
+                flayOutMenu_link: '/revista',
               },
             ]
           },
