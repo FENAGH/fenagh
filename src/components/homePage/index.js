@@ -35,7 +35,6 @@ const HomePage = () => {
       <Border />
       <Objectives />
       <Sectors />
-      <News />
     </> 
   )
 }

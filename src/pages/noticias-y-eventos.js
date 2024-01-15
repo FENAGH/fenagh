@@ -1,44 +1,33 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image" 
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { Constrain } from "../components/globals"
 import Hero from "../components/hero"
-import ContentfulListing from "../components/contentfulListing"
+//import ContentfulListing from "../components/contentfulListing"
 
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "proyectos_page.webp" }) {
-        
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+  query {
+    file(relativePath: { eq: "proyectos_page.webp" }) {
+      
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
-      posts: allContentfulBlogPost(
-        limit: 20, 
-        sort: {order: DESC, fields: createdAt}
-      ) {
-        nodes {
-          id
-          title
-          tag
-          slug
-          excerpt {
-            excerpt
-          }
-          createdAt
-          image{
-            title
-            fluid(maxWidth: 620){
-              ...GatsbyContentfulFluid
-            }
-          }
+    }
+    
+    Imagen1: file(relativePath: {eq: "CONGRESO_MUJERES_2024.png"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
+    }
+    
     }
   `)
   return(
@@ -50,8 +39,11 @@ const ProjectsPage = () => {
         headline="Noticias y Eventos"
       />
       <Constrain>
-        <ContentfulListing posts={data.posts}/>
+      <div className="content-media-item">
+                <Img fluid={data.Imagen1.childImageSharp.fluid}/>
+              </div>
       </Constrain>
+     
     </Layout>
   )
 }

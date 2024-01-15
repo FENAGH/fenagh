@@ -34,8 +34,9 @@ const PersonalPage = () => {
             <Cell data-title="Nombre">Nombre</Cell>
             <Cell data-title="Cargo">Cargo</Cell>
             <Cell data-title="Correo">Correo</Cell>
+            <Cell data-title="Telefono">Telefono</Cell>
           </TableHead>
-          {PERSONAL.map(({id, cargo, email, nombre}) => (
+          {PERSONAL.map(({id, cargo, email, nombre,telefono}) => (
             <TableRow key={id}>
               <Cell data-title="Nombre">{nombre}</Cell>
               <Cell data-title="Cargo">{cargo}</Cell>
@@ -44,6 +45,7 @@ const PersonalPage = () => {
                   <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">{email}</a>
                 )}
               </Cell>
+              <Cell data-title="Telefono">{telefono}</Cell>
             </TableRow>
           ))}
         </Table>
