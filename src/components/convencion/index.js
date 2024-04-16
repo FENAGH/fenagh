@@ -120,46 +120,7 @@ function dataWithImage(WrappedComponent){
 
 const Convencion = dataWithImage(props => (
 <>
- <h2>ASAMBLEA 2023</h2>
-
-   <div className="content-media content-media--fullWidth content-media--double">
-      <div className="content-media-items">
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen01.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div>
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen02.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div> 
-        
-      </div>
-      <figure className="content-caption"> Asamblea de la FENAGH 2023.</figure>
-    </div>
-    
-    <div className="content-media content-media--fullWidth content-media--double">
-      <div className="content-media-items">
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen03.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div>
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen04.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div> 
-       
-      </div>
-      <figure className="content-caption"> Asamblea de la FENAGH 2023.</figure>
-    </div>
-
-    <div className="content-media content-media--fullWidth content-media--double">
-      <div className="content-media-items">
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen05.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div>
-        <div className="content-media-item">
-          <Img fluid={props.imageData.imagen06.childImageSharp.fluid} alt="FENAGH convención 2023"/>
-        </div> 
-
-      </div>
-      <figure className="content-caption"> Asamblea de la FENAGH 2023.</figure>
-    </div> 
+ <h2>ASAMBLEA 2024</h2>
 
  
     <h2>Patrocinadores</h2> 
