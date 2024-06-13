@@ -52,9 +52,9 @@ export const ASOCIACIONES = [
   {
     id: "02",
     asociacion: "AGAA",
-    nombre: "Asociación de Ganaderos y Agricultores de Atlántida ",
-    presidente: "Héctor Castro",
-    telefono: "9995-2993"
+    nombre: "Asociación de Ganaderos y Agricultores de Atlántida",
+    presidente: "Jose Domingo Henriquez Machado",//Héctor Castro
+    telefono: "9926-9569" //9995-2993
     
   },
   {
@@ -105,8 +105,8 @@ export const ASOCIACIONES = [
     id: "09",
     asociacion: "PROAVIH",
     nombre: " Productores Avícolas de Honduras",
-    presidente: "Mildred Reyes de Handal",
-    telefono: "2557-4636"
+    presidente: "Juan Jose Sabillon Cruz",//Mildred Reyes de Handal
+    telefono: "9492-6853" //2557-4636
   },
   {
     id: "10",
@@ -189,7 +189,7 @@ export const ASOCIACIONES = [
     id: "21",
     asociacion: "APAH",
     nombre: "Asociación de Productores de Azúcar Honduras ",
-    presidente: "Yamal Yibrin Canahuati", /*"Robert Vinelli"*/
+    presidente: "Robert Vinelli",
     telefono: "2239-4933"
   },
   {
@@ -245,8 +245,8 @@ export const ASOCIACIONES = [
     id: "29",
     asociacion: "ASOPROSALH",
     nombre: "Asociación de Productores Saleros de Honduras",
-    presidente: "Marcio Molina",
-    telefono: "3336-0000"
+    presidente: "Ivan Osorio Sierra",//Marcio Molina
+    telefono: "3354-1184" //3336-0000
   },
   {
     id: "30",
