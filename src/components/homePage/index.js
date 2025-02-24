@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Hero from '../hero'
 import About from './about'
 import Sectors from './sectors'
-import News from './news'
+//import News from './news'//
 import Border from '../border'
 import Objectives from './objectives'
 import SectionWithImage from './sectionWithImage'

@@ -64,6 +64,15 @@ const RevistaPage = () => {
               >
                 Revista 1° Edición.
               </a>
+              <a 
+                href='https://downloads.ctfassets.net/e4da5bv5j8g0/40kv9OQKW9qDB47sG8e7V6/b9d60218267900522fbe6ca0b826e4cb/REVISTA_FENAGH_2025.pdf'
+                  download
+                rel="noopener noreferrer" 
+                target="_blank"
+                className="page-meta__files--file"
+              >
+                Revista 2° Edición.
+              </a>
               </div>
               </section>
               <Carousel/> 

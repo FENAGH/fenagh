@@ -43,3 +43,6 @@
     transform: scale(1.05); /* Escala ligeramente la imagen activa para resaltarla */
   }
 
+  .centered {
+    text-align: center;
+}

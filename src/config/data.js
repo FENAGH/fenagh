@@ -2,7 +2,7 @@ export const PERSONAL = [
   {id: "01", nombre: "Ing. José A. Chacón", cargo: "Director Ejecutivo", email: "directorejecutivofenagh@gmail.com", telefono: "33977073"},
   {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn2@gmail.com", telefono: "33158224"},
   {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com", telefono: "31470400"},
- // {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
+  // {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
   {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com", telefono: "32156959"},
   {id: "06", nombre: "Kathy Sierra", cargo: "Jefe de Recaudo", email: "recaudo.fenagh@gmail.com", telefono: "32873844"},
   {id: "07", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com", telefono: "31650656"},
@@ -84,7 +84,7 @@ export const ASOCIACIONES = [
     asociacion: "AGAC",
     nombre: "Asociación de Ganaderos y Agricultores de Copán ",
     presidente: "Milton Yanuario Santos",
-    telefono: "2662-0856"
+    telefono: "9452-0059"
   },
   {
     id: "07",
@@ -97,8 +97,8 @@ export const ASOCIACIONES = [
     id: "08",
     asociacion: "ANAPOH",
     nombre: "Asociación Nacional de Porcicultores de Honduras ",
-    presidente: "Flavio Tinoco",
-    telefono: "9995-6639"
+    presidente: "Allan Reyes",
+    telefono: "9991-4033"
   },
   
   {
@@ -126,8 +126,8 @@ export const ASOCIACIONES = [
     id: "12",
     asociacion: "AGASM",
     nombre: "Asociación de Ganaderos y Agricultores de San Marcos",
-    presidente: "Luis Abraham Guillen Salinas",
-    telefono: "8835-0040"
+    presidente: "José Hernán Arias",
+    telefono: "9998-1558"
   },
   {
     id: "13",
@@ -140,8 +140,8 @@ export const ASOCIACIONES = [
     id: "14",
     asociacion: "ADAGO",
     nombre: "Asociación de Ganaderos y Agricultores de Oriente",
-    presidente: "Adolfo Leonel Sevilla ",
-    telefono: "9973-8791 "
+    presidente: "José María Ordoñez",
+    telefono: "9785-1377"
   },
   {
     id: "15",
@@ -154,8 +154,8 @@ export const ASOCIACIONES = [
     id: "16",
     asociacion: "AGADEG",
     nombre: "Asociación de Ganaderos y Agricultores de Gracias ",
-    presidente: "Jorge Omar Batres",
-    telefono: "9701-1934"
+    presidente: "Adrián Castro",
+    telefono: "9931-6397"
   },
   {
     id: "17",
@@ -217,7 +217,7 @@ export const ASOCIACIONES = [
     id: "25",
     asociacion: "AHPROCEM",
     nombre: "Asociación Hondureña de Procesadores de Carne y Embutidos ",
-    presidente: "Patricio Pérez",
+    presidente: "María Fernanda Ortega",
     telefono: "2564-9470"
   },
   {
@@ -273,8 +273,8 @@ export const ASOCIACIONES = [
     id: "33",
     asociacion: "DINANT",
     nombre: "Corporacion Dinant",
-    presidente: "Ana Maria Rivera",
-    telefono: "3390-5437"
+    presidente: "Miguel Mauricio Facusse",
+    telefono: ""
   },
   {
     id: "34",
@@ -295,8 +295,8 @@ export const ASOCIACIONES = [
     id: "36",
     asociacion: "AGAVI",
     nombre: "Asociación de Ganaderos y Agricultores de Villanueva",
-    presidente: "Mauro Caballero Alvarado ",
-    telefono: "3172-1398"
+    presidente: "Jaime Vidal Hernández Matta",
+    telefono: "9452-5344"
   },
   {
     id: "37",

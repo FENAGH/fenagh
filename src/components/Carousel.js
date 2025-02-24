@@ -9,7 +9,7 @@ const Carousel = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { relativeDirectory: { eq: "revista1" } }
+        filter: { relativeDirectory: { eq: "Revista2" } }
         sort: { fields: name, order: ASC }
       ) {
         edges {

@@ -80,6 +80,13 @@ const ProjectsPage = () => {
           }
         }
       }
+        PNGSH: file(relativePath: {eq: "PNGSH.png"}){
+        childImageSharp {
+          fluid(maxWidth: 620, quality: 10) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return(
@@ -92,6 +99,27 @@ const ProjectsPage = () => {
       />
       <Constrain>
         <Content>
+        <h2>PROYECTO MAF-FENAGH</h2>
+        <p>Proyecto “Transformando el Sector Ganadero de Honduras para Contribuir a una Economía Baja en Emisiones”.</p>
+        <p>En Co-ejecución con el Centro Agronómico Tropical de Investigación y Enseñanza (CATIE)</p>
+        <p>Colón, Atlántida, Yoro, Olancho, Choluteca. Febrero 2024 – Agosto 2027</p>
+        <div className="content-media content-media--fullWidth content-media--double">
+        <div className="content-media-item">
+                <Img fluid={data.PNGSH.childImageSharp.fluid} alt="PNGSH"/>
+              </div>
+        </div>
+        <h2 className="highlights">AVISO: TDR PARA CONTRATACIÓN DE CONSULTOR <br></br>¡¡ MANDANOS TU HOJA DE VIDA !! </h2>
+        <div className="centered">
+        <span className="page-meta__files--title">ARCHIVO DESCARGABLE: </span>
+        <a 
+                href='https://assets.ctfassets.net/e4da5bv5j8g0/5AfRZacXuFpa866myJeTdp/610d0acd6c4c9c2d4a7ad42c14da5b1b/TDR_Consultor_MAF_FENAGH.pdf'
+                  download
+                rel="noopener noreferrer" 
+                target="_blank"
+                className="page-meta__files--file"
+              >TDR CONSULTOR MAF-FENAGH.
+              </a>
+        </div>
           <h2>Programa “FENAGH Reforesta"</h2>
           <p>Gracias a un convenio firmado entre la FENAGH y el Instituto de Conservación Forestal en junio del 2019. A la fecha se han reforestado 1365 manzanas de distintos productores a nivel nacional. Se han instalado 2 viveros en las asociaciones de la FENAGH (AGATC, AGASE).</p>
           <div className="content-media content-media--fullWidth content-media--double">
