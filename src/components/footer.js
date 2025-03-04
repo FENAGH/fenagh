@@ -43,8 +43,8 @@ function Footer() {
             <Logo white/>
           </Box>
           <Box textAlign={{md: "right" }} opacity=".8">
-            <Box as="span" display="block">Col. Ruben Dario, Calle Real de Minas, Frente a Edificio El Faro</Box>
-            <Box as="span" display="block">Casa 701, Tegucigalpa, Honduras</Box>
+            <Box as="span" display="block">Edificio Torre Alianza, Tercer Nivel</Box>
+            <Box as="span" display="block">Tegucigalpa, Honduras</Box>
             <Box as="span" display="block">Tel. 3147-0400, 3215-6959</Box>
           </Box>
         </Box>
