@@ -20,7 +20,7 @@ const ProjectsPage = () => {
       }
     }
     
-    Imagen1: file(relativePath: {eq: "CONGRESO_MUJERES_2024.png"}) {
+    Imagen1: file(relativePath: {eq: "AFICHEREFORMADO.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
