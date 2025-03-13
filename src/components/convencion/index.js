@@ -105,14 +105,12 @@ function dataWithImage(WrappedComponent){
             }
           },
 
-          
-
-
-
-
 
         }
-      `}
+      `
+
+    }
+    
       render={ data => <WrappedComponent {...props} imageData={data} /> }
     />
   )
@@ -120,7 +118,7 @@ function dataWithImage(WrappedComponent){
 
 const Convencion = dataWithImage(props => (
 <>
- <h2>ASAMBLEA 2024</h2>
+ <h2>ASAMBLEA 2025</h2>
 
  
     <h2>Patrocinadores</h2> 

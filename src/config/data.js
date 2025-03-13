@@ -342,6 +342,27 @@ export const ASOCIACIONES = [
     presidente: "Johnny Talhami ",
     telefono: "9978-8988"
   },
+  {
+    id: "43",
+    asociacion: "AGASE",
+    nombre: "Asociación de Ganaderos y Agricultores de San Esteban",
+    presidente: "Edgar Oliva",
+    telefono: "9838-9616"
+  },
+  {
+    id: "44",
+    asociacion: "APROJOCON",
+    nombre: "Asociación de Productores Agropecuarios y Procesadores de Lácteos de Jocón, Yoro",
+    presidente: "Tito Banegas",
+    telefono: "9496-0006"
+  },
+  {
+    id: "45",
+    asociacion: "AGAMPA",
+    nombre: "Asociación de Ganaderos y Agricultores del Paraíso",
+    presidente: "Mario Sánchez",
+    telefono: "9635-0904"
+  },
 ]
 				
 			
