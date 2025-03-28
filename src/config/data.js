@@ -266,7 +266,7 @@ export const ASOCIACIONES = [
     id: "32",
     asociacion: "MSH",
     nombre: "Molino Harinero de Sula",
-    presidente: "Antonio Francisco Guillen",
+    presidente: "Daniel Erza Goldstein Anhalt",
     telefono: "2566-2587"
   },
   {
@@ -288,7 +288,7 @@ export const ASOCIACIONES = [
     id: "35",
     asociacion: "ASPAH",
     nombre: "Asociación de Productores de Aguacate de Honduras",
-    presidente: "Mario Dubon",
+    presidente: "Carlos Miguel Robleto",
     telefono: "9695-5363"
   },
   {
@@ -309,23 +309,23 @@ export const ASOCIACIONES = [
     id: "38",
     asociacion: "AGATRO",
     nombre: "Asociación de Ganaderos y Agricultores de Trojes",
-    presidente: "Marvin Herrera ",
-    telefono: "9980-9207"
+    presidente: "Carlos Guanergy Betancouth",
+    telefono: "9523-0866"
   },
   {
     id: "39",
     asociacion: "AGASAG ",
     nombre: "Asociación de Ganaderos y Agriculores de Sabanagrande",
-    presidente: "Santos Sierra ",
-    telefono: "9600-0614"
+    presidente: "Sixto Amador",
+    telefono: "3313-4220"
   },
   
   {
     id: "40",
     asociacion: "AGAT ",
     nombre: "Asociación de Ganaderos y Agricultores de Tela",
-    presidente: "Amadeo Rapalo ",
-    telefono: "3384-5829"
+    presidente: "Fabricio Calix",
+    telefono: "9882-3872"
   },
   {
     id: "41",

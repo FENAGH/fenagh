@@ -104,6 +104,15 @@ function dataWithImage(WrappedComponent){
               }
             }
           },
+          imagen19: file(
+            relativePath: { eq: "Convocatoria2025.jpg" }
+          ) {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }, 
 
 
         }
@@ -119,10 +128,10 @@ function dataWithImage(WrappedComponent){
 const Convencion = dataWithImage(props => (
 <>
  <h2>ASAMBLEA 2025</h2>
-
- 
-    <h2>Patrocinadores</h2> 
-
+ <div className="content-media-item">
+          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2025"/>
+        </div>  
+  <h2>Patrocinadores</h2>
    <Logos>
       <div>
         {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
