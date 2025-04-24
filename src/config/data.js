@@ -126,7 +126,7 @@ export const ASOCIACIONES = [
     id: "12",
     asociacion: "AGASM",
     nombre: "Asociación de Ganaderos y Agricultores de San Marcos",
-    presidente: "José Hernán Arias",
+    presidente: "Luis Abraham Guillén",
     telefono: "9998-1558"
   },
   {
