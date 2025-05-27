@@ -25,7 +25,7 @@ const DirectivePage = () => {
       <Hero
         sources={data.file.childImageSharp.fluid}
         className="hero-default hero-alignBottom hero-alignLeft"
-        headline="Junta Directiva 2023-2025"
+        headline="Junta Directiva 2025-2027"
         section="Nuestra Gente"
       />
       <Constrain>
