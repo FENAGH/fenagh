@@ -161,8 +161,8 @@ export const ASOCIACIONES = [
     id: "17",
     asociacion: "AGAO",
     nombre: "Asociación de Ganaderos y Agricultores de Olancho",
-    presidente: "Luis Efren Espinal Garcia",//"Oscar Neptali Espinal",//
-    telefono: "9885-9192" //"9916-0180"//
+    presidente: "Andrew Edgardo Rubi", //"Luis Efren Espinal Garcia",//"Oscar Neptali Espinal",//
+    telefono:"9707-6896" //"9885-9192" //"9916-0180"//
   },
   {
     id: "18",
@@ -305,13 +305,7 @@ export const ASOCIACIONES = [
     presidente: "Jose Everth Rubio ",
     telefono: "9614-4410"
   },
-  {
-    id: "38",
-    asociacion: "AGATRO",
-    nombre: "Asociación de Ganaderos y Agricultores de Trojes",
-    presidente: "Carlos Guanergy Betancouth",
-    telefono: "9523-0866"
-  },
+  
   {
     id: "39",
     asociacion: "AGASAG ",
@@ -327,21 +321,7 @@ export const ASOCIACIONES = [
     presidente: "Fabricio Calix",
     telefono: "9882-3872"
   },
-  {
-    id: "41",
-    asociacion: "AGAP ",
-    nombre: "Asociación de Ganaderos y Agricultores de Patuca",
-    presidente: "Nahun Rodriguez ",
-    telefono: ""
-  },
 
-  {
-    id: "42",
-    asociacion: "APPIH ",
-    nombre: "Asociación de Productores Piscícolas de Honduras ",
-    presidente: "Johnny Talhami ",
-    telefono: "9978-8988"
-  },
   {
     id: "43",
     asociacion: "AGASE",
