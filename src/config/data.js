@@ -307,7 +307,7 @@ export const ASOCIACIONES = [
   },
   
   {
-    id: "39",
+    id: "38",
     asociacion: "AGASAG ",
     nombre: "Asociación de Ganaderos y Agriculores de Sabanagrande",
     presidente: "Sixto Amador",
@@ -315,7 +315,7 @@ export const ASOCIACIONES = [
   },
   
   {
-    id: "40",
+    id: "39",
     asociacion: "AGAT ",
     nombre: "Asociación de Ganaderos y Agricultores de Tela",
     presidente: "Fabricio Calix",
@@ -323,21 +323,21 @@ export const ASOCIACIONES = [
   },
 
   {
-    id: "43",
+    id: "40",
     asociacion: "AGASE",
     nombre: "Asociación de Ganaderos y Agricultores de San Esteban",
     presidente: "Edgar Oliva",
     telefono: "9838-9616"
   },
   {
-    id: "44",
+    id: "41",
     asociacion: "APROJOCON",
     nombre: "Asociación de Productores Agropecuarios y Procesadores de Lácteos de Jocón, Yoro",
     presidente: "Tito Banegas",
     telefono: "9496-0006"
   },
   {
-    id: "45",
+    id: "42",
     asociacion: "AGAMPA",
     nombre: "Asociación de Ganaderos y Agricultores del Paraíso",
     presidente: "Mario Sánchez",
