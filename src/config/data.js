@@ -140,7 +140,7 @@ export const ASOCIACIONES = [
     id: "14",
     asociacion: "ADAGO",
     nombre: "Asociación de Ganaderos y Agricultores de Oriente",
-    presidente: "José María Ordoñez",
+    presidente: "Ricardo Emilio Arias",
     telefono: "9785-1377"
   },
   {
