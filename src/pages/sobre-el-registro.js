@@ -11,7 +11,7 @@ const SobreRegistroPage = () => {
     query {
       file(relativePath: { eq: "registro_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -3,13 +3,22 @@ import { useStaticQuery, graphql } from "gatsby"
 // Components
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { Constrain, Table, TableHead, TableRow,  Cell } from "../components/globals"
+import { Constrain} from "../components/globals"
 import Hero from "../components/hero"
 import { PERSONAL } from '../config/data'
+import PersonalCard from '../components/PersonalCard/PersonalCard'
 
 const PersonalPage = () => {
   const data = useStaticQuery(graphql`
     query {
+      allFile(filter: {relativeDirectory: {eq: "Empleados"}}) {
+        nodes {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(width: 400, placeholder: BLURRED)
+          }
+        }
+      }
       file(relativePath: { eq: "administrativo.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 100) {
@@ -19,6 +28,13 @@ const PersonalPage = () => {
       }
     }
   `)
+
+  // 🔹 Crear mapa de imágenes por ruta
+  const imageMap = {}
+  data.allFile.nodes.forEach(node => {
+    imageMap[node.relativePath] = node.childImageSharp.gatsbyImageData
+  })
+
   return (
     <Layout>
       <SEO title="Personal Administrativo" />
@@ -29,26 +45,15 @@ const PersonalPage = () => {
         section="Nuestra Gente"
       />
       <Constrain>
-        <Table>
-          <TableHead>
-            <Cell data-title="Nombre">Nombre</Cell>
-            <Cell data-title="Cargo">Cargo</Cell>
-            <Cell data-title="Correo">Correo</Cell>
-            <Cell data-title="Telefono">Telefono</Cell>
-          </TableHead>
-          {PERSONAL.map(({id, cargo, email, nombre,telefono}) => (
-            <TableRow key={id}>
-              <Cell data-title="Nombre">{nombre}</Cell>
-              <Cell data-title="Cargo">{cargo}</Cell>
-              <Cell data-title="Correo">
-                {email.length > 0 && (
-                  <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">{email}</a>
-                )}
-              </Cell>
-              <Cell data-title="Telefono">{telefono}</Cell>
-            </TableRow>
+        <div className="personal-grid">
+          {PERSONAL.map(persona => (
+            <PersonalCard
+              key={persona.id}
+              {...persona}
+              imageData={imageMap[persona.foto.replace(/^\//, "")]} // quitar el slash inicial
+            />
           ))}
-        </Table>
+        </div>
       </Constrain>
     </Layout>
   )

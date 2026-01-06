@@ -23,6 +23,10 @@ module.exports = {
                 flayOutMenu_name: 'Sectores Represantados',
                 flayOutMenu_link: '/sectores',
               },
+              {
+                flayOutMenu_name: 'Revista FENAGH',
+                flayOutMenu_link: '/revista',
+              },
             ]
           },
           {
@@ -123,9 +127,10 @@ module.exports = {
                 flayOutMenu_link: '/sobre-el-registro',
               },
               {
-                flayOutMenu_name: 'Revista FENAGH',
-                flayOutMenu_link: '/revista',
+                flayOutMenu_name: 'Plataforma Registro',
+                flayOutMenu_link: 'https://registro-genealogico-v2.vercel.app/auth/sign-in?redirect_url=https%3A%2F%2Fregistro-genealogico-v2.vercel.app%2Fdashboard%2Fejemplares',
               },
+              
             ]
           },
           {

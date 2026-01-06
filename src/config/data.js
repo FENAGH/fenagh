@@ -1,11 +1,11 @@
 export const PERSONAL = [
-  {id: "01", nombre: "Ing. José A. Chacón", cargo: "Director Ejecutivo", email: "directorejecutivofenagh@gmail.com", telefono: "33977073"},
-  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn2@gmail.com", telefono: "33158224"},
-  {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com", telefono: "31470400"},
-  // {id: "04", nombre: "Ing. José A. Chacón", cargo: "Jefe de Registro Genealógico", email: "jcfenagh@gmail.com"},
-  {id: "05", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com", telefono: "32156959"},
-  {id: "06", nombre: "Kathy Sierra", cargo: "Jefe de Recaudo", email: "recaudo.fenagh@gmail.com", telefono: "32873844"},
-  {id: "07", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com", telefono: "31650656"},
+  {id: "01", nombre: "Ing. José A. Chacón", cargo: "Director Ejecutivo", email: "directorejecutivofenagh@gmail.com", telefono: "33977073",foto:"Empleados/JoseChacon.jpeg" },
+  {id: "02", nombre: "Msc. Javier Barahona", cargo: "Asistente Técnico Administrativo", email: "javierbarahonahn2@gmail.com", telefono: "33158224", foto:"Empleados/JavierBarahona.jpeg"},
+  {id: "03", nombre: "Msc. Maria Jose Romero", cargo: "Asistente Técnico Administrativo", email: "fenagh.oficial@gmail.com", telefono: "31470400", foto:"Empleados/MariaJose.jpeg"},
+  {id: "04", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com", telefono: "32156959", foto:"Empleados/KeniaCastellanos.jpeg"},
+  {id: "05", nombre: "Kathy Sierra", cargo: "Jefe de Recaudo", email: "recaudo.fenagh@gmail.com", telefono: "32873844", foto:"Empleados/KathySierra.jpeg"},
+  {id: "06", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com", telefono: "31650656", foto:"Empleados/WaldinaPon.jpeg"},
+  {id: "07", nombre: "Stephany Bonilla", cargo: "Oficial de Datos de Registro Genealógico",email: "", telefono: "", foto:"Empleados/StephanyBonilla.jpeg"},
   //{id: "08", nombre: "Ana del Cid", cargo: "Oficial de Recaudo SENASA ", email: "anadelcid.fenagh@gmail.com"},//
 ]
 

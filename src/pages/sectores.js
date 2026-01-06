@@ -12,7 +12,7 @@ const ProjectsPage = () => {
     query {
       bgImage: file(relativePath: { eq: "objectives.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1920, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

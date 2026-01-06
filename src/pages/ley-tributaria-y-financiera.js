@@ -11,7 +11,7 @@ const LeyTributarioFinancieroPage = () => {
     query {
       file(relativePath: { eq: "leyes_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
+          fluid(maxWidth: 2400, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

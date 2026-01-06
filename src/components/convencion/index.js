@@ -42,7 +42,11 @@ function dataWithImage(WrappedComponent){
               node {
                 base
                 childImageSharp {
-                  fluid {
+                  fluid(
+    maxWidth: 400
+    quality: 100
+    sizes: "(max-width: 1024px) 60px, 200px"
+  )  {
                     ...GatsbyImageSharpFluid
                   }
                 }

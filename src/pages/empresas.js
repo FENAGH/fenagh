@@ -13,33 +13,32 @@ const DirectivePage = () => {
     query {
       file(relativePath: { eq: "administrativo.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       dinant: file(relativePath: { eq: "logo-dinant.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      lacthosa: file(relativePath: { eq: "logo-lacthosa.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      
-      molino: file(relativePath: { eq: "logo-molino-harinero.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 250, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
+  childImageSharp {
+    fluid(maxWidth: 600, quality: 100) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+},
+lacthosa: file(relativePath: { eq: "logo-lacthosa.png" }) {
+  childImageSharp {
+    fluid(maxWidth: 600, quality: 100) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+},
+molino: file(relativePath: { eq: "logo-molino-harinero.png" }) {
+  childImageSharp {
+    fluid(maxWidth: 600, quality: 100) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+},
       
     
     }

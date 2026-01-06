@@ -16,7 +16,7 @@ const Carousel = () => {
           node {
             id
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 2200, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -24,26 +24,33 @@ const Carousel = () => {
         }
       }
     }
-  `);
+  `)
 
   const settings = {
-    dots: false,
+    arrows: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-  };
+    speed: 500,
+    adaptiveHeight: false, 
+  }
 
   return (
-    <Slider {...settings}>
-      {data.allFile.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Img fluid={node.childImageSharp.fluid} alt="Imagen de la revista" />
-        </div>
-      ))}
-    </Slider>
-  );
-};
+    <div className="carousel-isolation">
+  <Slider {...settings}>
+    {data.allFile.edges.map(({ node }) => (
+      <div key={node.id} className="carousel-slide">
+        <Img
+          fluid={node.childImageSharp.fluid}
+          alt="Imagen de la revista"
+          className="carousel-image"
+          imgStyle={{ objectFit: 'contain' }}
+        />
+      </div>
+    ))}
+  </Slider>
+</div>
+  )
+}
 
-export default Carousel;
+export default Carousel

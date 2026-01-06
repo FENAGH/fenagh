@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Hero from '../components/hero'
 import { Content, Constrain } from "../components/globals"
-import Carousel from "../components/Carousel"
+import Carousel from "../components/carrusel/Carousel"
 const RevistaPage = () => {
   const data = useStaticQuery(graphql`
     query {

@@ -10,18 +10,25 @@ import Hero from "../components/hero"
 const HistoryPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      media_I: file(relativePath: {eq: "home-media-01.webp"}){
+      media_I: file(relativePath: { eq: "home-media-01.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 720) {
+          fluid(
+            maxWidth: 1200
+            quality: 90
+            srcSetBreakpoints: [400, 600, 800, 1000, 1200]
+          ) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      bgImage: file(
-        relativePath: { eq: "about_page.webp" }
-      ) {
+
+      bgImage: file(relativePath: { eq: "about_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
+          fluid(
+            maxWidth: 1920
+            quality: 95
+            srcSetBreakpoints: [800, 1200, 1600, 1920]
+          ) {
             ...GatsbyImageSharpFluid
           }
         }
