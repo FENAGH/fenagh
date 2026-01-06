@@ -5,7 +5,7 @@ export const PERSONAL = [
   {id: "04", nombre: "Kenia Castellanos", cargo: "Administradora", email: "admonfenagh1@gmail.com", telefono: "32156959", foto:"Empleados/KeniaCastellanos.jpeg"},
   {id: "05", nombre: "Kathy Sierra", cargo: "Jefe de Recaudo", email: "recaudo.fenagh@gmail.com", telefono: "32873844", foto:"Empleados/KathySierra.jpeg"},
   {id: "06", nombre: "Waldina Pon", cargo: "Oficial de Recaudo PROMDECA", email: "waldinaponfenagh@gmail.com", telefono: "31650656", foto:"Empleados/WaldinaPon.jpeg"},
-  {id: "07", nombre: "Stephany Bonilla", cargo: "Oficial de Datos de Registro Genealógico",email: "", telefono: "", foto:"Empleados/StephanyBonilla.jpeg"},
+  {id: "07", nombre: "Stephany Bonilla", cargo: "Oficial de Datos de Registro Genealógico",email: "registrogenealogicofenagh@gmail.com", telefono: "3311-0100", foto:"Empleados/StephanyBonilla.jpeg"},
   //{id: "08", nombre: "Ana del Cid", cargo: "Oficial de Recaudo SENASA ", email: "anadelcid.fenagh@gmail.com"},//
 ]
 
