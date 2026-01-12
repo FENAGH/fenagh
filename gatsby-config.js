@@ -212,8 +212,8 @@ module.exports = {
 {
   resolve: `gatsby-source-filesystem`, //agregado para la revista
   options: {
-    name: `revista3`,
-    path: `${__dirname}/src/images/revista3`,
+    name: `Revista3`,
+    path: `${__dirname}/src/images/Revista3`,
   },
 },
 
