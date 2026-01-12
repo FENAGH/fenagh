@@ -9,14 +9,14 @@ const Carousel = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { relativeDirectory: { eq: "Revista2" } }
+        filter: { relativeDirectory: { eq: "Revista3" } }
         sort: { fields: name, order: ASC }
       ) {
         edges {
           node {
             id
             childImageSharp {
-              fluid(maxWidth: 2200, quality: 100) {
+              fluid(maxWidth: 1200, quality: 80) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -32,7 +32,8 @@ const Carousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
-    adaptiveHeight: false, 
+    adaptiveHeight: false,
+    lazyLoad: "ondemand", 
   }
 
   return (
