@@ -9,24 +9,30 @@ const RevistaFlipbook = () => {
   const [isFullscreen, setIsFullscreen] = useState(false)
 
   // 🔁 Inicializar Turn.js UNA sola vez
-  useEffect(() => {
-    const initTurn = () => {
-      if (!window.$ || !window.$.fn.turn || !flipbookRef.current) return
+useEffect(() => {
+  if (!flipbookRef.current) return
 
-      if (window.$(flipbookRef.current).data("turn")) return
+  const start = () => {
+    if (!window.$ || !window.$.fn.turn) return
+    if (window.$(flipbookRef.current).data("turn")) return
 
-      window.$(flipbookRef.current).turn({
-        width: 900,
-        height: 600,
-        autoCenter: true,
-        elevation: 50,
-        gradients: true,
-      })
-    }
+    window.$(flipbookRef.current).turn({
+      width: 900,
+      height: 600,
+      autoCenter: true,
+      elevation: 50,
+      gradients: true,
+    })
+  }
 
-    const t = setTimeout(initTurn, 400)
-    return () => clearTimeout(t)
-  }, [])
+  // Espera render + layout + paint
+  const raf = requestAnimationFrame(() => {
+    setTimeout(start, 600)
+  })
+
+  return () => cancelAnimationFrame(raf)
+}, [])
+
 
   // 🎥 Fullscreen
   useEffect(() => {
