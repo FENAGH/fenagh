@@ -209,13 +209,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-{
-  resolve: `gatsby-source-filesystem`, //agregado para la revista
-  options: {
-    name: `Revista3`,
-    path: `${__dirname}/src/images/Revista3`,
-  },
-},
 
   ],
 }
