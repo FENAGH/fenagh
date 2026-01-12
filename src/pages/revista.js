@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Hero from '../components/hero'
 import { Content, Constrain } from "../components/globals"
-import Carousel from "../components/carrusel/Carousel"
+import RevistaFlipbook from "../components/card/RevistaFlip/RevistaFlipbook"
 const RevistaPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -84,7 +84,7 @@ const RevistaPage = () => {
                 </a>
               </div>
               </section>
-              <Carousel/> 
+              <RevistaFlipbook/> 
       
         </Content>
       
