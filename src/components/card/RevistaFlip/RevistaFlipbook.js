@@ -15,7 +15,7 @@ const RevistaFlipbook = () => {
   // 📂 Imágenes
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { sourceInstanceName: { eq: "revista3" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "Revista3" } }) {
         nodes {
           publicURL
           base
