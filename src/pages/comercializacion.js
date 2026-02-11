@@ -11,7 +11,7 @@ const ComercializacionPage = () => {
     query {
       file(relativePath: { eq: "comercializacion-hero.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 90) {
+          fluid(maxWidth: 1200, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

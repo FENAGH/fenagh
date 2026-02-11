@@ -126,8 +126,8 @@ export const ASOCIACIONES = [
     id: "12",
     asociacion: "AGASM",
     nombre: "Asociación de Ganaderos y Agricultores de San Marcos",
-    presidente: "Luis Abraham Guillén",
-    telefono: "9998-1558"
+    presidente: "Jose Antonio Calderon Lopez",
+    telefono: "9624-5503"
   },
   {
     id: "13",
@@ -231,8 +231,8 @@ export const ASOCIACIONES = [
     id: "27",
     asociacion: "AGATC",
     nombre: "Asociación de Ganadores y Agricultores de Tocoa,Colón",
-    presidente: "César Mauricio Artica",
-    telefono: "9512-6051"
+    presidente: "Rosel Ramon Matute",
+    telefono: "9566-9695"
   },
   {
     id: "28",
@@ -343,6 +343,7 @@ export const ASOCIACIONES = [
     presidente: "Mario Sánchez",
     telefono: "9635-0904"
   },
+   
 ]
 				
 			

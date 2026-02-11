@@ -12,7 +12,7 @@ const AssociationsPage = () => {
     query {
       file(relativePath: { eq: "asociaciones_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 100) {
+          fluid(maxWidth: 1200, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

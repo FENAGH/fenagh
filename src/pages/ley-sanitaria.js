@@ -11,7 +11,7 @@ const LeySanitariaPage = () => {
     query {
       file(relativePath: { eq: "leyes_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 2400, quality: 90) {
+          fluid(maxWidth: 1200, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

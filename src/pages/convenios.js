@@ -12,7 +12,7 @@ const ConveniosPage = () => {
     query {
       file(relativePath: { eq: "proyectos_page.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1200, quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }

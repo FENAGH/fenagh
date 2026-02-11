@@ -25,7 +25,7 @@ const HistoryPage = () => {
       bgImage: file(relativePath: { eq: "about_page.webp" }) {
         childImageSharp {
           fluid(
-            maxWidth: 1920
+            maxWidth: 1200
             quality: 95
             srcSetBreakpoints: [800, 1200, 1600, 1920]
           ) {
