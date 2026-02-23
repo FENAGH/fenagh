@@ -13,8 +13,8 @@ const HistoryPage = () => {
       media_I: file(relativePath: { eq: "home-media-01.webp" }) {
         childImageSharp {
           fluid(
-            maxWidth: 1200
-            quality: 90
+            maxWidth: 1000
+            quality: 75
             srcSetBreakpoints: [400, 600, 800, 1000, 1200]
           ) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ const HistoryPage = () => {
         childImageSharp {
           fluid(
             maxWidth: 1200
-            quality: 95
+            quality: 75
             srcSetBreakpoints: [800, 1200, 1600, 1920]
           ) {
             ...GatsbyImageSharpFluid

@@ -8,7 +8,7 @@ const RevistaFlipbook = () => {
   const containerRef = useRef(null)
   const [isFullscreen, setIsFullscreen] = useState(false)
 
-  // 🔁 Inicializar Turn.js UNA sola vez
+  // Inicializar Turn.js UNA sola vez
 useEffect(() => {
   if (!flipbookRef.current) return
 
@@ -34,7 +34,7 @@ useEffect(() => {
 }, [])
 
 
-  // 🎥 Fullscreen
+  // Fullscreen
   useEffect(() => {
     const onFsChange = () => {
       const fs = !!document.fullscreenElement
