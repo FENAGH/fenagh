@@ -128,7 +128,7 @@ module.exports = {
               },
               {
                 flayOutMenu_name: 'Plataforma Registro',
-                flayOutMenu_link: 'https://registro-genealogico-v2.vercel.app/auth/sign-in?redirect_url=https%3A%2F%2Fregistro-genealogico-v2.vercel.app%2Fdashboard%2Fejemplares',
+                flayOutMenu_link: 'https://registro.fenagh.net',
               },
               
             ]

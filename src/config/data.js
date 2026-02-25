@@ -53,7 +53,7 @@ export const ASOCIACIONES = [
     id: "02",
     asociacion: "AGAA",
     nombre: "Asociación de Ganaderos y Agricultores de Atlántida",
-    presidente: "Margarito Vásquez Laínez",//Héctor Castro
+    presidente: "Margarito Vásquez Laínez",
     telefono: "9926-9569" //9995-2993
     
   },
