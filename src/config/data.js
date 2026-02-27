@@ -54,7 +54,7 @@ export const ASOCIACIONES = [
     asociacion: "AGAA",
     nombre: "Asociación de Ganaderos y Agricultores de Atlántida",
     presidente: "Margarito Vásquez Laínez",
-    telefono: "9926-9569" //9995-2993
+    telefono: "9583-2518" 
     
   },
   {
