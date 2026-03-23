@@ -105,8 +105,8 @@ export const ASOCIACIONES = [
     id: "09",
     asociacion: "PROAVIH",
     nombre: " Productores Avícolas de Honduras",
-    presidente: "Juan Jose Sabillon Cruz",//Mildred Reyes de Handal
-    telefono: "9492-6853" //2557-4636
+    presidente: "Ixim David",
+    telefono: "2557-4636" 
   },
   {
     id: "10",
@@ -340,10 +340,16 @@ export const ASOCIACIONES = [
     id: "42",
     asociacion: "AGAMPA",
     nombre: "Asociación de Ganaderos y Agricultores del Paraíso",
-    presidente: "Mario Sánchez",
-    telefono: "9635-0904"
+    presidente: "José Eliobardo Amador",
+    telefono: "9584-1411"
   },
-   
+  {
+    id: "43",
+    asociacion: "AGATRO",
+    nombre: "Asociación de Ganaderos y Agricultores de Trojes",
+    presidente: "Carlos Guanergy",
+    telefono: "9523-0866"
+  }, 
 ]
 				
 			
