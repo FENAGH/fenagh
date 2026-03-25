@@ -71,54 +71,7 @@ function dataWithImage(WrappedComponent){
               }
             }
           },
-          imagen03: file(
-            relativePath: { eq: "Convencion_2023_3.jpeg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
-         
-          imagen04: file(
-            relativePath: { eq: "Convencion_2023_4.jpeg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
-          imagen05: file(
-            relativePath: { eq: "Convencion_2023_5.jpeg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
-          imagen06: file(
-            relativePath: { eq: "Convencion_2023_6.jpeg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          },
-          imagen19: file(
-            relativePath: { eq: "Convocatoria2025.jpg" }
-          ) {
-            childImageSharp {
-              fluid(maxWidth: 720, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }, 
-
-
+          
         }
       `
 
@@ -130,20 +83,49 @@ function dataWithImage(WrappedComponent){
 }
 
 const Convencion = dataWithImage(props => (
-<>
- <h2>ASAMBLEA 2025</h2>
- <div className="content-media-item">
-          <Img fluid={props.imageData.imagen19.childImageSharp.fluid} alt="FENAGH convención 2025"/>
-        </div>  
-  <h2>Patrocinadores</h2>
-   <Logos>
+  <>
+    <div
+      style={{
+    paddingTop: "20px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    maxWidth: "800px",
+    textAlign: "center",
+  }}
+    >
+      <h2
+        style={{
+          fontSize: "46px",
+          fontWeight: "900",
+          letterSpacing: "2px",
+          margin: "10px 0 0",
+          color: "#1a1a1a",
+        }}
+      >
+        ASAMBLEA 2026
+      </h2>
+
+      <h3
+        style={{
+          fontSize: "20px",
+          fontWeight: "700",
+          letterSpacing: "3px",
+          color: "#2e7d32",
+          margin: "5px 0 30px",
+        }}
+      >
+        PATROCINADORES
+      </h3>
+    </div>
+
+    <Logos>
       <div>
-        {props.imageData.partners.edges.map(({node: {base, childImageSharp}}) => (
-          <Img id={base} fluid={childImageSharp.fluid}/>
+        {props.imageData.partners.edges.map(({ node: { base, childImageSharp } }) => (
+          <Img key={base} fluid={childImageSharp.fluid} />
         ))}
       </div>
     </Logos>
-    </>
+  </>
 ))
 
 export { Convencion }

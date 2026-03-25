@@ -42,33 +42,32 @@ const ConvencioPage = () => {
             <div className="page-meta__files">
               <span className="page-meta__files--title">Archivos descargables: </span>
               <a 
-                  href= 'https://assets.ctfassets.net/e4da5bv5j8g0/15F5edwgDISAFoVhOZt9eY/2b3edf2324278b23226dc00fe5fd6bff/Convocatoria_Asamblea_25_04_2025.pdf'
-                //href='https://images.ctfassets.net/e4da5bv5j8g0/16VXCPlQnZBAOKwPg2KDxp/eed40f5935a31e622aa4092fce11e0fa/FENAGH_CONVOCATORIA_2024.jpg' 
+                  href= 'https://assets.ctfassets.net/e4da5bv5j8g0/1aKkB6N4vh0ZEXjFycEtst/d015cad3104861ab29715d331912ca71/FENAGH_EH__C-6_CONVOCATORIA_2026_260314_135502.pdf'
+                
+                rel="noopener noreferrer" 
+                target="_blank"
+                className="page-meta__files--file"
+              >
+                Convocatoria 2026.
+              </a>
+              <a 
+              href= 'https://assets.ctfassets.net/e4da5bv5j8g0/50bFIVwzehELez7994PtfV/9c35579760b6ae03ca0a122380ed242e/CREDENCIAL_2026.pdf' 
                 download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Convocatoria 2025.
+               Credencial 2026.
               </a>
               <a 
-              href= 'https://assets.ctfassets.net/e4da5bv5j8g0/4Ltxb3w9u8Ay7Fa1kPohHb/ccd8f87eb5fe3af015aa6336aa50700a/CREDENCIAL_2025.pdf' 
-                download
-                rel="noopener noreferrer" 
-                target="_blank"
-                className="page-meta__files--file"
-              >
-               Credencial 2025.
-              </a>
-              <a 
-                href='https://assets.ctfassets.net/e4da5bv5j8g0/62D5PlaHCQZnmVut98mmbj/114264f815714fb392c558f5778c7675/Programa_Asamblea_FENAGH_2025.pdf'
+                href='https://assets.ctfassets.net/e4da5bv5j8g0/6EhRThNjkLV8XW3Nw9z4Eb/74097211bf08d81513d343a5b04082ea/Hoteles_Sugeridos_San_Esteban_Olancho_2026.pdf'
                
                download
                 rel="noopener noreferrer" 
                 target="_blank"
                 className="page-meta__files--file"
               >
-                Agenda 2025.
+                Hoteles Sugeridos.
               </a>
             </div>
             <nav className="page-meta__nav">
@@ -90,9 +89,10 @@ const ConvencioPage = () => {
               ))}
               </ul>
             </nav>
-            
-          </section>
-          <>{ConvencionContent[active].content}</>
+</section>
+
+{ConvencionContent[active].content}
+          
         </Content>
       </Constrain>
     </Layout>
