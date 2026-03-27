@@ -63,7 +63,7 @@ function dataWithImage(WrappedComponent){
             }
           },
           imagen02: file(
-            relativePath: { eq: "Convencion_2023_2.jpeg" }
+            relativePath: { eq: "CREDENCIAL_2026.jpg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -84,40 +84,25 @@ function dataWithImage(WrappedComponent){
 
 const Convencion = dataWithImage(props => (
   <>
-    <div
+  <div
       style={{
-    paddingTop: "20px",
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "800px",
+    maxWidth: "900px",
     textAlign: "center",
   }}
     >
-      <h2
-        style={{
-          fontSize: "46px",
-          fontWeight: "900",
-          letterSpacing: "2px",
-          margin: "10px 0 0",
-          color: "#1a1a1a",
-        }}
-      >
+
+      <h2>
         ASAMBLEA 2026
       </h2>
+      <div className="content-media-item">
+          <Img fluid={props.imageData.imagen02.childImageSharp.fluid} alt="FENAGH convención 2026"/>
+        </div>  
 
-      <h3
-        style={{
-          fontSize: "20px",
-          fontWeight: "700",
-          letterSpacing: "3px",
-          color: "#2e7d32",
-          margin: "5px 0 30px",
-        }}
-      >
+      <h2>
         PATROCINADORES
-      </h3>
-    </div>
-
+      </h2>
     <Logos>
       <div>
         {props.imageData.partners.edges.map(({ node: { base, childImageSharp } }) => (
@@ -125,6 +110,7 @@ const Convencion = dataWithImage(props => (
         ))}
       </div>
     </Logos>
+  </div>  
   </>
 ))
 
