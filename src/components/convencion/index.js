@@ -63,7 +63,7 @@ function dataWithImage(WrappedComponent){
             }
           },
           imagen02: file(
-            relativePath: { eq: "CREDENCIAL_2026.jpg" }
+            relativePath: { eq: "CONVOCATORIA_2026.jpg" }
           ) {
             childImageSharp {
               fluid(maxWidth: 720, quality: 100) {
@@ -88,7 +88,7 @@ const Convencion = dataWithImage(props => (
       style={{
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "900px",
+    maxWidth: "800px",
     textAlign: "center",
   }}
     >
