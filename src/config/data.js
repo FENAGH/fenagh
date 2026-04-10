@@ -318,8 +318,8 @@ export const ASOCIACIONES = [
     id: "39",
     asociacion: "AGAT ",
     nombre: "Asociación de Ganaderos y Agricultores de Tela",
-    presidente: "Fabricio Calix",
-    telefono: "9882-3872"
+    presidente: "Melvin Lopez",
+    telefono: "9950-6327"
   },
 
   {
