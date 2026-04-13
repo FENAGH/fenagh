@@ -289,7 +289,7 @@ export const ASOCIACIONES = [
     asociacion: "ASPAH",
     nombre: "Asociación de Productores de Aguacate de Honduras",
     presidente: "Carlos Miguel Robleto",
-    telefono: "9695-5363"
+    telefono: "9888-1320"
   },
   {
     id: "36",
