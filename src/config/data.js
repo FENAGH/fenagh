@@ -196,8 +196,8 @@ export const ASOCIACIONES = [
     id: "22",
     asociacion: "CAFOGAH",
     nombre: "Cámara de Fomento Ganadero de Honduras",
-    presidente: "Leopoldo Durán",
-    telefono: "9995-7718"
+    presidente: "Mario Lovo",
+    telefono: "9973-4020"
   },
   {
     id: "23",
