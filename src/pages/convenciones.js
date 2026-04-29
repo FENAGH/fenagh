@@ -19,7 +19,7 @@ const ConvencioPage = () => {
   const [active, setActive] = useState(ConvencionContent[0].id);
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "AsambleaActual.jpg" }) {
+      file(relativePath: { eq: "portadaconvencion.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 90) {
             ...GatsbyImageSharpFluid
